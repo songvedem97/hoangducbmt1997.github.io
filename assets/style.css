@@ -14,6 +14,8 @@
 }
 body{
 	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .wrap-pre-loader{
 	display: none;
@@ -22,6 +24,7 @@ body{
 	background-color:#fff;
 	position: absolute;
 	z-index: 10;
+	position: fixed;
   }
 .pre-loader {
 	border: 1px solid #ECF0F1;
