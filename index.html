@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600&display=swap" rel="stylesheet" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600&display=swap"
+		rel="stylesheet" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/grid.css">
@@ -14,85 +16,90 @@
 
 <body>
 	<div class="wrap-pre-loader">
-		<div class="pre-loader"><hr/><hr/><hr/><hr/></div>
+		<div class="pre-loader">
+			<hr />
+			<hr />
+			<hr />
+			<hr />
+		</div>
 	</div>
-	<div id="app">
-		<div class="music-content">
-			<div class="music-wrap">
-				<div class="music-play">
-				<div class="now-playing-title">
-					<div class="wrap-now-playing-title-icon">
-						<div class="wrap-playing-icon"><ion-icon class="now-playing-title-icon-back icon-title" name="chevron-back-outline"></ion-icon></div>
-						<div class="wrap-playing-icon"><p>Now Playing</p></div>
-						<div class="wrap-playing-icon"><ion-icon class="now-playing-title-icon-list icon-title" name="reorder-two-outline"></ion-icon></div>
-					</div>
+	<div id="app" class="container">
+		<div class="row">
+			<div class="col-12 col-lg-12 col-md-12 col-sm-12">
+				<div class="music-wrap col-4 col-lg-4 col-md-4 col-sm-4">
+					<div class="music-play">
+						<div class="wrap-now-playing">
+							<div class="row">
+								<div class="wrap-playing-icon col-4 col-lg-4 col-md-4 col-sm-4"><i
+										class="fas fa-chevron-left now-playing-title-icon-back"></i></div>
+								<div class="wrap-playing-icon col-4 col-lg-4 col-md-4 col-sm-4">
+									<p>Now Playing</p>
+								</div>
+								<div class="wrap-playing-icon col-4 col-lg-4 col-md-4 col-sm-4"><i
+										class="fas fa-ellipsis-v now-playing-title-icon-list"></i></div>
+							</div>
+							<div class="row">
+								<div class="wrap-time col-12 col-lg-12 col-md-12 col-sm-12">
+									<span class="current-time">00:00</span>
+									<span class="duration-time "></span>
+								</div>
+							</div>
 
-					<div>
-						<span class="current-time time" >00:00</span>
-						<span class="duration-time time"></span>
-					</div>
+						</div>
 
-				</div>
-							
-					<div class="avatar">
-						<div class="wrap-img-1"></div>
-							<div class="wrap-img-2"></div>
-							<div class="wrap-img-3"></div>
-								<img src="">
-					</div>
-					<div class="info">
-						<div class="name"></div>
-						<div class="creator"></div>
-					</div>
-					<audio id="audio" src=""></audio>
-					<div class="music-properties">
-						
-						<div class="music-bar">
-							
+						<div class="avatar col-12 col-lg-12 col-md-12 col-sm-12">
+							<div class="wrap-img-shadow-1"></div>
+							<div class="wrap-img-shadow-2"></div>
+							<div class="wrap-img-shadow-3"></div>
+							<img src="">
+						</div>
+						<div class="info col-12 col-lg-12 col-md-12 col-sm-12">
+							<div class="name col-12 col-lg-12 col-md-12 col-sm-12"></div>
+							<div class="creator col-12 col-lg-12 col-md-12 col-sm-12"></div>
+						</div>
+						<audio id="audio" src=""></audio>
+						<div class="music-bar col-12  col-12 col-lg-12 col-md-12 col-sm-12">
 							<div class="progress">
-	
 								<div class="progress-bar">
 									<div class="dot"></div>
 								</div>
-								
 							</div>
-							
-						</div>
-						<div class="music-controll">
+							<div class="music-controll col-12  col-12 col-lg-12 col-md-12 col-sm-12">
 
-							<ion-icon name="infinite-outline" class="btn-loop" ></ion-icon>
+								<ion-icon name="infinite-outline" class="btn-loop"></ion-icon>
 
-							<i class="fas fa-step-backward btn-prev"></i>
+								<i class="fas fa-step-backward btn-prev"></i>
 
-							<i class="fas fa-play-circle"></i>
+								<i class="fas fa-play-circle"></i>
 
-							<i class="fas fa-step-forward btn-next"></i>
+								<i class="fas fa-step-forward btn-next"></i>
 
-
-							<ion-icon  name="shuffle-outline" class="btn-random"></ion-icon>
+								<ion-icon name="shuffle-outline" class="btn-random"></ion-icon>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="music-box">
-					<h2>TOP MUSIC VIP</h2>
-					<ul class="list-music"></ul>
+					<div class="music-box">
+						<h2>TOP MUSIC VIP</h2>
+						<ul class="list-music"></ul>
+					</div>
 				</div>
 			</div>
-			<div class="copyright-vip-coder">
+			<div class="copyright-vip-coder col-12 col-lg-12 col-md-12 col-sm-12">
 				<span class="vip-0"><i class="far fa-copyright"></i></span>
 				<span class="vip-1">Copyright by </span>
-				<span class="vip-2">songvedem</span>
+				<span class="vip-2">Songvedem</span>
 			</div>
 		</div>
-		
+
 	</div>
-
-
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script type="text/javascript" src="assets/app.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-	<script type="text/javascript" src="assets/app.js"></script>
+
 </body>
+
 </html>

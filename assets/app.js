@@ -5,7 +5,7 @@ window.onload = async ()=>{
 	await getData();
 	$body.removeClass("loading");
 }
-const musicContent = document.querySelector(".music-content");
+const musicContent = document.querySelector(".row");
 const avatar = document.querySelector(".avatar img");
 const name = document.querySelector(".music-play .name");
 const creator = document.querySelector(".music-play .creator");
