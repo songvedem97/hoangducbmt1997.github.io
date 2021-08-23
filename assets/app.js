@@ -1,7 +1,7 @@
 window.onload = async ()=>{
 	$body = $("body");
 	$body.addClass("loading");
-	await getSong();
+	getSong();
 	await getData();
 	$body.removeClass("loading");
 }
