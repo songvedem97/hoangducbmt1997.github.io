@@ -5,7 +5,7 @@
 	--blue: #569cfa;
 	--orange: #ffcc81;
 	--cyan: #7ed1e2;
-  }
+}
 *{
     margin: 0;
     padding: 0;
@@ -123,11 +123,13 @@ body{
 .wrap-now-playing{
 	position: relative;
 	color: #06306A;
+	width: 100%;
 }
 .wrap-playing-icon{
 	margin-top: 40px;
 	margin-bottom: 25px;
 	position: relative;
+	width: 100%;
 }
 .now-playing-title-icon-back{
 	font-size: 0.9rem;
@@ -144,6 +146,7 @@ body{
 .wrap-playing-icon p{
 	font-size: 0.9rem;
 	font-weight: bold;
+	text-align: center;
 }
 /*-Time-*/
 .wrap-time{
@@ -165,17 +168,14 @@ body{
 /*-Avatar-*/
 .avatar{
     position: relative;
-	width: 250px;
-	height: 250px;
 	display: flex;
 	justify-content: center;
 }
 .wrap-img-shadow-1{
 	top: 50px;
-	left: 15px;
+	border-radius: 50%;
 	position: absolute;
 	background-color: #EEF2F8;
-	border-radius: 50%;
 	width: 316px;
 	height: 150px;
 }
@@ -272,9 +272,8 @@ body{
 	align-items: center;
 	cursor: pointer;
 	padding: 5px 0;
-	background-color: #fff;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	color: #373947;
 }
 /*Loop*/
@@ -324,6 +323,7 @@ body.loading .wrap-pre-loader {
 	font-size: 0.8rem;
 	font-weight: bold;
 	text-align: center;
+	margin-bottom: 50px;
 }
 .vip-0{
 	color: #06306A;

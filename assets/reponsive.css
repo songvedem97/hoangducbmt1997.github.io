@@ -1,0 +1,207 @@
+/*-LG-*/
+@media only screen  and (max-width: 991px) and (min-width: 850px) {
+    .container{
+    width: 50%;
+    }
+    .wrap-time{
+        margin-bottom: 20px;
+    }
+    .music-play .music-controll{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    } 
+}
+/*-MD-*/
+@media only screen and (max-width: 849px) and (min-width: 768px) {
+    .container{
+    width: 50%;
+    }
+}
+/*-SM-*/
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    .container{
+    width: 50%;
+    }
+    .wrap-playing-icon{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    .wrap-time{
+        margin-bottom: 20px;
+    }
+    .music-play .avatar img{
+        width: 220px;
+        height: 220px;
+    }
+    .wrap-img-shadow-1{
+       height: 120px;
+       width: 266px;
+    }
+    .wrap-img-shadow-2{
+        width: 240px;
+        height: 170px;
+    }
+    .wrap-img-shadow-3{
+        height: 220px;
+        width: 220px;
+    }
+    .music-play .info .name {
+        padding-bottom: 10px;
+    }
+    .music-play .info{
+        height: 120px;
+    }
+    .music-play .music-controll{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .music-play .info{
+        height: 150px;
+    }      
+
+}
+/*-XSM-*/
+@media only screen and (max-width:575px) and (min-width: 401px){
+        .container{
+        width: 70%;
+        }
+        .music-wrap{
+            width: 300px;
+        }
+        .now-playing-title-icon-back{
+            font-size: 0.6rem;
+            margin-left: 20px;
+        }   
+        .wrap-playing-icon p {
+            font-size: 0.7rem;
+        }
+        .now-playing-title-icon-list{
+            font-size: 0.6rem;
+            margin-right: 20px;
+        }
+        .wrap-time{
+            font-size: 0.6rem;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        .current-time{
+            padding-left: 0px;
+        }
+        .duration-time{
+            padding-right: 0px;
+        }
+        .music-play .avatar img{
+            width: 150px;
+            height: 150px;
+        }
+        .wrap-img-shadow-2{
+            top: 32px;
+            height: 85px;
+            width: 166px;
+         }
+         .wrap-img-shadow-1{
+             top: 47px;
+             width: 180px;
+             height: 55px;
+         }
+        .wrap-img-shadow-3{
+            height: 150px;
+            width: 150px;
+        }
+        .music-play .info .name {
+            padding-bottom: 10px;
+            font-size: 1.2rem;
+            padding-top: 20px;
+        }
+        .music-play .info{
+            height: 115px;
+        }
+        .music-play .music-controll{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .music-play .music-controll :nth-child(1){
+            margin-left: 10px;
+            font-size: 0.6rem;
+        }
+        .music-play .music-controll :nth-child(3){
+            font-size: 2.5rem;
+        }
+        .music-play .music-controll :nth-child(5){
+            margin-right: 10px;
+            font-size: 0.6rem;
+        }
+}
+/*-XXSM-*/
+@media only screen and (max-width: 400px){
+    .container{
+    width: 100%;
+    }
+    .music-wrap{
+        width: 280px;
+    }
+    .now-playing-title-icon-back{
+        font-size: 0.6rem;
+        margin-left: 10px;
+    }   
+    .wrap-playing-icon p {
+        font-size: 0.7rem;
+        width: 100px;
+    }
+    .now-playing-title-icon-list{
+        font-size: 0.6rem;
+        margin-right: 10px;
+    }
+    .wrap-time{
+        font-size: 0.6rem;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    .current-time{
+        padding-left: 0px;
+    }
+    .duration-time{
+        padding-right: 0px;
+    }
+    .music-play .avatar img{
+        width: 150px;
+        height: 150px;
+    }
+    .wrap-img-shadow-2{
+        top: 32px;
+        height: 85px;
+        width: 166px;
+     }
+     .wrap-img-shadow-1{
+         top: 47px;
+         width: 180px;
+         height: 55px;
+     }
+    .wrap-img-shadow-3{
+        height: 150px;
+        width: 150px;
+    }
+    .music-play .info .name {
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+        padding-top: 20px;
+    }
+    .music-play .info{
+        height: 115px;
+    }
+    .music-play .music-controll{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .music-play .music-controll :nth-child(1){
+        margin-left: 10px;
+        font-size: 0.6rem;
+    }
+    .music-play .music-controll :nth-child(3){
+        font-size: 2.5rem;
+    }
+    .music-play .music-controll :nth-child(5){
+        margin-right: 10px;
+        font-size: 0.6rem;
+    }
+}
