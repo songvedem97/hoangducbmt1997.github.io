@@ -66,7 +66,7 @@
         width: 70%;
         }
         .music-wrap{
-            width: 300px;
+            width: 290px;
         }
         .now-playing-title-icon-back{
             font-size: 0.6rem;
@@ -117,8 +117,8 @@
             height: 115px;
         }
         .music-play .music-controll{
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
         .music-play .music-controll :nth-child(1){
             margin-left: 10px;
@@ -141,7 +141,7 @@
     width: 100%;
     }
     .music-wrap{
-        width: 280px;
+        width: 270px;
     }
     .now-playing-title-icon-back{
         font-size: 0.6rem;
@@ -193,8 +193,8 @@
         height: 115px;
     }
     .music-play .music-controll{
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .music-play .music-controll :nth-child(1){
         margin-left: 10px;
