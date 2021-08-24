@@ -131,6 +131,9 @@
             margin-right: 10px;
             font-size: 0.6rem;
         }
+        .copyright-vip-coder{
+            margin-bottom: 20px;
+        }
 }
 /*-XXSM-*/
 @media only screen and (max-width: 400px){
@@ -203,5 +206,8 @@
     .music-play .music-controll :nth-child(5){
         margin-right: 10px;
         font-size: 0.6rem;
+    }
+    .copyright-vip-coder{
+        margin-bottom: 20px;
     }
 }
