@@ -1,3 +1,12 @@
+
+
+/*-Orther screen-*/
+@media only screen and (min-width: 992px) {
+    .music-wrap{
+        width: 380px;
+    }
+}
+
 /*-LG-*/
 @media only screen  and (max-width: 991px) and (min-width: 850px) {
     .container{
