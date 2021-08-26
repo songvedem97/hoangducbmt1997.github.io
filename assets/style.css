@@ -135,13 +135,13 @@ body{
 	font-size: 0.9rem;
 	position: absolute;
 	left: 0;
-	margin-left: 40px;
+	margin-left: 35px;
 }
 .now-playing-title-icon-list{
 	font-size: 1rem;
 	position: absolute;
 	right: 0;
-	margin-right: 40px;
+	margin-right: 35px;
 }
 .wrap-playing-icon p{
 	font-size: 0.9rem;
@@ -176,21 +176,21 @@ body{
 	border-radius: 50%;
 	position: absolute;
 	background-color: #EEF2F8;
-	width: 316px;
-	height: 150px;
+	width: 276px;
+	height: 120px;
 }
 .wrap-img-shadow-2{
 	top: 25px;
-	height: 200px;
-	width: 280px;
+	height: 170px;
+	width: 250px;
 	position: absolute;
 	background-color: #02315a;
 	border-radius: 50%;
 	opacity: 0.1;
 }
 .wrap-img-shadow-3{
-	width: 250px;
-    height: 250px;
+	width: 220px;
+    height: 220px;
 	border-radius: 50%;
 	position: absolute;
 	background-color: white;
@@ -201,8 +201,8 @@ body{
 	border-radius: 50%;
 	animation: rotate 8s linear infinite;
 	animation-play-state: paused;
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
 	border: 3px solid #fff;
 	z-index: 5;
 }
@@ -279,18 +279,18 @@ body{
 /*Loop*/
 .music-play .music-controll :nth-child(1){
 	margin-left: 30px;
-	font-size: 1.2rem;
-	height: 15px;
-	width: 15px;
+	font-size: 1rem;
+	height: 20px;
+	width: 20px;
 	padding: 5px;
 	border-radius: 50%;
 }
 /*Random*/
 .music-play .music-controll :nth-child(5){
 	margin-right: 30px;
-	font-size: 1.2rem;
-	height: 15px;
-	width: 15px;
+	font-size: 1rem;
+	height: 20px;
+	width: 20px;
 	padding: 5px;
 	border-radius: 50%;
 }

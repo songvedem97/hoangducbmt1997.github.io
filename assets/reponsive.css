@@ -3,7 +3,7 @@
 /*-Orther screen-*/
 @media only screen and (min-width: 992px) {
     .music-wrap{
-        width: 380px;
+        width: 360px;
     }
 }
 
@@ -15,6 +15,9 @@
     .wrap-time{
         margin-bottom: 20px;
     }
+    .music-wrap{
+        width: 340px;
+    }
     .music-play .music-controll{
         margin-top: 30px;
         margin-bottom: 30px;
@@ -25,12 +28,28 @@
     .container{
     width: 50%;
     }
+    .music-wrap{
+        width: 340px;
+    }
+    .music-play .music-controll :nth-child(1){
+        font-size: 0.8rem;
+        height: 17px;
+        width: 17px;
+    }
+    .music-play .music-controll :nth-child(5){
+        height: 17px;
+        width: 17px;    
+        font-size: 0.8rem;
+    }
 }
 /*-SM-*/
 @media only screen and (max-width: 767px) and (min-width: 576px) {
     .container{
     width: 50%;
     }
+    .music-wrap{
+        width: 330px;
+    }   
     .wrap-playing-icon{
         margin-top: 40px;
         margin-bottom: 10px;
@@ -66,6 +85,16 @@
     }
     .music-play .info{
         height: 150px;
+    }
+    .music-play .music-controll :nth-child(1){
+        font-size: 0.8rem;
+        height: 17px;
+        width: 17px;
+    }
+    .music-play .music-controll :nth-child(5){
+        height: 17px;
+        width: 17px;    
+        font-size: 0.8rem;
     }      
 
 }
@@ -132,6 +161,8 @@
         .music-play .music-controll :nth-child(1){
             margin-left: 10px;
             font-size: 0.6rem;
+            height: 15px;
+            width: 15px;
         }
         .music-play .music-controll :nth-child(3){
             font-size: 2.5rem;
@@ -139,6 +170,8 @@
         .music-play .music-controll :nth-child(5){
             margin-right: 10px;
             font-size: 0.6rem;
+            height: 15px;
+            width: 15px;
         }
         .copyright-vip-coder{
             margin-bottom: 20px;
@@ -180,13 +213,13 @@
         height: 150px;
     }
     .wrap-img-shadow-2{
-        top: 32px;
-        height: 85px;
+        top: 27px;
+        height: 95px;
         width: 166px;
      }
      .wrap-img-shadow-1{
          top: 47px;
-         width: 180px;
+         width: 186px;
          height: 55px;
      }
     .wrap-img-shadow-3{
@@ -208,6 +241,8 @@
     .music-play .music-controll :nth-child(1){
         margin-left: 10px;
         font-size: 0.6rem;
+        width: 15px;
+        height: 15px;
     }
     .music-play .music-controll :nth-child(3){
         font-size: 2.5rem;
@@ -215,6 +250,8 @@
     .music-play .music-controll :nth-child(5){
         margin-right: 10px;
         font-size: 0.6rem;
+        width: 15px;
+        height: 15px;
     }
     .copyright-vip-coder{
         margin-bottom: 20px;

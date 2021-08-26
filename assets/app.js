@@ -235,9 +235,6 @@ btnLoop.addEventListener("click",()=>{
 		isLoop = false;
 		removeLoopSong();
 	}
-	setTimeout(()=>{
-		playSong();
-	},400)
 })
 list.addEventListener("click", (e)=>{
 	songIndex = e.target.closest("li").getAttribute("data-index");
