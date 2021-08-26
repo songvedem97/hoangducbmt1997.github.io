@@ -284,6 +284,7 @@ body{
 	width: 20px;
 	padding: 5px;
 	border-radius: 50%;
+	transform: rotate(180deg);
 }
 /*Random*/
 .music-play .music-controll :nth-child(5){
