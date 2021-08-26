@@ -222,9 +222,6 @@ btnRandom.addEventListener("click",()=>{
 		isRandom = false;
 		removeRandomSong();
 	}
-	setTimeout(()=>{
-		playSong();
-	},400)
 })
 btnLoop.addEventListener("click",()=>{
 	if(isLoop == false ){
