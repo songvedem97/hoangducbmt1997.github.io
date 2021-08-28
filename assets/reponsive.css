@@ -166,18 +166,27 @@
             font-size: 0.6rem;
             height: 15px;
             width: 15px;
+            cursor: none;
         }
         .music-play .music-controll :nth-child(3){
             font-size: 2.5rem;
+            cursor: none;
         }
         .music-play .music-controll :nth-child(5){
             margin-right: 10px;
             font-size: 0.6rem;
             height: 15px;
             width: 15px;
+            cursor: none;
         }
         .copyright-vip-coder{
             margin-bottom: 20px;
+        }
+        .music-play .music-controll :nth-child(2){
+            cursor: none;
+        }
+        .music-play .music-controll :nth-child(4){
+            cursor: none;
         }
 }
 /*-XXSM-*/
@@ -246,15 +255,24 @@
         font-size: 0.6rem;
         width: 15px;
         height: 15px;
+        cursor: none;
+    }
+    .music-play .music-controll :nth-child(2){
+        cursor: none;
+    }
+    .music-play .music-controll :nth-child(4){
+        cursor: none;
     }
     .music-play .music-controll :nth-child(3){
         font-size: 2.5rem;
+        cursor: none;
     }
     .music-play .music-controll :nth-child(5){
         margin-right: 10px;
         font-size: 0.6rem;
         width: 15px;
         height: 15px;
+        cursor: none;
     }
     .copyright-vip-coder{
         margin-bottom: 20px;
