@@ -8,6 +8,9 @@
     .music-play .music-controll{
         cursor: pointer;
     }
+    .music-play .music-controll .btn-play i{
+        margin-top: 2px;
+    }
        
 }
 
@@ -49,7 +52,7 @@
         font-size: 0.9rem;
     }
     .wrap-now-playing {
-        height: 160px;
+        padding-top: 40px;
     }
     .music-play .info {
         height: 150px;
@@ -98,7 +101,7 @@
         margin-top: 10px;
     }
     .wrap-now-playing {
-        height: 140px;
+        padding-top: 40px;
     }
     .music-play .avatar img{
         width: 220px;
@@ -114,6 +117,9 @@
     .music-play .music-controll {
         height: 130px;
     }
+    .music-play .music-controll {
+        width: 100%;
+    }
     .music-play .music-controll :nth-child(1){
         font-size: 0.9rem;
         height: 20px;
@@ -128,8 +134,8 @@
         font-size: 1.2rem;
     }
     .music-play .music-controll .btn-play {
-        height: 45px;
-        width: 45px;
+        height: 50px;
+        width: 50px;
     }
     .music-play .music-controll .btn-play i{
         font-size: 1rem;
@@ -160,7 +166,7 @@
             margin-top: 10px;
         }
         .wrap-now-playing {
-            height: 140px;
+            padding-top: 40px;
         }
         .wrap-time{
             font-size: 0.7rem;
@@ -187,10 +193,19 @@
             height: 23px;
 	        width: 23px;
         }
+        .music-play .music-controll {
+            width: 100%;
+        }
         .music-play .music-controll :nth-child(1){
             font-size: 0.9rem;
             height: 20px;
             width: 20px;
+        }
+        .music-play .music-controll :nth-child(2){
+            font-size: 1.2rem;
+        }
+        .music-play .music-controll :nth-child(4){
+            font-size: 1.2rem;
         }
         .music-play .music-controll :nth-child(5){
             height: 20px;
@@ -233,7 +248,7 @@
         margin-top: 10px;
     }
     .wrap-now-playing {
-        height: 130px;
+        padding-top: 40px;
     }
     .wrap-time{
         width: 100%;
@@ -261,6 +276,9 @@
         margin-top: -0.6rem;
         height: 23px;
         width: 23px;
+    }
+    .music-play .music-controll {
+        width: 100%;
     }
     .music-play .music-controll :nth-child(1){
         font-size: 0.9rem;
