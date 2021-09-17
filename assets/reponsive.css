@@ -3,11 +3,12 @@
 /*-Orther screen-*/
 @media only screen and (min-width: 992px) {
     .music-wrap{
-        width: 360px;
+        width: 400px;
     }
     .music-play .music-controll{
         cursor: pointer;
-    }    
+    }
+       
 }
 
 /*-LG-*/
@@ -18,12 +19,17 @@
     .wrap-time{
         margin-bottom: 20px;
     }
+    .wrap-now-playing {
+        height: 190px;
+    } 
     .music-wrap{
-        width: 340px;
+        width: 380px;
+    }
+    .music-play .info .name {
+        font-size: 1.4rem;
     }
     .music-play .music-controll{
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     } 
 }
 /*-MD-*/
@@ -32,17 +38,44 @@
     width: 50%;
     }
     .music-wrap{
-        width: 340px;
+        width: 360px;
+    }
+    .btn-volume, .btn-list {
+        height: 45px;
+        width: 45px;
+        font-size: 0.9rem;
+    }
+    .title-playing p{
+        font-size: 0.9rem;
+    }
+    .wrap-now-playing {
+        height: 160px;
+    }
+    .music-play .info {
+        height: 150px;
+    }
+    .music-play .music-controll {
+        height: 150px;
     }
     .music-play .music-controll :nth-child(1){
-        font-size: 0.8rem;
-        height: 17px;
-        width: 17px;
+        font-size: 0.9rem;
+        height: 20px;
+        width: 20px;
     }
     .music-play .music-controll :nth-child(5){
-        height: 17px;
-        width: 17px;    
-        font-size: 0.8rem;
+        height: 20px;
+        width: 20px;    
+        font-size: 0.9rem;
+    }
+    .music-play .info .name {
+        font-size: 1.4rem;
+    }
+    .music-play .music-controll .btn-play {
+        height: 50px;
+        width: 50px;
+    }
+    .music-play .music-controll .btn-play i{
+        font-size: 1.2rem;
     }
 }
 /*-SM-*/
@@ -51,52 +84,58 @@
     width: 50%;
     }
     .music-wrap{
-        width: 330px;
+        width: 360px;
     }   
-    .wrap-playing-icon{
-        margin-top: 40px;
-        margin-bottom: 10px;
+    .btn-volume, .btn-list {
+        height: 38px;
+        width: 38px;
+        font-size: 0.8rem;
     }
-    .wrap-time{
-        margin-bottom: 20px;
+    .title-playing p{
+        font-size: 0.8rem;
+    }
+    .title-playing {
+        margin-top: 10px;
+    }
+    .wrap-now-playing {
+        height: 140px;
     }
     .music-play .avatar img{
         width: 220px;
         height: 220px;
     }
-    .wrap-img-shadow-1{
-       height: 120px;
-       width: 266px;
-    }
-    .wrap-img-shadow-2{
-        width: 240px;
-        height: 170px;
-    }
-    .wrap-img-shadow-3{
-        height: 220px;
+    .wrap-img-shadow-3 {
         width: 220px;
+        height: 220px;
     }
-    .music-play .info .name {
-        padding-bottom: 10px;
+    .music-play .info {
+        height: 140px;
     }
-    .music-play .info{
-        height: 120px;
-    }
-    .music-play .music-controll{
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    .music-play .info{
-        height: 150px;
+    .music-play .music-controll {
+        height: 130px;
     }
     .music-play .music-controll :nth-child(1){
-        font-size: 0.8rem;
-        height: 17px;
-        width: 17px;
+        font-size: 0.9rem;
+        height: 20px;
+        width: 20px;
     }
     .music-play .music-controll :nth-child(5){
-        height: 17px;
-        width: 17px;    
+        height: 20px;
+        width: 20px;    
+        font-size: 0.9rem;
+    }
+    .music-play .info .name {
+        font-size: 1.2rem;
+    }
+    .music-play .music-controll .btn-play {
+        height: 45px;
+        width: 45px;
+    }
+    .music-play .music-controll .btn-play i{
+        font-size: 1rem;
+        margin-top: 4px;
+    }
+    .copyright-vip-coder{
         font-size: 0.8rem;
     }      
 
@@ -107,79 +146,70 @@
         width: 70%;
         }
         .music-wrap{
-            width: 290px;
-        }
-        .now-playing-title-icon-back{
-            font-size: 0.6rem;
-            margin-left: 20px;
+            width: 340px;
         }   
-        .wrap-playing-icon p {
-            font-size: 0.7rem;
+        .btn-volume, .btn-list {
+            height: 38px;
+            width: 38px;
+            font-size: 0.8rem;
         }
-        .now-playing-title-icon-list{
-            font-size: 0.6rem;
-            margin-right: 20px;
+        .title-playing p{
+            font-size: 0.8rem;
+        }
+        .title-playing {
+            margin-top: 10px;
+        }
+        .wrap-now-playing {
+            height: 140px;
         }
         .wrap-time{
-            font-size: 0.6rem;
-            margin-top: 0px;
-            margin-bottom: 20px;
-        }
-        .current-time{
-            padding-left: 0px;
-        }
-        .duration-time{
-            padding-right: 0px;
+            font-size: 0.7rem;
         }
         .music-play .avatar img{
-            width: 150px;
-            height: 150px;
+            width: 220px;
+            height: 220px;
         }
-        .wrap-img-shadow-2{
-            top: 32px;
-            height: 85px;
-            width: 166px;
-         }
-         .wrap-img-shadow-1{
-             top: 47px;
-             width: 180px;
-             height: 55px;
-         }
-        .wrap-img-shadow-3{
-            height: 150px;
-            width: 150px;
+        .wrap-img-shadow-3 {
+            width: 220px;
+            height: 220px;
         }
-        .music-play .info .name {
-            padding-bottom: 10px;
-            font-size: 1.2rem;
-            padding-top: 20px;
+        .music-play .info {
+            height: 140px;
         }
-        .music-play .info{
-            height: 115px;
+        .music-play .music-controll {
+            height: 130px;
         }
-        .music-play .info .creator {
-            font-size: 0.6rem;
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 5px;
         }
-        .music-play .music-controll{
-            margin-top: 30px;
-            margin-bottom: 30px;
+        input[type=range]::-webkit-slider-thumb {
+            margin-top: -0.6rem;
+            height: 23px;
+	        width: 23px;
         }
         .music-play .music-controll :nth-child(1){
-            margin-left: 10px;
-            font-size: 0.6rem;
-            height: 15px;
-            width: 15px;
-        }
-        .music-play .music-controll :nth-child(3){
-            font-size: 2.5rem;
+            font-size: 0.9rem;
+            height: 20px;
+            width: 20px;
         }
         .music-play .music-controll :nth-child(5){
-            margin-right: 10px;
-            font-size: 0.6rem;
-            height: 15px;
-            width: 15px;
+            height: 20px;
+            width: 20px;    
+            font-size: 0.9rem;
+        }
+        .music-play .info .name {
+            font-size: 1.2rem;
+        }
+        .music-play .music-controll .btn-play {
+            height: 45px;
+            width: 45px;
+        }
+        .music-play .music-controll .btn-play i{
+            font-size: 1rem;
+            margin-top: 5px;
         }
         .copyright-vip-coder{
+            font-size: 0.8rem;
             margin-bottom: 20px;
         }
 }
@@ -189,80 +219,72 @@
     width: 100%;
     }
     .music-wrap{
-        width: 270px;
+        width: 310px;
     }
-    .now-playing-title-icon-back{
-        font-size: 0.6rem;
-        margin-left: 10px;
-    }   
-    .wrap-playing-icon p {
-        font-size: 0.7rem;
-        width: 100px;
+    .btn-volume, .btn-list {
+        height: 38px;
+        width: 38px;
+        font-size: 0.8rem;
     }
-    .now-playing-title-icon-list{
-        font-size: 0.6rem;
-        margin-right: 10px;
+    .title-playing p{
+        font-size: 0.8rem;
+    }
+    .title-playing {
+        margin-top: 10px;
+    }
+    .wrap-now-playing {
+        height: 130px;
     }
     .wrap-time{
-        font-size: 0.6rem;
-        margin-top: 0px;
-        margin-bottom: 20px;
-    }
-    .current-time{
-        padding-left: 0px;
-    }
-    .duration-time{
-        padding-right: 0px;
+        width: 100%;
+        font-size: 0.7rem;
+
     }
     .music-play .avatar img{
-        width: 150px;
-        height: 150px;
+        width: 210px;
+        height: 210px;
     }
-    .wrap-img-shadow-2{
-        top: 27px;
-        height: 95px;
-        width: 166px;
-     }
-     .wrap-img-shadow-1{
-         top: 47px;
-         width: 186px;
-         height: 55px;
-     }
-    .wrap-img-shadow-3{
-        height: 150px;
-        width: 150px;
+    .wrap-img-shadow-3 {
+        width: 210px;
+        height: 210px;
     }
-    .music-play .info .name {
-        padding-bottom: 10px;
-        font-size: 1.2rem;
-        padding-top: 20px;
+    .music-play .info {
+        height: 140px;
     }
-    .music-play .info{
-        height: 115px;
+    .music-play .music-controll {
+        height: 110px;
     }
-    .music-play .music-controll{
-        margin-top: 30px;
-        margin-bottom: 30px;
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 5px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        margin-top: -0.6rem;
+        height: 23px;
+        width: 23px;
     }
     .music-play .music-controll :nth-child(1){
-        margin-left: 10px;
-        font-size: 0.6rem;
-        width: 15px;
-        height: 15px;
-    }
-    .music-play .music-controll :nth-child(3){
-        font-size: 2.5rem;
+        font-size: 0.9rem;
+        height: 20px;
+        width: 20px;
     }
     .music-play .music-controll :nth-child(5){
-        margin-right: 10px;
-        font-size: 0.6rem;
-        width: 15px;
-        height: 15px;
+        height: 20px;
+        width: 20px;    
+        font-size: 0.9rem;
+    }
+    .music-play .info .name {
+        font-size: 1.2rem;
+    }
+    .music-play .music-controll .btn-play {
+        height: 40px;
+        width: 40px;
+    }
+    .music-play .music-controll .btn-play i{
+        font-size: 0.9rem;
+        margin-top: 5px;
     }
     .copyright-vip-coder{
+        font-size: 0.8rem;
         margin-bottom: 20px;
-    }
-    .music-play .info .creator {
-        font-size: 0.6rem;
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/reponsive.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 </head>
+
 <body>
 	<div class="wrap-pre-loader">
 		<div class="pre-loader">
@@ -23,54 +25,51 @@
 	</div>
 	<div id="app" class="container">
 		<div class="row">
-				<div class="music-wrap col-4 col-lg-9 col-md-11 col-sm-12 col-xsm-12 ">
-					<div class="music-play">
-						<div class="wrap-now-playing">
-							<div class="row col-xxm-12">
-								<div class="wrap-playing-icon col-3 col-lg-3 col-md-3 col-sm-3 col-xsm-2 "><i
-										class="fas fa-chevron-left now-playing-title-icon-back"></i></div>
-								<div class="wrap-playing-icon col-6 col-lg-6 col-md-6 col-sm-6 col-xsm-8 ">
-									<p>Now Playing</p>
-								</div>
-								<div class="wrap-playing-icon col-3 col-lg-3 col-md-3 col-sm-3 col-xsm-2 "><i
-										class="fas fa-ellipsis-v now-playing-title-icon-list"></i></div>
+			<div class="music-wrap col-4 col-lg-9 col-md-11  col-xsm-12 ">
+				<div class="music-play">
+					<div class="wrap-now-playing">
+						<div class="wrapp-title row col-xxm-12">
+							<div class="btn-volume"><i
+									class="fas fa-volume-up now-playing-title-icon-back"></i></div>
+							<div class="title-playing col-6 col-lg-6 col-md-6 col-sm-6 col-xsm-8 ">
+								<p>Now Playing</p>
 							</div>
-								<div class="wrap-time col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
-									<span class="current-time ">00:00</span>
-									<span class="duration-time "></span>
-								</div>
+							<div class="btn-list"><i
+									class="fas fa-bars now-playing-title-icon-list"></i></div>
 						</div>
-						<div class="avatar col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12">
-							<div class="wrap-img-shadow-1"></div>
-							<div class="wrap-img-shadow-2"></div>
-							<div class="wrap-img-shadow-3"></div>
-							<img src="" class="">
-						</div>
-						<div class="info col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
-							<div class="name "></div>
-							<div class="creator "></div>
-						</div>
-						<audio id="audio" src=""></audio>
-						<div class="music-bar col-12  col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
-							<div class="progress">
-								<div class="progress-bar">
-									<div class="dot"></div>
-								</div>
-							</div>
-							<div class="music-controll col-12  col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
-								<ion-icon name="shuffle-outline" class="btn-random"></ion-icon>
-								<i class="fas fa-step-backward btn-prev"></i>
-								<i class="fas fa-play-circle"></i>
-								<i class="fas fa-step-forward btn-next"></i>
-								<ion-icon name="infinite-outline"  class="btn-loop"></ion-icon>
-							</div>
+						<div class="wrap-time col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
+							<span class="current-time ">00:00</span>
+							<span class="duration-time "></span>
 						</div>
 					</div>
-					<div class="music-box">
-						<h2>TOP MUSIC VIP</h2>
-						<ul class="list-music"></ul>
+					<div class="avatar col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12">
+						<div class="wrap-img-shadow-3"></div>
+						<img src="" class="">
+					</div>
+					<div class="info col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
+						<div class="name "></div>
+						<div class="creator "></div>
+					</div>
+					<audio id="audio" src=""></audio>
+					<div class="music-bar col-12  col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
+						<div class="wrap-progress-bar">
+							<input class="test-progress-bar" type="range" value="0" step="1" min="0" max="100" />
+						</div>
+						
+						<div class="music-controll col-12  col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
+							<ion-icon name="shuffle-outline" class="btn-random"></ion-icon>
+							<i class="fas fa-step-backward btn-prev"></i>
+							<div class="btn-play"><i class="fas fa-play"></i></div>
+							<i class="fas fa-step-forward btn-next"></i>
+							<ion-icon name="infinite-outline" class="btn-loop"></ion-icon>
+						</div>
 					</div>
 				</div>
+				<div class="music-box">
+					<h2>TOP MUSIC VIP</h2>
+					<ul class="list-music"></ul>
+				</div>
+			</div>
 		</div>
 		<div class="copyright-vip-coder col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
 			<span class="vip-0"><i class="far fa-copyright"></i></span>
@@ -86,4 +85,5 @@
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </body>
+
 </html>
