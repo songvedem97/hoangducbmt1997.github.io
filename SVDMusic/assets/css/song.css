@@ -1,0 +1,132 @@
+:root {
+    --bg--color: #1D2D47;
+    --blue--color: #0E192A;
+    --gray--color: #afafaf;
+    --light--gray--color: #d3d3d3;
+    --white--color: #fff;
+    --medium-blue--color: #11263a;
+    --light--blue--color: #00E5CE;
+    --yellow--color: #fbff00;
+    --purple--color: #423ea3;
+    --green--color: #00ffcc;
+    --bg--footer: #06141f;
+    --bg--search: hsla(0, 0%, 100%, 0.5);
+    --alpha--layout--bg: rgba(21, 37, 71, 0.8);
+}
+
+.ms-song-lyrics {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ms-song-lyrics .blur-song-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--alpha--layout--bg);
+    opacity: 0.9;
+}
+
+.ms-song-lyrics .img-blur {
+    width: 100%;
+    position: absolute;
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+}
+
+.wrapper-ms-song-lyrics {
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ms-wrapper-content-song .song-action {
+    height: 100%;
+    width: 40%;
+}
+
+.ms-wrapper-content-song .song-action .wrapper-song-action {
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.wrapper-img-action {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2px;
+}
+
+.wrapper-img-action img {
+    width: 100%;
+}
+
+.wrapper-equalize {
+    z-index: 2;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    left: 20px;
+}
+.song-action-info {
+    color: #fff;
+}
+
+/*--Lyrics--*/
+
+.wrapper-lyric {
+    width: 60%;
+    height: 370px;
+    z-index: 5;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+.container-lyrics {
+    width: 90%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper-title-lyrics {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    font-weight: 300 !important;
+}
+.song-action-info .name-song {
+    padding-bottom: 5px;
+}
+.song-action-info .name-creator {
+    font-size: 0.8rem;
+    color: var(--light--gray--color);
+}
+.current-line {
+    color: var(--yellow--color);
+}
+.lyric {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    transition: 0.2s;
+    top: 80px;
+    line-height: 70px;
+    font-weight: bold;
+}
+.lyricwrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-y: hidden;
+    -ms-overflow-y: hidden;
+    color: var(--light--gray--color);
+}

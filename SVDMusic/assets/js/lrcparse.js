@@ -1,6 +1,7 @@
 
 const audio = document.getElementById('audio');
 const lyricContainer = document.getElementById('lyric');
+const dataLrc = document.getElementById('audio').getAttribute('data-lrc');
 
 function parseLyric(text) {
     //Tách văn bản thành từng dòng và lưu trữ nó trong một mảng
@@ -27,10 +28,10 @@ function parseLyric(text) {
 }
 
 
-getLrc = function () {
+getLrc = function (url) {
     $.ajax({
         type: "get",
-        url: "co-hen-voi-thanh-xuan-MONSTAR.lrc",
+        url: url,
         dataType: "text",
     })
         .done(function (data) {
@@ -66,7 +67,7 @@ getLrc = function () {
         }
     };
 
-getLrc();
+getLrc(dataLrc);
 
 audio.addEventListener('timeupdate', function (e) {
     for (var i = 0, l = lyric.length; i < l; i++) {
@@ -78,13 +79,8 @@ audio.addEventListener('timeupdate', function (e) {
             $(".current-line").attr("class", "");
             line.attr("class", "current-line");
             $(".lyric").css("top", "" + (80 - line.position().top) + "px");
-            if (lyric[i][1] !== '') {
-                document.title = lyric[i][1];
-            } else {
-                document.title = 'Goodbye';
-            }
         }
     }
 
-}, false);
+});
 
