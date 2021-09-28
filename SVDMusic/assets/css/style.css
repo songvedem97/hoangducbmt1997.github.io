@@ -89,6 +89,11 @@ body {
     background-color: rgba(94, 110, 141, 0.9);
     visibility: hidden;
 }
+.bg-login{
+    filter: blur(px);
+    -webkit-filter: blur(5px);
+    transform: scale(1.1,1.1);
+}
 .modal-body{
     height: 100%;
     width: 100%;
@@ -125,7 +130,6 @@ body {
     font-size: 1.2rem;
     color: var(--gray-color);
 }
-
 .more-detail-login{
     margin-bottom: 10px;
 }
@@ -1118,7 +1122,7 @@ input[type=radio] {
 .carousel-mv-song .wrapper-mv-song{
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 140px;
     overflow: hidden;
 }
 .carousel-mv-song .item span{
