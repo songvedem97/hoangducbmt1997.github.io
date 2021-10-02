@@ -1057,7 +1057,6 @@ input[type=radio] {
     justify-content: center;
     align-items: center ;
     width: 50px;
-    border-radius: 2px;
     overflow: hidden;
 }
 .ms-list-song .list-music-item-info .avatar .btn-play{
