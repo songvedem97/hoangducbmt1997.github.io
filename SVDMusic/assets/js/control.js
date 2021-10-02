@@ -1,6 +1,5 @@
 
 /*--Login--*/
-var signIn = true;
 const signUpBtnHeader = document.getElementById('signUpHeader');
 const signInBtnHeader = document.getElementById('signInHeader');
 const signUpButton = document.getElementById('signUp');
@@ -34,7 +33,7 @@ $('.carousel-suggesstion-song').owlCarousel({
             items:3
         },
         900:{
-            items:5
+            items:6
         }
     }
 })
@@ -133,7 +132,7 @@ overlay.addEventListener('click',()=>{
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
       document.getElementById('header').style.backgroundColor='var(--blue-color)';
       document.getElementById('search').style.backgroundColor= 'var(--bg-color)';
       document.getElementById('input-search').style.color='var(--white-color)';

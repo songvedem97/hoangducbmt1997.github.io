@@ -10876,6 +10876,5 @@ if ( typeof noGlobal === "undefined" ) {
 
 
 
-console.log('b');
 return jQuery;
 } );
