@@ -646,23 +646,36 @@ input[type=radio] {
 .is-acttive:before {
     content: "";
     height: 34px;
-    width: 3px;
+    width: 40px;
     background-color: var(--light-blue-color);
     position: absolute;
     left: 0;
+    filter: blur(50px);
 }
-
+.is-acttive::after {
+    content: "";
+    height: 30px;
+    width: 4px;
+    background-color: var(--light-blue-color);
+    position: absolute;
+    filter: blur(0.5px);
+    top:2px;
+    left: 0;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius: 5px ;
+}
 .is-acttive {
-    background-color: #3d4f69;
+    overflow: hidden;
+    position: relative;
 }
-
+.is-acttive p, .is-acttive .material-icons-outlined {
+    color: var(--green-color);
+}
 .ms-nav-bar .material-icons-outlined {
     padding-left: 20px;
 }
 
-.is-acttive p, .is-acttive .material-icons-outlined {
-    color: var(--white-color);
-}
+
 .hr-nav-bar {
     height: 1px;
     width: 80%;

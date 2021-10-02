@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/user.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/rank-song.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
@@ -23,7 +23,7 @@
     <script src="assets/js/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://kit.fontawesome.com/f9275dded9.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -103,7 +103,7 @@
                             <p>Trang Chủ</p>
                         </li>
                     </a>
-                    <a href="#">
+                    <a href="#" class="is-acttive">
                         <li><span class="material-icons-outlined">equalizer</span>
                             <p>BXH</p>
                         </li>
@@ -162,22 +162,65 @@
                     </div>
                 </div>
             </div>
-            <div class="ms-user-profile-bg">
+            <div class="ms-ranking-song">
                 <div class="blur-song-bg"></div>
                 <div class="blur-song-bg-1"></div>
-                <img class="user-profile-bg" src="assets/image/bg-user-profile.jpg" />
+                <img class="ms-ranking-bg" src="assets/image/bg-login.PNG" />
+                <h1 class="title-ranking-song"># BẢNG XẾP HẠNG</h1>
             </div>
-            <div class="ms-wrapper-content-song">
+            <div class="ms-wrapper-content-song ms-list-ranking-song">
+
+                <div class="owl-carousel carousel-new-song">
+                    <div class="item">
+                        <div class="wrapper-suggesstion">
+                            <span class="material-icons flex-center">play_arrow</span>
+                            <div class="overlay"></div>
+                            <h1 class="number-new-song number-1">#1</h1>
+                            <img src="assets/image/banner-1.jpg" />
+                        </div>
+                        <div class="info-new-song">
+                            <div class="name">Sao Ta Ngược Lối</div>
+                            <div class="creator">Đình Dũng</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="wrapper-suggesstion">
+                            <span class="material-icons flex-center">play_arrow</span>
+                            <div class="overlay"></div>
+                            <h1 class="number-new-song number-2">#2</h1>
+                            <img src="assets/image/banner-2.jpg" />
+
+                        </div>
+                        <div class="info-new-song">
+                            <div class="name">Hạnh Phúc Bỏ Rơi Em</div>
+                            <div class="creator">Hương Ly</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="wrapper-suggesstion">
+                            <span class="material-icons flex-center">play_arrow</span>
+                            <div class="overlay"></div>
+                            <h1 class="number-new-song number-3">#3</h1>
+                            <img src="assets/image/banner-3.jpg" />
+
+                        </div>
+                        <div class="info-new-song">
+                            <div class="name">Yêu Thầm</div>
+                            <div class="creator">Hoàng Yến Chibi</div>
+                        </div>
+                    </div>
+
+
+                </div>
                 <div class="ms-list-song">
                     <div class="wrap-list-song">
-                        <ul class="list-music">
+                        <ul class="list-music list-music-ranking">
                             <li class="list-music-item" data-music="assets/mp3/pho-da-len-den-remix.mp3"
                                 data-lrc="assets/lyrics/pho-da-len-den-remix.lrc" data-name="Phố đã lên đèn"
                                 data-creator="Huyền Tâm Môn" data-avatar="assets/image/pho-da-len-den.jpg"
-                                data-img="assets/image/pho-da-len-den-banner.jpg"
-                                data-index="0">
+                                data-img="assets/image/pho-da-len-den-banner.jpg" data-index="0">
                                 <div class="equalizer-and-number">
-                                    <p class="number-item">01</p>
+                                    <p class="number-item">04</p>
                                 </div>
                                 <div class="list-music-item-info">
                                     <div class="avatar">
@@ -206,7 +249,7 @@
                                 data-creator="NB3 HOÀI BẢO" data-img="assets/image/co-duyen-khong-no-banner.jpg"
                                 data-avatar="assets/image/co-duyen-khong-no-remix.jpg" data-index="1">
                                 <div class="equalizer-and-number">
-                                    <p class="number-item">02</p>
+                                    <p class="number-item">05</p>
                                 </div>
 
                                 <div class="list-music-item-info">
@@ -237,7 +280,7 @@
                                 data-avatar="assets/image/do-toc-2-remix.jpg" data-index="2">
 
                                 <div class="equalizer-and-number">
-                                    <p class="number-item">03</p>
+                                    <p class="number-item">06</p>
                                 </div>
 
                                 <div class="list-music-item-info">
@@ -268,7 +311,7 @@
                                 data-avatar="assets/image/duong-toi-cho-em-ve-remix.jpg" data-index="3">
 
                                 <div class="equalizer-and-number">
-                                    <p class="number-item">04</p>
+                                    <p class="number-item">07</p>
                                 </div>
 
                                 <div class="list-music-item-info">
@@ -299,7 +342,7 @@
                                 data-avatar="assets/image/em-co-do-remix.jpg" data-index="4">
 
                                 <div class="equalizer-and-number">
-                                    <p class="number-item">05</p>
+                                    <p class="number-item">08</p>
                                 </div>
 
                                 <div class="list-music-item-info">
@@ -325,160 +368,160 @@
                                 </div>
                             </li>
                             <li class="list-music-item" data-music="assets/mp3/lan-hen-ho-dau-tien-remix.mp3"
-                            data-lrc="assets/lyrics/lan-hen-ho-dau-tien-remix.lrc"
-                            data-creator="Huyền Tâm Môn" data-avatar="assets/image/lan-hen-ho-dau-tien.jpg"
-                            data-img="assets/image/lan-hen-ho-dau-tien-banner.jpg" data-name="Lần hẹn hò đầu tiên"
-                            data-creator="Huyền Tâm Môn" data-index="5">
-                            <div class="equalizer-and-number">
-                                <p class="number-item">06</p>
-                            </div>
-                            <div class="list-music-item-info">
-                                <div class="avatar">
-                                    <div class="btn-play"><span class="material-icons">
-                                            play_arrow
-                                        </span></div>
-                                    <div class="over-lay-item-info"></div>
-                                    <img src="assets/image/lan-hen-ho-dau-tien.jpg">
+                                data-lrc="assets/lyrics/lan-hen-ho-dau-tien-remix.lrc" data-creator="Huyền Tâm Môn"
+                                data-avatar="assets/image/lan-hen-ho-dau-tien.jpg"
+                                data-img="assets/image/lan-hen-ho-dau-tien-banner.jpg" data-name="Lần hẹn hò đầu tiên"
+                                data-creator="Huyền Tâm Môn" data-index="5">
+                                <div class="equalizer-and-number">
+                                    <p class="number-item">09</p>
                                 </div>
-                                <div class="item-info">
-                                    <div class="name">Lần hẹn hò đầu tiên</div>
-                                    <div class="creator">Huyền Tâm Môn</div>
+                                <div class="list-music-item-info">
+                                    <div class="avatar">
+                                        <div class="btn-play"><span class="material-icons">
+                                                play_arrow
+                                            </span></div>
+                                        <div class="over-lay-item-info"></div>
+                                        <img src="assets/image/lan-hen-ho-dau-tien.jpg">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="name">Lần hẹn hò đầu tiên</div>
+                                        <div class="creator">Huyền Tâm Môn</div>
+                                    </div>
+                                    <div class="item-control">
+                                        <span class="material-icons-outlined">
+                                            mic
+                                        </span>
+                                        <span class="material-icons-outlined">
+                                            playlist_add
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="item-control">
-                                    <span class="material-icons-outlined">
-                                        mic
-                                    </span>
-                                    <span class="material-icons-outlined">
-                                        playlist_add
-                                    </span>
+                            </li>
+                            <li class="list-music-item" data-music="assets/mp3/co-hen-voi-thanh-xuan.mp3"
+                                data-lrc="assets/lyrics/co-hen-voi-thanh-xuan.lrc" data-name="Có hẹn với thanh xuân"
+                                data-creator="MONSTAR" data-avatar="assets/image/co-hen-voi-thanh-xuan-banner.jpg"
+                                data-img="assets/image/co-hen-voi-thanh-xuan.jpg" data-name="Có hẹn với thanh xuân"
+                                data-creator="MONSTAR" data-index="6">
+                                <div class="equalizer-and-number">
+                                    <p class="number-item">10</p>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="list-music-item" data-music="assets/mp3/co-hen-voi-thanh-xuan.mp3"
-                        data-lrc="assets/lyrics/co-hen-voi-thanh-xuan.lrc" data-name="Có hẹn với thanh xuân"
-                        data-creator="MONSTAR" data-avatar="assets/image/co-hen-voi-thanh-xuan-banner.jpg"
-                        data-img="assets/image/co-hen-voi-thanh-xuan.jpg" data-name="Có hẹn với thanh xuân"
-                        data-creator="MONSTAR" data-index="6">
-                        <div class="equalizer-and-number">
-                            <p class="number-item">07</p>
-                        </div>
-                        <div class="list-music-item-info">
-                            <div class="avatar">
-                                <div class="btn-play"><span class="material-icons">
-                                        play_arrow
-                                    </span></div>
-                                <div class="over-lay-item-info"></div>
-                                <img src="assets/image/co-hen-voi-thanh-xuan-banner.jpg">
-                            </div>
-                            <div class="item-info">
-                                <div class="name">Có hẹn với thanh xuân</div>
-                                <div class="creator">MONSTAR</div>
-                            </div>
-                            <div class="item-control">
-                                <span class="material-icons-outlined">
-                                    mic
-                                </span>
-                                <span class="material-icons-outlined">
-                                    playlist_add
-                                </span>
-                            </div>
-                        </div>
-                    </li>
-                        <li class="list-music-item" data-music="assets/mp3/tuy-am.mp3"
-                            data-lrc="assets/lyrics/tuy-am.lrc" data-name="Túy Âm"
-                            data-creator="Xesi" data-img="assets/image/tuy-am-banner.jpg"
-                            data-avatar="assets/image/tuy-am.jpg" data-index="7">
+                                <div class="list-music-item-info">
+                                    <div class="avatar">
+                                        <div class="btn-play"><span class="material-icons">
+                                                play_arrow
+                                            </span></div>
+                                        <div class="over-lay-item-info"></div>
+                                        <img src="assets/image/co-hen-voi-thanh-xuan-banner.jpg">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="name">Có hẹn với thanh xuân</div>
+                                        <div class="creator">MONSTAR</div>
+                                    </div>
+                                    <div class="item-control">
+                                        <span class="material-icons-outlined">
+                                            mic
+                                        </span>
+                                        <span class="material-icons-outlined">
+                                            playlist_add
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-music-item" data-music="assets/mp3/tuy-am.mp3"
+                                data-lrc="assets/lyrics/tuy-am.lrc" data-name="Túy Âm" data-creator="Xesi"
+                                data-img="assets/image/tuy-am-banner.jpg" data-avatar="assets/image/tuy-am.jpg"
+                                data-index="7">
 
-                            <div class="equalizer-and-number">
-                                <p class="number-item">08</p>
-                            </div>
+                                <div class="equalizer-and-number">
+                                    <p class="number-item">11</p>
+                                </div>
 
-                            <div class="list-music-item-info">
-                                <div class="avatar">
-                                    <div class="btn-play"><span class="material-icons">
-                                            play_arrow
-                                        </span></div>
-                                    <div class="over-lay-item-info"></div>
-                                    <img src="assets/image/tuy-am.jpg">
+                                <div class="list-music-item-info">
+                                    <div class="avatar">
+                                        <div class="btn-play"><span class="material-icons">
+                                                play_arrow
+                                            </span></div>
+                                        <div class="over-lay-item-info"></div>
+                                        <img src="assets/image/tuy-am.jpg">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="name">Túy Âm</div>
+                                        <div class="creator">Xesi</div>
+                                    </div>
+                                    <div class="item-control">
+                                        <span class="material-icons-outlined">
+                                            mic
+                                        </span>
+                                        <span class="material-icons-outlined">
+                                            playlist_add
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="item-info">
-                                    <div class="name">Túy Âm</div>
-                                    <div class="creator">Xesi</div>
-                                </div>
-                                <div class="item-control">
-                                    <span class="material-icons-outlined">
-                                        mic
-                                    </span>
-                                    <span class="material-icons-outlined">
-                                        playlist_add
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-music-item" data-music="assets/mp3/cung-danh-thoi.mp3"
-                            data-lrc="assets/lyrics/cung-danh-thoi.lrc" data-name="Cũng đành thôi"
-                            data-creator="Đức Phúc" data-img="assets/image/cung-danh-thoi-banner.jpg"
-                            data-avatar="assets/image/cung-danh-thoi.jpg" data-index="8">
+                            </li>
+                            <li class="list-music-item" data-music="assets/mp3/cung-danh-thoi.mp3"
+                                data-lrc="assets/lyrics/cung-danh-thoi.lrc" data-name="Cũng đành thôi"
+                                data-creator="Đức Phúc" data-img="assets/image/cung-danh-thoi-banner.jpg"
+                                data-avatar="assets/image/cung-danh-thoi.jpg" data-index="8">
 
-                            <div class="equalizer-and-number">
-                                <p class="number-item">09</p>
-                            </div>
+                                <div class="equalizer-and-number">
+                                    <p class="number-item">12</p>
+                                </div>
 
-                            <div class="list-music-item-info">
-                                <div class="avatar">
-                                    <div class="btn-play"><span class="material-icons">
-                                            play_arrow
-                                        </span></div>
-                                    <div class="over-lay-item-info"></div>
-                                    <img src="assets/image/cung-danh-thoi.jpg">
+                                <div class="list-music-item-info">
+                                    <div class="avatar">
+                                        <div class="btn-play"><span class="material-icons">
+                                                play_arrow
+                                            </span></div>
+                                        <div class="over-lay-item-info"></div>
+                                        <img src="assets/image/cung-danh-thoi.jpg">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="name">Cũng đành thôi</div>
+                                        <div class="creator">Đức Phúc</div>
+                                    </div>
+                                    <div class="item-control">
+                                        <span class="material-icons-outlined">
+                                            mic
+                                        </span>
+                                        <span class="material-icons-outlined">
+                                            playlist_add
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="item-info">
-                                    <div class="name">Cũng đành thôi</div>
-                                    <div class="creator">Đức Phúc</div>
-                                </div>
-                                <div class="item-control">
-                                    <span class="material-icons-outlined">
-                                        mic
-                                    </span>
-                                    <span class="material-icons-outlined">
-                                        playlist_add
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-music-item" data-music="assets/mp3/thac-mac.mp3"
-                            data-lrc="assets/lyrics/thac-mac.lrc" data-name="Thắc mắc"
-                            data-creator="Thịnh Suy" data-img="assets/image/thac-mac-banner.jpg"
-                            data-avatar="assets/image/thac-mac.jpg" data-index="9">
+                            </li>
+                            <li class="list-music-item" data-music="assets/mp3/thac-mac.mp3"
+                                data-lrc="assets/lyrics/thac-mac.lrc" data-name="Thắc mắc" data-creator="Thịnh Suy"
+                                data-img="assets/image/thac-mac-banner.jpg" data-avatar="assets/image/thac-mac.jpg"
+                                data-index="9">
 
-                            <div class="equalizer-and-number">
-                                <p class="number-item">10</p>
-                            </div>
+                                <div class="equalizer-and-number">
+                                    <p class="number-item">13</p>
+                                </div>
 
-                            <div class="list-music-item-info">
-                                <div class="avatar">
-                                    <div class="btn-play"><span class="material-icons">
-                                            play_arrow
-                                        </span></div>
-                                    <div class="over-lay-item-info"></div>
-                                    <img src="assets/image/thac-mac.jpg">
+                                <div class="list-music-item-info">
+                                    <div class="avatar">
+                                        <div class="btn-play"><span class="material-icons">
+                                                play_arrow
+                                            </span></div>
+                                        <div class="over-lay-item-info"></div>
+                                        <img src="assets/image/thac-mac.jpg">
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="name">Thắc Mắc</div>
+                                        <div class="creator">Thịnh Suy</div>
+                                    </div>
+                                    <div class="item-control">
+                                        <span class="material-icons-outlined">
+                                            mic
+                                        </span>
+                                        <span class="material-icons-outlined">
+                                            playlist_add
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="item-info">
-                                    <div class="name">Thắc Mắc</div>
-                                    <div class="creator">Thịnh Suy</div>
-                                </div>
-                                <div class="item-control">
-                                    <span class="material-icons-outlined">
-                                        mic
-                                    </span>
-                                    <span class="material-icons-outlined">
-                                        playlist_add
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
                         </ul>
-                        
+
                     </div>
 
 
@@ -558,7 +601,6 @@
     </div>
     <script src="assets/js/app.js" type="text/javascript"></script>
     <script src="assets/js/control.js" type="text/javascript"></script>
-    <script src="assets/js/lrcparse.js" type="text/javascript"></script>
 </body>
 
 </html>
