@@ -77,11 +77,15 @@
     margin-top: 10px;
     margin-right: 5%;
 }
+/*--List song user--*/
 .list-song-user{
     width: 100% !important;
-    height: 400px;
+    height: 400px !important ;
     overflow: scroll;
     overflow-x: hidden;
+}
+.list-song-user li{
+    width: 100% !important;
 }
 .list-song-user::-webkit-scrollbar {
     width: 0px;  
@@ -119,6 +123,8 @@
 .title-add-playlist{
     font-weight: bold;
     padding-top: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 .wrapper-user-playlist-item{
     display: flex;
@@ -136,14 +142,18 @@
 }
 .ms-user-playlist .name-playlist{
     font-weight: bold;
-    padding-top: 15px;
+    padding-top: 10px;
+    
 }
 .playlist-user-item-info{
     color: var(--white-color);
+    background-color: var(--purple-color);
+    padding-left: 10px;
 }
 .playlist-user-item-info .date-create-playlist{
-    color: var(--gray-color);
+    color: var(--light-gray-color);
     font-size: 0.8rem;
+    padding-bottom: 10px;
 }
 .playlist-user-item{
     width: 15%;
