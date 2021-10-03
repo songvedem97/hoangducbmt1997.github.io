@@ -109,7 +109,7 @@
     margin: 0 auto;
 }
 .add-playlist-user{
-    width: 15%;
+    width: 200px;
     height: 200px;
     background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
     flex-direction: column;
@@ -155,7 +155,7 @@
     padding-bottom: 10px;
 }
 .playlist-user-item{
-    width: 15%;
+    width: 200px;
     height: 200px;
     margin-left: 5%;
 }
