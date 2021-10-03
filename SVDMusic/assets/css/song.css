@@ -181,7 +181,10 @@
     align-items: center;
 }
 .ms-play-control-img-song .equalizer{
-    margin: 30px 15px 0 0;  
+    margin: 30px 15px 0 0; 
+}
+.ms-play-control-img-song .equalizer span{
+    background-color: var(--white-color);
 }
 .ms-play-control-img-song img{
     width: 35px;
