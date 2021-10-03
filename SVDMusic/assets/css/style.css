@@ -1093,10 +1093,12 @@ input[type=radio] {
 }
 .ms-list-song .item-info .name{
     color: var(--white-color);
+    padding: 2px;
 }
 
 .ms-list-song .item-info .creator{
     font-size: 0.8rem;
+    padding: 2px;
 }
 .ms-list-song .item-info .creator:hover{
     color: var(--yellow-color);
