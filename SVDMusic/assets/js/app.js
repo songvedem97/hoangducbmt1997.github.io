@@ -14,6 +14,7 @@ const currentTimeDisplay = document.querySelector(".current-time");
 const progressBar = document.querySelector(".progress-bar");
 const rangeVolume = document.querySelector(".volume");
 const btnLoop = document.querySelector('.btn-loop');
+const btnRandom = document.querySelector('.btn-random');
 
 const avatarControl = document.querySelector('.play-control-img-song');
 const imgBlurSong = document.querySelector('.img-blur');
@@ -22,7 +23,7 @@ const nameSong = document.querySelector(".ms-control-info-song .name-song");
 const creator = document.querySelector(".ms-control-info-song .creator");
 
 var arraySongs = [];
-
+var isRandom = false;
 const btnVolume = document.querySelector('.btn-volume');
 const listSong = document.querySelector('.list-music');
 /*--INIT--*/
@@ -33,7 +34,8 @@ avatar.style.animationPlayState = 'paused';
 audio.volume = valueVolume;
 
 getSong = async () => {
-	let songs = document.querySelectorAll(".list-music-item")
+	let songs = document.querySelectorAll(".list-music-item");
+	
 	for (let i = 0; i < songs.length; i++) {
 		arraySongs.push(songs[i].getAttribute("data-music"));
 	}
@@ -95,8 +97,6 @@ loadSong = async () => {
 	document.title = detailSong[song].getAttribute("data-name")+", "+detailSong[song].getAttribute("data-creator");;
 	
 }
-
-
 playSong = () => {
 	musicContent.classList.add("playing");
 	avatar.style.animationPlayState = 'running';
@@ -139,6 +139,14 @@ removeLoopSong = () => {
 	musicContent.classList.remove("looping");
 	audio.loop = false;
 }
+
+addRandomSong = () => {
+	btnRandom.classList.add('add-color-btn');
+}
+removeRandomSong = ()=>{
+	btnRandom.classList.remove('add-color-btn');
+}
+
 addVolume = () => {
 	musicContent.classList.add("volume");
 	btnVolume.classList.add('fa-volume-up');
@@ -192,13 +200,13 @@ btnNext.addEventListener("click", () => {
 	nextSong();
 	setTimeout(() => {
 		playSong();
-	}, 100)
+	}, 1000)
 })
 btnPrev.addEventListener("click", () => {
 	prevSong();
 	setTimeout(() => {
 		playSong();
-	}, 100)
+	}, 1000)
 })
 btnLoop.addEventListener("click", () => {
 	if (musicContent.classList.contains("looping")) {
@@ -207,7 +215,16 @@ btnLoop.addEventListener("click", () => {
 	else
 		addLoopSong();
 })
-
+btnRandom.addEventListener("click",()=>{
+	if (isRandom == false) {
+		isRandom = true;
+		addRandomSong();
+	}
+	else if (isRandom == true) {
+		isRandom = false;
+		removeRandomSong();
+	}
+})
 btnVolume.addEventListener("click", () => {
 	if (musicContent.classList.contains('volume')) {
 		muteVolume();
@@ -237,8 +254,20 @@ audio.addEventListener("timeupdate", updateProgressTime);
 
 audio.addEventListener("ended", () => {
 	avatar.style.animationPlayState = 'paused';
-	nextSong();
-	playSong();
+	if (isRandom == true) {
+		let valueRandom;
+		do{
+			valueRandom =Math.floor(Math.random()*arraySongs.length);
+		}while(valueRandom===songIndex);
+		songIndex = valueRandom
+		console.log(songIndex);
+		nextSong();
+		playSong();
+	}
+	else{
+		nextSong();	
+		playSong();
+	}
 })
 audio.ontimeupdate = function () {
 	if (audio.duration) {
@@ -277,7 +306,7 @@ audio.addEventListener('timeupdate', function (e) {
 				anchor = line.position().top;
 			$(".current-line").attr("class", "");
 			line.attr("class", "current-line");
-			$(".lyric").css("top", "" + (110 - line.position().top) + "px");
+			$(".lyric").css("top", "" + (120 - line.position().top) + "px");
 		}
 	}
 

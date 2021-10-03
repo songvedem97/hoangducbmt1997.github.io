@@ -143,7 +143,7 @@ body {
     color: var(--green-color);
     transition: all 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.btn-prev,.btn-next{
+.btn-prev,.btn-next,.btn-random{
     cursor: pointer;
 }
 @keyframes pulse-border {
