@@ -1088,7 +1088,7 @@ input[type=radio] {
     font-size: 0.8rem;
 }
 .ms-list-song .item-info .creator:hover{
-    color: var(--light-blue-color);
+    color: var(--yellow-color);
 }
 .ms-list-song .item-control{
     display: flex;
