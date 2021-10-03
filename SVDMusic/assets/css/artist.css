@@ -1,0 +1,55 @@
+
+.wrapper-ms-artist-banner{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 150px;
+}
+.ms-artist-info{
+    width: 40%;
+}
+.ms-artist-list-song{
+    width: 60%;
+}
+.ms-artist-banner .avatar-artist{
+    width: 300px;
+    height: 300px;
+}
+.ms-artist-suggesstion{
+    width: 90%;
+    margin: 0 auto;
+}
+.list-music-artist li{
+    width: 100% !important;
+    border-bottom: 1px solid var(--bg-color);
+}
+.ms-artist-list-song .ms-artist-story{
+    color: var(--light-gray-color);
+    font-size: 1rem;
+}
+.ms-artist-banner .wrapper-artist-info{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: var(--gray-color);
+}
+.artist-info{
+    line-height: 2rem;
+}
+.btn-artist-play,.btn-artist-register {
+    margin-top: 1rem;
+    border: none;
+    background: var(--green-btn-color);
+    padding: 10px 15px 10px 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.btn-artist-register {
+    background-color: var(--alpha-color);
+    margin-left: 15px;
+}
+.ms-artist-playlist{
+    width: 90%;
+    margin: 0 auto;
+}
