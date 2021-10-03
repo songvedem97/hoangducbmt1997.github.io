@@ -55,6 +55,18 @@ body {
     cursor: pointer;
     box-sizing: border-box;
 }
+input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    outline: none;
+}
+input:focus{
+    border: 2px solid var(--bg-control);
+}
+  
 .btn:active {
     transform: scale(0.9);
 }
@@ -272,7 +284,6 @@ body {
 
 .login-form input {
     background-color: rgba(0, 0, 0, 0.3);
-    border: none;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
