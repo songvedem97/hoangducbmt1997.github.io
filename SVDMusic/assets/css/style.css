@@ -55,17 +55,7 @@ body {
     cursor: pointer;
     box-sizing: border-box;
 }
-input {
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid transparent;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    outline: none;
-}
-input:focus{
-    border: 2px solid var(--bg-control);
-}
+
   
 .btn:active {
     transform: scale(0.9);
@@ -262,6 +252,18 @@ input:focus{
     color: var(--white-color);
     font-weight: bold;
     transition: transform 80ms ease-in;
+}
+.login-form input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    outline: none;
+}
+
+.login-form input:focus{
+    border: 2px solid var(--bg-control);
 }
 .login-form button:focus {
     outline: none;
