@@ -94,6 +94,23 @@ $('.carousel-asia-song').owlCarousel({
         }
     }
 })
+$('.carousel-play-list-user').owlCarousel({
+    loop:false,
+    margin:20,
+    nav:true,
+    navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        900:{
+            items:6
+        }
+    }
+})
 
 
 /*--Show Popup Login--*/
