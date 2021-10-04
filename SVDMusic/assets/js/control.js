@@ -1,4 +1,3 @@
-
 /*--Login--*/
 const signUpBtnHeader = document.getElementById('signUpHeader');
 const signInBtnHeader = document.getElementById('signInHeader');
@@ -8,17 +7,6 @@ const overlay = document.getElementById('overlay');
 const closePopLogin = document.getElementById('close_login_popup');
 const container_login = document.getElementById('container_login');
 const joinButon = document.getElementById('join-now');
-
-/*--Slide --*/
-var counter = 1;
-setInterval(function(){
-    document.getElementById('item-' + counter).checked = true ;
-    counter ++;
-    if(counter > 3){
-        counter = 1;
-    }
-},4000);
-
 /*--Carousel--*/
 $('.carousel-suggesstion-song').owlCarousel({
     loop:true,
@@ -89,6 +77,24 @@ $('.carousel-mv-song').owlCarousel({
         }
     }
 })
+$('.carousel-asia-song').owlCarousel({
+    loop:false,
+    margin:20,
+    nav:true,
+    navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        900:{
+            items:6
+        }
+    }
+})
+
 
 /*--Show Popup Login--*/
 

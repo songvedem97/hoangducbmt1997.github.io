@@ -6,7 +6,7 @@
     position: relative;
 }
 .title-ranking-song{
-    z-index: 10;
+    z-index: 5;
     position: absolute;
     bottom: 120px;
     width: 100%;
@@ -39,4 +39,9 @@
 .list-music-ranking li{
     width: 100% !important;
     border-bottom: 1px solid var(--bg-color);
+}
+
+/*--Rank 100--*/
+.blur-100-song{
+    background-color: var(--bg-index);
 }
