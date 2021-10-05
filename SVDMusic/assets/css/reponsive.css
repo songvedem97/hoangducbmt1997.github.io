@@ -166,12 +166,13 @@
         padding: 0px;
     }
     .wrapper-item-footer{
-        flex-direction: row;
+        flex-direction: column;
     }
-    .footer-contact .item-contact {
-        width: 100%;
+    .footer-contact .item-contact{
+        display: flex;
     }
     .footer-contact .item-contact ul {
+        flex: 50%;
     }
     .footer-contact .item-contact .title-footer {
         font-weight: 400;
