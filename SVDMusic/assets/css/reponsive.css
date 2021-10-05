@@ -3,7 +3,6 @@
 @media only screen and (min-width:46.25rem) and (max-width:64rem) {
     /*--Define genaral--*/
     body {
-        overflow-x: hidden !important;
         font-size: 0.8rem;
     }
     .font-tablet {
@@ -83,6 +82,18 @@
 /*--CSS Mobile width < 740px--*/
 
 @media only screen and (max-width:46.25rem) {
+    body {
+        font-size: 0.8rem;
+    }
+    .font-tablet {
+        font-size: 0.8rem;
+    }
+    .font-tablet-title {
+        font-size: 1.6rem;
+    }
+    .title-suggesstion {
+        font-size: 1.1rem;
+    }
     .container-app {
         width: calc(100vw - 70px);
         height: 100%;
@@ -130,7 +141,6 @@
     }
     .wrapper-header-control{
         display: none;
-
     }
     .ms-wrapper-slide{
         display: none;
@@ -144,10 +154,25 @@
     .ms-list-song .item-info .name {
         width: 100px;
     }
-
+    /*--Footer--*/
     .footer-contact {
         padding: 0px;
     }
-
+    .wrapper-item-footer{
+        flex-direction: column;
+    }
+    .footer-copyright {
+        height: auto;
+    } 
+    .wrapper-footer-copyright {
+        flex-direction: column;
+    }
+    .footer-copyright .footer-item {
+        width: 100%;
+        padding:10px;
+    }
+    .wrapper-footer-copyright div:nth-child(2),.wrapper-footer-copyright div:nth-child(3){
+        display: none;
+    }
     
 }
