@@ -170,6 +170,7 @@
     .footer-copyright .footer-item {
         width: 100%;
         padding:10px;
+        text-align: center;
     }
     .wrapper-footer-copyright div:nth-child(2),.wrapper-footer-copyright div:nth-child(3){
         display: none;
