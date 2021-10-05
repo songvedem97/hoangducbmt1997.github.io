@@ -1,0 +1,86 @@
+/*--CSS Mobile width >= 740px and width < 1024px --*/
+@media only screen and (min-width:46.25rem) and (max-width:64rem) { 
+
+
+    /*--Define genaral--*/
+    body{
+        overflow-x: hidden !important;
+    }
+    .title-suggesstion {
+        font-size: 1.1rem;
+    }
+    .container-app {
+        width: calc(100vw - 70px);
+        height: 100%;
+    }
+    /*--NAVBAR--*/
+    .ms-nav-bar {
+        width: 70px;
+    }
+    .logo-desktop{
+        display: none;
+    }
+    .logo-tablet{
+        display: block;
+    }
+    .ms-nav-bar .ms-logo {
+        height: 70px;
+        padding-top: 10px;
+    }
+    .ms-nav-bar li p{
+        display: none;
+    }
+    .ms-nav-bar ul li {
+        padding: 10px 0 10px 0;
+    }
+    .is-acttive::after {
+        height: 44px;
+    }
+    .suggesstion-login {
+        display: none;
+    }
+    .ms-nav-bar ul:nth-child(1) {
+        padding: 0;
+    }
+    .ms-nav-bar ul:nth-child(3) {
+        padding: 0;
+    }
+    /*--CONTENT--*/
+    .ms-content {
+        margin-left: 70px;
+        position: relative;
+        width: 100%;
+        background-color: var(--bg-index);
+    }
+    .ms-wrapper-header {
+        position: fixed;
+        z-index: 8;
+        width: calc(100% - 70px);
+    }
+    .ms-slide {
+        height: 400px;
+        padding-top: 50px;
+    }
+    .btn-carousel-prev, .btn-carousel-next {
+        padding: 7px;
+        font-size: 1rem;
+    }
+    .wrapper-theme-of-song .wrapper-theme-song-img {
+        height: 60px;
+    }
+    .ms-list-song .list-music-item{
+        width: 100%;
+    }
+    .footer-contact {
+        padding: 0;
+    }
+    .footer-contact .wrapper-item-contact {
+        font-size: 0.8rem;
+    }
+}
+
+
+/*--CSS Mobile width < 740px--*/
+@media only screen and (max-width:46.25rem) { 
+    
+}

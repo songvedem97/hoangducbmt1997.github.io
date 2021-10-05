@@ -19,8 +19,12 @@ $('.carousel-suggesstion-song').owlCarousel({
         },
         600:{
             items:3
+        }
+        ,
+        740:{
+            items:4
         },
-        900:{
+        1024:{
             items:6
         }
     }
@@ -38,7 +42,10 @@ $('.carousel-favorite-artist').owlCarousel({
         600:{
             items:3
         },
-        900:{
+        740:{
+            items:4
+        },
+        1024:{
             items:6
         }
     }
@@ -55,7 +62,7 @@ $('.carousel-new-song').owlCarousel({
         600:{
             items:3
         },
-        900:{
+        1024:{
             items:3
         }
     }
@@ -72,7 +79,7 @@ $('.carousel-mv-song').owlCarousel({
         600:{
             items:3
         },
-        900:{
+        1024:{
             items:4
         }
     }
@@ -89,7 +96,7 @@ $('.carousel-asia-song').owlCarousel({
         600:{
             items:3
         },
-        900:{
+        1024:{
             items:6
         }
     }
@@ -106,7 +113,7 @@ $('.carousel-play-list-user').owlCarousel({
         600:{
             items:3
         },
-        900:{
+        1024:{
             items:6
         }
     }

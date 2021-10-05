@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Âm nhạc xuyên màn đêm</title>
+    <title>Âm Nhạc Xuyên Màn Đêm</title>
     <link rel="shortcut icon" type="image/png" href="assets/image/Logo-mini.png" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/reponsive.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
@@ -22,7 +23,7 @@
     <script src="assets/js/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://kit.fontawesome.com/f9275dded9.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -31,12 +32,12 @@
         <div class="modal-body">
             <div id="overlay"></div>
             <div class="container" id="container_login">
-                <img class="bg-login" src="assets/image/bg-login.PNG"/>
+                <img class="bg-login" src="assets/image/bg-login.PNG" />
                 <button data-dismiss="modal" id="close_login_popup" class="close_login_popup"><span
                         class="btn material-icons-outlined">
                         close
                     </span></button>
-                <div class="form-container sign-up-container">    
+                <div class="form-container sign-up-container">
                     <form action="#">
                         <h2>Tạo Tài Khoản</h2>
                         <div class="social-container">
@@ -89,7 +90,8 @@
         <!--NAVBAR-->
         <div class="ms-nav-bar">
             <div class="ms-logo">
-                <img src="assets/image/Logo.png" width="150" />
+                <img class="logo-desktop" src="assets/image/Logo.png" width="150" />
+                <img class="logo-tablet" src="assets/image/Logo-mini.png" width="50" height="50"/>
             </div>
             <div class="ms-nav-bar">
                 <ul>
@@ -168,7 +170,7 @@
                     <input type="radio" name="slider" id="item-1" checked>
                     <input type="radio" name="slider" id="item-2">
                     <input type="radio" name="slider" id="item-3">
-                    <div class="cards">
+                    <div class="cards flex-center">
                         <div class="wrap-control-slide">
                             <span class="material-icons-outlined btn-carousel-prev">arrow_forward</span>
                             <span class="material-icons-outlined btn-carousel-next">arrow_back</span>
@@ -186,8 +188,8 @@
                 </div>
             </div>
             <div class="ms-bg-content-song">
-            <div class="ms-wrapper-content-song">
-                <div class="ms-sugesstion-song">
+                <div class="ms-wrapper-content-song">
+                    <div class="ms-sugesstion-song">
                         <p class="title-suggesstion">Gợi Ý Hôm Nay</p>
                         <div class="owl-carousel carousel-suggesstion-song">
                             <div class="item">
@@ -290,9 +292,9 @@
                                 </div>
                             </div>
                         </div>
-                </div>
+                    </div>
 
-                <div class="ms-sugesstion-song">
+                    <div class="ms-sugesstion-song">
                         <p class="title-suggesstion">Thể loại</p>
                         <div class="owl-carousel carousel-suggesstion-song">
                             <div class="item">
@@ -394,9 +396,9 @@
                             </div>
                         </div>
 
-                </div>
+                    </div>
 
-                <div class="ms-list-song">
+                    <div class="ms-list-song">
                         <p class="title-suggesstion">Bài Hát Mới</p>
                         <div class="owl-carousel carousel-new-song">
                             <div class="item">
@@ -476,7 +478,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avatar-song-2.png">
@@ -503,7 +505,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avata-song-3.jpg">
@@ -530,7 +532,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avata-song-4.jpg">
@@ -557,7 +559,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avata-song-5.jpg">
@@ -584,7 +586,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avata-song-6.jpg">
@@ -611,7 +613,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avatar-song-7.png">
@@ -638,7 +640,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avatar-song-8.jpg">
@@ -665,7 +667,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avatar-song-9.jpg">
@@ -692,7 +694,7 @@
                                     <div class="list-music-item-info">
                                         <div class="avatar">
                                             <div class="btn-play"><span class="material-icons">
-                                                play_arrow
+                                                    play_arrow
                                                 </span></div>
                                             <div class="over-lay-item-info"></div>
                                             <img src="assets/image/Avatar-song-10.jpg">
@@ -717,9 +719,9 @@
 
                         </div>
 
-                </div>
+                    </div>
 
-                <div class="ms-theme-of-song">
+                    <div class="ms-theme-of-song">
                         <p class="title-suggesstion">Chủ Đề Âm Nhạc</p>
                         <div class="wrapper-theme-of-song">
                             <div class="wrapper-theme-song-img">
@@ -734,13 +736,13 @@
 
                         </div>
 
-                </div>
+                    </div>
 
-                <div class="ms-favorite-artist">
+                    <div class="ms-favorite-artist">
                         <p class="title-suggesstion">Nghệ Sĩ Yêu Thích</p>
                         <div class="owl-carousel carousel-favorite-artist">
                             <div class="item">
-                                
+
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
@@ -752,7 +754,7 @@
 
                             </div>
                             <div class="item">
-                                
+
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
@@ -761,7 +763,7 @@
                                 <div class="name-artist">Marshmello</div>
                             </div>
                             <div class="item">
-                               
+
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
@@ -772,7 +774,7 @@
                             </div>
 
                             <div class="item">
-                                
+
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
@@ -783,7 +785,7 @@
                             </div>
 
                             <div class="item">
-                               
+
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
@@ -795,7 +797,7 @@
 
 
                             <div class="item">
-                                
+
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
@@ -807,7 +809,7 @@
 
 
                             <div class="item">
-                                
+
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
@@ -818,138 +820,140 @@
                             </div>
                         </div>
 
-                </div>
-
-
-
-            </div>
-            <div class="ms-mv-song">
-                <div class="container-content">
-                    <p class="title-suggesstion">MV Hot</p>
-                    <div class="owl-carousel carousel-mv-song">
-                        <div class="item">
-                            <div class="wrapper-mv-song">
-                                <div class="overlay"></div>
-                                <span class="material-icons">play_arrow</span>
-                                <img src="assets/image/mv-song-1.jpg"></img>
-                            </div>
-                            <div class="info-mv-song">
-                                <div class="name">Độ tộc 2</div>
-                                <div class="creator">Độ Mixi</div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="wrapper-mv-song">
-                                <div class="overlay"></div>
-                                <span class="material-icons">play_arrow</span>
-                                <img src="assets/image/mv-song-2.jpg"></img>
-                            </div>
-                            <div class="info-mv-song">
-                                <div class="name">Đường tôi chở em về</div>
-                                <div class="creator">Buitruonglinh</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="wrapper-mv-song">
-                                <div class="overlay"></div>
-                                <span class="material-icons">play_arrow</span>
-                                <img src="assets/image/mv-song-3.jpg" />
-                            </div>
-                            <div class="info-mv-song">
-                                <div class="name">Sài Gòn Hôm Nay Mưa</div>
-                                <div class="creator">JSOL</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="wrapper-mv-song">
-                                <div class="overlay"></div>
-                                <span class="material-icons">play_arrow</span>
-                                <img src="assets/image/mv-song-4.jpg"></img>
-                            </div>
-                            <div class="info-mv-song">
-                                <div class="name">Thức Giấc</div>
-                                <div class="creator">Da LAB</div>
-                            </div>
-                        </div>
                     </div>
+
+
+
                 </div>
-            </div>
-            <div class="ms-footer">
-                <div class="footer-contact">
-                    <div class="wrapper-bg-contact">
-                        <div class="wrapper-item-contact">
-                            <div class="bg-footer-alpha"></div>
-                           <img src="assets/image/footer-bg.png"/>
-                           <div class="wrapper-item-footer">
-                            <div class="about-us item-contact">
-                                <p class="title-footer">Về chúng tôi</p>
-                                <div class="hr-footer"></div>
-                                <ul>
-                                    <li><span class="material-icons-outlined">
-                                            stay_primary_portrait
-                                        </span>036-282-3931</li>
-                                    <li><span class="material-icons-outlined">
-                                            lightbulb
-                                        </span>info@rocklee.org</li>
-                                    <li><span class="material-icons-outlined">
-                                            school
-                                        </span>TayNguyen University, Buon Ma Thuot, DakLak.</li>
-                                </ul>
+                <div class="ms-mv-song">
+                    <div class="container-content">
+                        <p class="title-suggesstion">MV Hot</p>
+                        <div class="owl-carousel carousel-mv-song">
+                            <div class="item">
+                                <div class="wrapper-mv-song">
+                                    <div class="overlay"></div>
+                                    <span class="material-icons">play_arrow</span>
+                                    <img src="assets/image/mv-song-1.jpg"></img>
+                                </div>
+                                <div class="info-mv-song">
+                                    <div class="name">Độ tộc 2</div>
+                                    <div class="creator">Độ Mixi</div>
+                                </div>
                             </div>
 
-                            <div class="support-client item-contact">
-                                <p class="title-footer">Hỗ trợ khách hàng</p>
-                                <div class="hr-footer"></div>
-                                <ul>
-                                    <li>Email: hotro@svdmusic.com</li>
-                                    <li>Đường dây nóng: 1900 1997</li>
-                                </ul>
+                            <div class="item">
+                                <div class="wrapper-mv-song">
+                                    <div class="overlay"></div>
+                                    <span class="material-icons">play_arrow</span>
+                                    <img src="assets/image/mv-song-2.jpg"></img>
+                                </div>
+                                <div class="info-mv-song">
+                                    <div class="name">Đường tôi chở em về</div>
+                                    <div class="creator">Buitruonglinh</div>
+                                </div>
                             </div>
-
-                            <div class="contact-adv item-contact">
-                                <p class="title-footer">Liên hệ quảng cáo</p>
-                                <div class="hr-footer"></div>
-                                <ul>
-                                    <li>Hotline: (036) 282 3931</li>
-                                    <li>Email: hoangducbmt1997@gmail.com</li>
-                                </ul>
+                            <div class="item">
+                                <div class="wrapper-mv-song">
+                                    <div class="overlay"></div>
+                                    <span class="material-icons">play_arrow</span>
+                                    <img src="assets/image/mv-song-3.jpg" />
+                                </div>
+                                <div class="info-mv-song">
+                                    <div class="name">Sài Gòn Hôm Nay Mưa</div>
+                                    <div class="creator">JSOL</div>
+                                </div>
                             </div>
+                            <div class="item">
+                                <div class="wrapper-mv-song">
+                                    <div class="overlay"></div>
+                                    <span class="material-icons">play_arrow</span>
+                                    <img src="assets/image/mv-song-4.jpg"></img>
+                                </div>
+                                <div class="info-mv-song">
+                                    <div class="name">Thức Giấc</div>
+                                    <div class="creator">Da LAB</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="footer-copyright">
-                    <div class="wrapper-footer-info footer-item">
-                        <p>© 2021 SVD Music. Copyright by<a href="#"> songvedem</a>
-                        </p>
+                <div class="ms-footer">
+                    <div class="footer-contact">
+                        <div class="wrapper-bg-contact">
+                            <div class="wrapper-item-contact">
+                                <div class="bg-footer-alpha"></div>
+                                <img src="assets/image/footer-bg.png" />
+                                <div class="wrapper-item-footer">
+                                    <div class="about-us item-contact">
+                                        <p class="title-footer">Về chúng tôi</p>
+                                        <div class="hr-footer"></div>
+                                        <ul>
+                                            <li><span class="material-icons-outlined">
+                                                    stay_primary_portrait
+                                                </span>036-282-3931</li>
+                                            <li><span class="material-icons-outlined">
+                                                    lightbulb
+                                                </span>info@rocklee.org</li>
+                                            <li><span class="material-icons-outlined">
+                                                    school
+                                                </span>TayNguyen University, Buon Ma Thuot, DakLak.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="support-client item-contact">
+                                        <p class="title-footer">Hỗ trợ khách hàng</p>
+                                        <div class="hr-footer"></div>
+                                        <ul>
+                                            <li>Email: hotro@svdmusic.com</li>
+                                            <li>Đường dây nóng: 1900 1997</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="contact-adv item-contact">
+                                        <p class="title-footer">Liên hệ quảng cáo</p>
+                                        <div class="hr-footer"></div>
+                                        <ul>
+                                            <li>Hotline: (036) 282 3931</li>
+                                            <li>Email: hoangducbmt1997@gmail.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="wrapper-icon-footer footer-item">
-                        <ul>
-                            <li>
-                                <img src="assets/image/t_ic_facebook.png" width="25px" />
-                            </li>
-                            <li>
-                                <img src="assets/image/t_ic_instagram.png" width="25px" />
-                            </li>
-                            <li>
-                                <img src="assets/image/t_ic_tiktok.png" width="25px" />
-                            </li>
-                            <li>
-                                <img src="assets/image/t_ic_twitter.png" width="25px" />
-                            </li>
-                        </ul>
+                    <div class="footer-copyright">
+                        <div class="wrapper-footer-copyright container-content">  
+                        <div class="wrapper-footer-info footer-item">
+                            <p>© 2021 SVD Music. Copyright by<a href="#"> songvedem</a>
+                            </p>
+                        </div>
+                        <div class="wrapper-icon-footer footer-item">
+                            <ul>
+                                <li>
+                                    <img src="assets/image/t_ic_facebook.png" width="25px" />
+                                </li>
+                                <li>
+                                    <img src="assets/image/t_ic_instagram.png" width="25px" />
+                                </li>
+                                <li>
+                                    <img src="assets/image/t_ic_tiktok.png" width="25px" />
+                                </li>
+                                <li>
+                                    <img src="assets/image/t_ic_twitter.png" width="25px" />
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="wrapper-privacy footer-item">
+                            <p>© SVD Corp. All rights reserved</p>
+                        </div>
                     </div>
-                    <div class="wrapper-privacy footer-item">
-                        <p>© SVD Corp. All rights reserved</p>
+
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>
-        </div>
     </div>
     <script src="assets/js/slide.js"></script>
     <script src="assets/js/control.js"></script>
