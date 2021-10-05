@@ -127,9 +127,16 @@
         margin-left: 70px;
         width: calc(100%-70px);
     }
+    .ms-wrapper-content-song {
+        padding-top: 70px;
+    }
     .ms-wrapper-header {
         z-index: 8;
         width: calc(100% - 70px);
+    }
+    .wrapper-header-control{
+        display: none;
+
     }
     .ms-wrapper-slide{
         display: none;
@@ -137,4 +144,16 @@
     .ms-list-song .list-music-item {
         width: 100%;
     }
+    .ms-list-song .number-item {
+        display: none;
+    }
+    .ms-list-song .item-info .name {
+        width: 100px;
+    }
+
+    .footer-contact {
+        padding: 0px;
+    }
+
+    
 }

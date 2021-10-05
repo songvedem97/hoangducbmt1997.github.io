@@ -74,7 +74,7 @@ $('.carousel-mv-song').owlCarousel({
     navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
     responsive:{
         0:{
-            items:2
+            items:1
         },
         600:{
             items:3
