@@ -1,7 +1,7 @@
 /*--CSS Mobile width >= 740px and width < 1024px --*/
 
 @media only screen and (min-width:46.25rem) and (max-width:64rem) {
-    /*--Define genaral--*/
+    /*--Define general--*/
     body {
         font-size: 0.8rem;
     }
@@ -77,7 +77,29 @@
         width: 150px;
         height: 150px;
     }
-
+    /*--Artist--*/
+    .wrapper-ms-artist-banner {
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+    }
+    .ms-artist-info {
+        width: 100%;
+    }
+    .ms-artist-list-song {
+        padding-top: 50px;
+        width: 100%;
+    }
+    /*--Song--*/
+    .ms-play-control-info {
+        width: 30%;
+    }
+    .ms-play-control-player {
+        width: 40%;
+    }
+    .ms-control-player-button-control {
+        width: 40%;
+    }
 }
 
 /*--CSS Mobile width < 740px--*/
@@ -143,10 +165,10 @@
     .search-container {
         width: 100%;
     }
-    .wrapper-header-control{
+    .wrapper-header-control {
         display: none;
     }
-    .ms-wrapper-slide{
+    .ms-wrapper-slide {
         display: none;
     }
     .ms-list-song .list-music-item {
@@ -165,7 +187,7 @@
     .footer-contact {
         padding: 0px;
     }
-    .wrapper-item-footer{
+    .wrapper-item-footer {
         flex-direction: column;
     }
     .footer-contact .item-contact .title-footer {
@@ -176,14 +198,47 @@
     }
     .footer-copyright {
         height: auto;
-    } 
-    .wrapper-footer-copyright div:nth-child(2),.wrapper-footer-copyright div:nth-child(3){
+    }
+    .wrapper-footer-copyright div:nth-child(2), .wrapper-footer-copyright div:nth-child(3) {
         display: none;
     }
     .footer-copyright .footer-item {
         width: 100%;
-        padding:10px;
+        padding: 10px;
         text-align: center;
     }
-    
+    /*--Song--*/
+    .ms-play-control-container{
+        height: 150px;
+    }
+    .ms-play-control-wrapper{
+        flex-direction: column;
+    }
+    .ms-play-control-info {
+        display: none;
+    }
+    .ms-play-control-player {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ms-control-player-button-control {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .ms-player-progress-bar .progress-bar {
+        margin-top: 20px;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .ms-play-control-right {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .ms-play-control-volume {
+        width: auto !important;
+    }
+    .wrapper-proggress-bar .time{
+        display: none;
+    }
 }

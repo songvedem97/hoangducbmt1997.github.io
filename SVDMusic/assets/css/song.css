@@ -287,6 +287,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 .ms-play-control-volume .volume{
     width: 80px;
