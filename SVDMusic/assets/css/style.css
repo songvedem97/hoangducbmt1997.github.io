@@ -630,6 +630,7 @@ body {
 .search-container input {
     margin: 0;
     display: inline-block;
+    font-size: 0.9rem;
     width: 95%;
     color: var(--blue-color);
     background-clip: padding-box;
@@ -1478,7 +1479,6 @@ input[type=radio] {
 
 .footer-contact .item-contact ul {
     width: 90%;
-    margin: 0 auto;
     padding: 15px;
 }
 
