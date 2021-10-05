@@ -45,12 +45,6 @@
     .suggesstion-login {
         display: none;
     }
-    .ms-nav-bar ul:nth-child(1) {
-        padding: 0;
-    }
-    .ms-nav-bar ul:nth-child(3) {
-        padding: 0;
-    }
     /*--CONTENT--*/
     .ms-content {
         margin-left: 70px;
@@ -90,7 +84,7 @@
 
 @media only screen and (max-width:46.25rem) {
     .container-app {
-        width: 100%;
+        width: calc(100vw - 70px);
         height: 100%;
     }
     /*--NAVBAR--*/
@@ -121,9 +115,6 @@
     }
     .ms-nav-bar ul:nth-child(1) {
         padding: 0;
-    }
-    .ms-nav-bar ul:nth-child(3){
-        
     }
     /*--Content--*/
     .ms-content {
