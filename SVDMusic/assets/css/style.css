@@ -1455,7 +1455,7 @@ input[type=radio] {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #341f97;
+    background: var(--purple-color);
     z-index: 5;
     opacity: 1;
 }

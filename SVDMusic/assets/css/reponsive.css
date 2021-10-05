@@ -168,12 +168,6 @@
     .wrapper-item-footer{
         flex-direction: column;
     }
-    .footer-contact .item-contact{
-        display: flex;
-    }
-    .footer-contact .item-contact ul {
-        flex: 50%;
-    }
     .footer-contact .item-contact .title-footer {
         font-weight: 400;
     }
