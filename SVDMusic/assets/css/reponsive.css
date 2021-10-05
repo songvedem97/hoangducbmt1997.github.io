@@ -209,12 +209,12 @@
     }
     /*--Song--*/
     .ms-song-lyrics {
-        height:auto;
+        height: auto;
     }
     .wrapper-ms-song-lyrics {
         padding-top: 80px;
     }
-    .wrapper-song-action .title-suggesstion{
+    .wrapper-song-action .title-suggesstion {
         text-align: center;
     }
     .wrapper-img-action {
@@ -228,24 +228,26 @@
         height: 150px;
         overflow: hidden;
     }
-    .lyric{
+    .lyric {
         font-size: 1.1rem;
         line-height: 3rem;
-        top:50px;
+        top: 50px;
     }
-    .wrapper-ms-song-lyrics{
+    .wrapper-ms-song-lyrics {
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
-    .container-lyrics .title-suggesstion{
+    .ms-content-song-new {
+        padding-top: 0px;
+    }
+    .container-lyrics .title-suggesstion {
         display: none;
     }
-    .ms-play-control-container{
+    .ms-play-control-container {
         height: 150px;
     }
-    .ms-play-control-wrapper{
+    .ms-play-control-wrapper {
         flex-direction: column;
     }
     .ms-play-control-info {
@@ -271,9 +273,9 @@
     .ms-play-control-volume {
         width: auto !important;
     }
-    .wrapper-proggress-bar .time{
+    .wrapper-proggress-bar .time {
         position: absolute;
-        top:33px;
+        top: 33px;
         width: 0px;
     }
     .wrapper-proggress-bar .duration-time {
