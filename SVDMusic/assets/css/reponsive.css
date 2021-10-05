@@ -134,4 +134,7 @@
     .ms-wrapper-slide{
         display: none;
     }
+    .ms-list-song .list-music-item {
+        width: 100%;
+    }
 }
