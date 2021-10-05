@@ -15,7 +15,7 @@ $('.carousel-suggesstion-song').owlCarousel({
     navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
     responsive:{
         0:{
-            items:1
+            items:2
         },
         600:{
             items:3
@@ -37,7 +37,7 @@ $('.carousel-favorite-artist').owlCarousel({
     navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
     responsive:{
         0:{
-            items:1
+            items:2
         },
         600:{
             items:3
@@ -74,7 +74,7 @@ $('.carousel-mv-song').owlCarousel({
     navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
     responsive:{
         0:{
-            items:1
+            items:2
         },
         600:{
             items:3
@@ -91,7 +91,7 @@ $('.carousel-asia-song').owlCarousel({
     navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
     responsive:{
         0:{
-            items:1
+            items:2
         },
         600:{
             items:3
@@ -108,10 +108,10 @@ $('.carousel-play-list-user').owlCarousel({
     navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
     responsive:{
         0:{
-            items:1
+            items:2
         },
         600:{
-            items:3
+            items:4
         },
         1024:{
             items:6
