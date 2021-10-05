@@ -631,7 +631,6 @@ body {
     margin: 0;
     display: inline-block;
     width: 95%;
-    font-size: 0.9rem;
     color: var(--blue-color);
     background-clip: padding-box;
     border: 0;
@@ -1455,7 +1454,7 @@ input[type=radio] {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, #250f58 0%, #25057e 100%);
+    background: #341f97;
     z-index: 5;
     opacity: 1;
 }
@@ -1468,9 +1467,6 @@ input[type=radio] {
 .footer-contact .item-contact .title-footer {
     color: var(--white-color);
     font-size: 1rem;
-    width: 90%;
-    margin: 0 auto;
-    padding: 25px 0px 0px 7px;
     font-weight: bold;
 }
 
@@ -1478,8 +1474,6 @@ input[type=radio] {
     height: 2px;
     width: 50px;
     background-color: var(--light-blue-color);
-    margin-left: 25px;
-    margin-top: 10px;
 }
 
 .footer-contact .item-contact ul {
@@ -1492,7 +1486,7 @@ input[type=radio] {
     list-style: none;
     color: var(--white-color);
     font-weight: 200;
-    padding: 0px 0px 10px 0;
+    padding: 5px 0 5px 0px;
 }
 
 .footer-contact .item-contact span {
@@ -1521,6 +1515,9 @@ input[type=radio] {
 }
 .footer-copyright .footer-item {
     width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .wrapper-footer-info a {
     text-decoration: none;

@@ -139,6 +139,9 @@
         z-index: 8;
         width: calc(100% - 70px);
     }
+    .search-container {
+        width: 100%;
+    }
     .wrapper-header-control{
         display: none;
     }
@@ -154,6 +157,9 @@
     .ms-list-song .item-info .name {
         width: 100px;
     }
+    .carousel-mv-song .info-mv-song .name {
+        font-weight: 400;
+    }
     /*--Footer--*/
     .footer-contact {
         padding: 0px;
@@ -161,19 +167,28 @@
     .wrapper-item-footer{
         flex-direction: column;
     }
+    .footer-contact .item-contact{
+        display: flex;
+    }
+    .footer-contact .item-contact ul {
+        width: 100%;
+    }
+    .footer-contact .item-contact .title-footer {
+        font-weight: 400;
+    }
+    .wrapper-footer-copyright {
+        flex-direction: column;
+    }
     .footer-copyright {
         height: auto;
     } 
-    .wrapper-footer-copyright {
-        flex-direction: column;
+    .wrapper-footer-copyright div:nth-child(2),.wrapper-footer-copyright div:nth-child(3){
+        display: none;
     }
     .footer-copyright .footer-item {
         width: 100%;
         padding:10px;
         text-align: center;
-    }
-    .wrapper-footer-copyright div:nth-child(2),.wrapper-footer-copyright div:nth-child(3){
-        display: none;
     }
     
 }
