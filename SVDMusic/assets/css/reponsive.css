@@ -220,7 +220,7 @@
     .ms-play-control-player {
         width: 100%;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .ms-control-player-button-control {
         width: 100%;
@@ -228,8 +228,7 @@
     }
     .ms-player-progress-bar .progress-bar {
         margin-top: 20px;
-        width: 80%;
-        margin-left: 10%;
+        width: 100%;
     }
     .ms-play-control-right {
         width: 80%;
@@ -239,6 +238,11 @@
         width: auto !important;
     }
     .wrapper-proggress-bar .time{
-        display: none;
+        position: absolute;
+        top:33px;
+        width: 0px;
+    }
+    .wrapper-proggress-bar .duration-time {
+        right: 10%;
     }
 }
