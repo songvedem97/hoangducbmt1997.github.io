@@ -208,6 +208,40 @@
         text-align: center;
     }
     /*--Song--*/
+    .ms-song-lyrics {
+        height:auto;
+    }
+    .wrapper-ms-song-lyrics {
+        padding-top: 80px;
+    }
+    .wrapper-song-action .title-suggesstion{
+        text-align: center;
+    }
+    .wrapper-img-action {
+        transform: scale(0.8);
+    }
+    .wrapper-lyric {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        overflow: hidden;
+    }
+    .lyric{
+        font-size: 1.1rem;
+        line-height: 3rem;
+        top:50px;
+    }
+    .wrapper-ms-song-lyrics{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .container-lyrics .title-suggesstion{
+        display: none;
+    }
     .ms-play-control-container{
         height: 150px;
     }

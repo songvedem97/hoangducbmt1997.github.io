@@ -72,10 +72,10 @@ getLrc = function (url) {
 		$(".lyricwrap").animate({
 			scrollTop: anchor
 		}, 1000, 'swing');
-		if (anchor - 110 != scrolltop) {
-			if (line.length && anchor >= 110) {
+		if (anchor - 50 != scrolltop) {
+			if (line.length && anchor >= 50) {
 				$(".lyricwrap").animate({
-					scrollTop: anchor - 110
+					scrollTop: anchor - 50
 				}, 1000, "swing");
 			}
 		}
@@ -306,7 +306,7 @@ audio.addEventListener('timeupdate', function (e) {
 				anchor = line.position().top;
 			$(".current-line").attr("class", "");
 			line.attr("class", "current-line");
-			$(".lyric").css("top", "" + (120 - line.position().top) + "px");
+			$(".lyric").css("top", "" + (50 - line.position().top) + "px");
 		}
 	}
 
