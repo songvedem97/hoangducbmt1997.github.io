@@ -543,11 +543,12 @@ body {
     background-color: var(--bg-color);
     margin: 0 auto;
 }
-
-.ms-nav-bar ul:nth-child(1) {
+.nav-bar-top {
     padding-bottom: 15px;
 }
-
+.nav-bar-bottom{
+    padding: 15px 0 15px 0 ;
+}
 .ms-nav-bar ul:nth-child(3) {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1538,7 +1539,6 @@ input[type=radio] {
 .wrapper-icon-footer ul li {
     list-style: none;
 }
-
 .wrapper-privacy {
     text-align: center;
 }
