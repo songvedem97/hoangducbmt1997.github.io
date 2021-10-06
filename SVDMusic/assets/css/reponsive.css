@@ -208,8 +208,19 @@
         text-align: center;
     }
     /*--Song--*/
+    .ms-nav-bar {
+        width: 70px;
+        height: 75px;
+        z-index: 10;
+        overflow: hidden;
+        background: transparent;
+    }
     .ms-song-lyrics {
         height: 680px;
+    }
+    .ms-wrapper-song-mobile{
+        margin-left: -75px;
+        background-color: var(--bg-index);
     }
     .wrapper-song-action .title-suggesstion {
         text-align: center;
@@ -245,7 +256,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-right: 70px;
         padding-top: 70px;
     }
     .ms-content-song-new {

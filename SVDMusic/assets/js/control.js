@@ -166,10 +166,13 @@ function scrollFunction() {
       document.getElementById('header').style.backgroundColor='var(--blue-color)';
       document.getElementById('search').style.backgroundColor= 'var(--bg-color)';
       document.getElementById('input-search').style.color='var(--white-color)';
+      document.getElementById('nav-bar').style.backgroundColor= 'var(--blue-color)';
   }
   else{
     document.getElementById('header').style.backgroundColor='transparent';
     document.getElementById('search').style.backgroundColor= 'var(--bg-search)';
     document.getElementById('input-search').style.color='var(--blue-color)';
+    document.getElementById('nav-bar').style.backgroundColor= 'transparent';
+    document.getElementById('nav-bar').style.border = ' none';
   }
 }
