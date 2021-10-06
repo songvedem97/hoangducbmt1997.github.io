@@ -224,13 +224,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 145px;
+        height: 100%;
         overflow: hidden;
     }
     .lyric {
+        margin-top: 20px;
         font-size: 1.1rem;
         line-height: 3rem;
         top: 115px;
+        height: 300px;
     }
     .wrapper-ms-song-lyrics {
         display: flex;
