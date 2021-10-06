@@ -220,19 +220,28 @@
     .wrapper-img-action {
         transform: scale(0.8);
     }
+    .wrapper-song-action{
+        overflow: hidden;
+    }
     .wrapper-lyric {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
         overflow: hidden;
+        position: relative;
+    }
+    .lyricwrap{
+        margin-top: 85px;
+        height: 250px;
+        position: relative;
+        top: -150px;
     }
     .lyric {
-        margin-top: 20px;
         font-size: 1.1rem;
         line-height: 3rem;
         top: 115px;
-        height: 300px;
+        overflow: hidden;
     }
     .wrapper-ms-song-lyrics {
         display: flex;
