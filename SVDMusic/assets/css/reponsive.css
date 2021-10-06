@@ -292,6 +292,13 @@
     .nav-bar-top, .nav-bar-bottom{
         padding: 0;
     }
+    .wrapper-ms-song-lyrics{
+        position: relative;
+    }
+    .title-playing{
+        position: relative;
+        left: -30px;
+    }
     .ms-song-lyrics {
         height: 680px;
     }
@@ -302,8 +309,10 @@
     .wrapper-img-action {
         transform: scale(0.8);
     }
-    .wrapper-song-action{
-        overflow: hidden;
+    .song-action{
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     .wrapper-lyric {
         display: flex;
