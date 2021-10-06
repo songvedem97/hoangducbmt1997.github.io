@@ -393,6 +393,10 @@
     .ms-user-profile-bg {
         height: 200px;
     }
+    .container-user-song{
+        width: 90%;
+        margin: 0 auto;
+    }
     /*--TOP100--*/
     .ms-ranking-song {
         height: 200px;
