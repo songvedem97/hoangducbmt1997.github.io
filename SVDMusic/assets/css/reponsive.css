@@ -181,7 +181,7 @@
         display: none;
     }
     .ms-list-song .item-info .name {
-        width: 150px;
+        width: 200px;
     }
     .carousel-mv-song .info-mv-song .name {
         font-weight: 400;
@@ -217,6 +217,7 @@
         z-index: 10;
         overflow: hidden;
         background: transparent;
+        transition: 0.3s ease-in-out;
     }
     .ms-song-lyrics {
         height: 680px;
