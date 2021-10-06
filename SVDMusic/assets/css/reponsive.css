@@ -231,9 +231,6 @@
         margin-left: -75px;
         background-color: var(--bg-index);
     }
-    .wrapper-song-action .title-suggesstion {
-        text-align: center;
-    }
     .wrapper-img-action {
         transform: scale(0.8);
     }
@@ -288,15 +285,15 @@
     .ms-play-control-player {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .ms-control-player-button-control {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .ms-player-progress-bar .progress-bar {
-        margin-top: 20px;
-        width: 100%;
+        margin:  20px auto;
+        width: 70%;
     }
     .ms-play-control-right {
         width: 100%;
@@ -306,7 +303,7 @@
     }
     .wrapper-proggress-bar .time {
         position: absolute;
-        top: 34px;
+        top: 12px;
         width: 0px;
     }
     .wrapper-proggress-bar .duration-time {
