@@ -257,6 +257,7 @@
         line-height: 3rem;
         top: 115px;
         overflow: hidden;
+        transition: none;
     }
     .wrapper-ms-song-lyrics {
         display: flex;
