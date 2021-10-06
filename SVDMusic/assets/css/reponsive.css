@@ -21,6 +21,7 @@
     /*--NAVBAR--*/
     .ms-nav-bar {
         width: 70px;
+        background-color: var(--blue-color);
     }
     .logo-mobile{
         display: none;
@@ -183,6 +184,7 @@
     /*--NAVBAR--*/
     .ms-nav-bar {
         width: 70px;
+        
     }
     .logo-desktop {
         display: none;
@@ -213,9 +215,6 @@
     }
     .suggesstion-login {
         display: none;
-    }
-    .ms-nav-bar ul:nth-child(1) {
-        padding: 0;
     }
     /*--Content--*/
     .ms-content {
@@ -277,6 +276,11 @@
         padding: 10px;
         text-align: center;
     }
+
+    /**/
+    .container-app{
+        background-color: var(--bg-index);
+    }
     /*--Song--*/
     .ms-nav-bar {
         width: 70px;
@@ -293,7 +297,7 @@
     .ms-song-lyrics {
         height: 680px;
     }
-    .ms-wrapper-song-mobile{
+    .ms-wrapper-mobile{
         margin-left: -75px;
         background-color: var(--bg-index);
     }

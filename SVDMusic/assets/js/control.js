@@ -8,6 +8,8 @@ const closePopLogin = document.getElementById('close_login_popup');
 const container_login = document.getElementById('container_login');
 const joinButton = document.getElementById('join-now');
 const logoButton = document.querySelector('.logo-mobile');
+const isIndex = document.querySelector('.ms-nav-bar a');
+
 var switchNavBar = true;
 /*--Carousel--*/
 $('.carousel-suggesstion-song').owlCarousel({
@@ -160,18 +162,20 @@ overlay.addEventListener('click',()=>{
     document.getElementById('overlay').style.visibility="hidden";
     document.getElementById('login-form').style.display="none";
 })
-
 logoButton.addEventListener("click",()=>{
-   if(switchNavBar == true){
-    document.getElementById('nav-bar').style.height = "100%";
-    document.getElementById('nav-bar').style.background ="var(--blue-color)";
-    switchNavBar = false;
-   }else{
-    document.getElementById('nav-bar').style.height = "75px";
-    document.getElementById('nav-bar').style.background ="transparent";
-    switchNavBar = true;
-   }
+    changeBgNavBar();
 })
+function changeBgNavBar() {
+    if(switchNavBar == true){
+        document.getElementById('nav-bar').style.height = "100%";
+        document.getElementById('nav-bar').style.background ="var(--blue-color)";
+        switchNavBar = false;
+       }else{
+        document.getElementById('nav-bar').style.height = "75px";
+        document.getElementById('nav-bar').style.background ="transparent";
+        switchNavBar = true;
+       }
+}
 
 window.onscroll = function() {scrollFunction()};
 
