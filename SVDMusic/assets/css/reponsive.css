@@ -225,6 +225,10 @@
         overflow: hidden;
         background: transparent;
         border: transparent;
+        z-index: 6;
+    }
+    .nav-bar-top, .nav-bar-bottom{
+        padding: 0;
     }
     #logo{
         background: transparent;

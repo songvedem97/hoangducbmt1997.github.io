@@ -6,7 +6,9 @@ const signInButton = document.getElementById('signIn');
 const overlay = document.getElementById('overlay');
 const closePopLogin = document.getElementById('close_login_popup');
 const container_login = document.getElementById('container_login');
-const joinButon = document.getElementById('join-now');
+const joinButton = document.getElementById('join-now');
+const logoButton = document.querySelector('.logo-tablet');
+var switchNavBar = true;
 /*--Carousel--*/
 $('.carousel-suggesstion-song').owlCarousel({
     loop:true,
@@ -134,7 +136,7 @@ signUpBtnHeader.addEventListener('click', () => {
     container_login.classList.add("right-panel-active");
 });
 
-joinButon.addEventListener('click', () => {
+joinButton.addEventListener('click', () => {
     document.getElementById('login-form').style.display="block";
     document.getElementById('overlay').style.visibility="visible";
 });
@@ -157,6 +159,18 @@ closePopLogin.addEventListener('click', () => {
 overlay.addEventListener('click',()=>{
     document.getElementById('overlay').style.visibility="hidden";
     document.getElementById('login-form').style.display="none";
+})
+
+logoButton.addEventListener("click",()=>{
+   if(switchNavBar == true){
+    document.getElementById('nav-bar').style.height = "100%";
+    document.getElementById('nav-bar').style.background ="var(--blue-color)";
+    switchNavBar = false;
+   }else{
+    document.getElementById('nav-bar').style.height = "75px";
+    document.getElementById('nav-bar').style.background ="transparent";
+    switchNavBar = true;
+   }
 })
 
 window.onscroll = function() {scrollFunction()};
