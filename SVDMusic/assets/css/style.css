@@ -160,6 +160,7 @@ body {
 
 .btn-prev, .btn-next, .btn-random {
     cursor: pointer;
+    padding: 5px;
 }
 
 @keyframes pulse-border {
