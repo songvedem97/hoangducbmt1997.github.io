@@ -89,12 +89,13 @@
     </div>
     <div id="app" class="container-app">
         <!--NAVBAR-->
-        <div class="ms-nav-bar">
-            <div class="ms-logo">
+        <div class="ms-nav-bar" id="nav-bar">
+            <div id="logo" class="ms-logo">
                 <img class="logo-desktop" src="assets/image/Logo.png" width="150" />
-                <img class="logo-tablet" src="assets/image/Logo-mini.png" width="50" height="50"/>
+                <img class="logo-mobile" src="assets/image/Logo-mini.png" width="50" height="50" />
+                <img class="logo-tablet" src="assets/image/Logo-mini.png" width="50" height="50" />
             </div>
-            <ul>
+            <ul class="nav-bar-top">
                 <a href="index-user.html">
                     <li><span class="material-icons-outlined">album</span>
                         <p>Cá Nhân</p>
@@ -105,12 +106,12 @@
                         <p>Trang Chủ</p>
                     </li>
                 </a>
-                <a href="index-bxh.html">
+                <a href="index-bxh.html" >
                     <li><span class="material-icons-outlined">equalizer</span>
                         <p>BXH</p>
                     </li>
                 </a>
-                <a href="index-song.html">
+                <a href="index-song.html" >
                     <li><span class="material-icons-outlined">music_note</span>
                         <p>Nhạc Mới</p>
                     </li>
@@ -122,13 +123,13 @@
                 </a>
             </ul>
             <div class="hr-nav-bar"></div>
-            <ul>
+            <ul class="nav-bar-bottom">
                 <a href="index-top100.html">
                     <li><span class="material-icons-outlined">show_chart</span>
                         <p>Top 100</p>
                     </li>
                 </a>
-                <a href="index-category.html">
+                <a href="index-category.html" >
                     <li><span class="material-icons-outlined">library_books</span>
                         <p>Thể loại</p>
                     </li>
@@ -163,9 +164,10 @@
                     </div>
                 </div>
             </div>
+            <div class="ms-wrapper-mobile">
             <div class="ms-artist-banner">
                 <div class="wrapper-ms-artist-banner">
-                    <div class="ms-artist-info">
+                    <div class="ms-artist-info ms-content-mobile">
                         <div class="wrapper-artist-info">
                             <img class="avatar-artist" src="assets/image/avatar-user-1.jpg" />
                             <div class="ms-artist-profile">
@@ -188,10 +190,10 @@
 
                     </div>
 
-                    <div class="ms-artist-list-song">
+                    <div class="ms-artist-list-song ms-content-mobile">
                         <p class="title-suggesstion title-artist-song">Bài Hát</p>
                         <div class="ms-list-song">
-                            <div class="wrap-list-song">
+                            <div class="wrap-list-song ">
                                 <ul class="list-music list-music-artist">
                                     <li class="list-music-item" data-music="assets/mp3/pho-da-len-den-remix.mp3"
                                         data-lrc="assets/lyrics/pho-da-len-den-remix.lrc" data-name="Phố đã lên đèn"
@@ -213,9 +215,7 @@
                                                 <div class="creator">Huyền Tâm Môn</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -243,9 +243,7 @@
                                                 <div class="creator">NB3 HOÀI BẢO</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -274,9 +272,7 @@
                                                 <div class="creator">Cukak</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -306,9 +302,7 @@
                                                 <div class="creator">Cukak Remix</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -337,9 +331,7 @@
                                                 <div class="creator">Cukak Remix</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -367,9 +359,7 @@
                                                 <div class="creator">Huyền Tâm Môn</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -398,9 +388,7 @@
                                                 <div class="creator">MONSTAR</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -429,9 +417,7 @@
                                                 <div class="creator">Xesi</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -460,9 +446,7 @@
                                                 <div class="creator">Đức Phúc</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -491,9 +475,7 @@
                                                 <div class="creator">Thịnh Suy</div>
                                             </div>
                                             <div class="item-control">
-                                                <span class="material-icons-outlined">
-                                                    mic
-                                                </span>
+                                                
                                                 <span class="material-icons-outlined">
                                                     playlist_add
                                                 </span>
@@ -510,7 +492,7 @@
                     </div>
 
                 </div>
-                <div class="ms-artist-playlist">
+                <div class="ms-artist-playlist ms-content-mobile">
                     <div class="ms-sugesstion-song">
                         <p class="title-suggesstion">Playlist</p>
                         <div class="owl-carousel carousel-suggesstion-song">
@@ -623,7 +605,7 @@
                 </div>
 
 
-                <div class="ms-artist-suggesstion">
+                <div class="ms-artist-suggesstion ms-content-mobile">
                     <div class="ms-favorite-artist">
                         <p class="title-suggesstion">Có Thể Bạn Sẽ Thích</p>
                         <div class="owl-carousel carousel-favorite-artist">
@@ -785,6 +767,7 @@
                 </div>
 
             </div>
+        </div>
         </div>
     </div>
     <script src="assets/js/app.js" type="text/javascript"></script>

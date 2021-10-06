@@ -88,12 +88,13 @@
     </div>
     <div id="app" class="container-app">
         <!--NAVBAR-->
-        <div class="ms-nav-bar">
-            <div class="ms-logo">
+        <div class="ms-nav-bar" id="nav-bar">
+            <div id="logo" class="ms-logo">
                 <img class="logo-desktop" src="assets/image/Logo.png" width="150" />
-                <img class="logo-tablet" src="assets/image/Logo-mini.png" width="50" height="50"/>
+                <img class="logo-mobile" src="assets/image/Logo-mini.png" width="50" height="50" />
+                <img class="logo-tablet" src="assets/image/Logo-mini.png" width="50" height="50" />
             </div>
-            <ul>
+            <ul class="nav-bar-top">
                 <a href="index-user.html">
                     <li><span class="material-icons-outlined">album</span>
                         <p>Cá Nhân</p>
@@ -109,7 +110,7 @@
                         <p>BXH</p>
                     </li>
                 </a>
-                <a href="index-song.html">
+                <a href="index-song.html" >
                     <li><span class="material-icons-outlined">music_note</span>
                         <p>Nhạc Mới</p>
                     </li>
@@ -121,7 +122,7 @@
                 </a>
             </ul>
             <div class="hr-nav-bar"></div>
-            <ul>
+            <ul class="nav-bar-bottom">
                 <a href="index-top100.html">
                     <li><span class="material-icons-outlined">show_chart</span>
                         <p>Top 100</p>
@@ -162,13 +163,15 @@
                     </div>
                 </div>
             </div>
+            <div class="ms-wrapper-mobile">
             <div class="ms-ranking-song">
                 <div class="blur-song-bg"></div>
                 <div class="blur-song-bg-1"></div>
                 <img class="ms-ranking-bg" src="assets/image/bg-login.PNG" />
                 <h1 class="title-ranking-song text-title"># BẢNG XẾP HẠNG</h1>
             </div>
-            <div class="ms-wrapper-content-song ms-list-ranking-song">
+
+            <div class="ms-wrapper-content-song ms-content-mobile ms-list-ranking-song">
 
                 <div class="owl-carousel carousel-new-song">
                     <div class="item">
@@ -602,6 +605,7 @@
                 </div>
 
             </div>
+        </div>
         </div>
     </div>
     <script src="assets/js/app.js" type="text/javascript"></script>

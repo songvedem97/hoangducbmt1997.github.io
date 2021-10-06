@@ -40,6 +40,9 @@
 .artist-info{
     line-height: 2rem;
 }
+.artist-suggession-play-song{
+    display: flex;
+}
 .btn-artist-play,.btn-artist-register {
     margin-top: 1rem;
     border: none;

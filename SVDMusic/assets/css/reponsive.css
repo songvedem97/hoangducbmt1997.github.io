@@ -276,8 +276,6 @@
         padding: 10px;
         text-align: center;
     }
-
-    /**/
     .container-app{
         background-color: var(--bg-index);
     }
@@ -335,9 +333,9 @@
         align-items: center;
         padding-top: 70px;
     }
-    .ms-content-song-new {
+    .ms-content-mobile {
         padding-top: 0px;
-        width: 80%;
+        width: 80% !important;
         margin: 0 auto;
     }
     .container-lyrics .title-suggesstion {
@@ -383,5 +381,46 @@
     }
     .wrapper-proggress-bar .duration-time {
         right: 10%;
+    }
+    /*--User--*/
+    .wrapper-user-profile{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-user-profile,.container-user-song{
+        width: 100%;
+    }
+    .ms-user-profile-bg {
+        height: 200px;
+    }
+    /*--TOP100--*/
+    .ms-ranking-song {
+        height: 200px;
+    }
+    .title-ranking-song {
+        bottom: 50px;
+    }
+    /*--CATE--*/
+    .title-category-song{
+        bottom: 50px;
+    }
+    .list-category-bg {
+        height: 200px;
+    }
+    /*--Artist-*/
+    .wrapper-ms-artist-banner {
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+    }
+    .ms-artist-info {
+        width: 100%;
+    }
+    .ms-artist-list-song {
+        padding-top: 50px;
+        width: 100%;
+    }
+    .btn-artist-play, .btn-artist-register {
+        font-size: 0.8rem;
     }
 }
