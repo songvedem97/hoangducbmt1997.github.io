@@ -306,7 +306,7 @@ audio.addEventListener('timeupdate', function (e) {
 				anchor = line.position().top;
 			$(".current-line").attr("class", "");
 			line.attr("class", "current-line");
-			$(".lyric").css("top", "" + (50 - line.position().top) + "px");
+			$(".lyric").css("top", "" + (115 - line.position().top) + "px");
 		}
 	}
 
