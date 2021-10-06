@@ -217,6 +217,11 @@
         z-index: 10;
         overflow: hidden;
         background: transparent;
+        border: transparent;
+    }
+    #logo{
+        background: transparent;
+        height: 75px;
         transition: 0.3s ease-in-out;
     }
     .ms-song-lyrics {
