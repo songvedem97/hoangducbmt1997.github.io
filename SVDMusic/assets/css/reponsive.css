@@ -22,6 +22,9 @@
     .ms-nav-bar {
         width: 70px;
     }
+    .logo-mobile{
+        display: none;
+    }
     .logo-desktop {
         display: none;
     }
@@ -91,15 +94,64 @@
         width: 100%;
     }
     /*--Song--*/
+    .ms-song-lyrics {
+        height: 550px;
+    }
     .ms-play-control-info {
         width: 30%;
     }
-    .ms-play-control-player {
+    .ms-play-control-right{
+        width: 30%;
+    }
+    .wrapper-ms-song-lyrics {
+        padding-top: 100px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+    }
+    .wrapper-lyric{
+        width: 60%;
+    }
+    .lyric{
+        font-size: 1.5rem;
+    }
+    .song-action{
         width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+    .wrapper-img-action {
+        transform: scale(0.8);
+    }
+
+     /*--Control--*/
+    .ms-play-control-container {
+        height: 150px;
+    }
+    .ms-play-control-player {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 40%;
+    }
+    .btn-volume{
+        padding-left: 10px;
+    }
+    .ms-play-control-volume .volume {
+        margin-left: 20px;
     }
     .ms-control-player-button-control {
-        width: 40%;
+        position: absolute;
     }
+    .ms-player-progress-bar {
+        position: absolute;
+        top: 20px;
+        width: 250%;
+    }
+
+
 }
 
 /*--CSS Mobile width < 740px--*/
@@ -136,7 +188,15 @@
         display: none;
     }
     .logo-tablet {
+        display: none;
+    }
+    .logo-mobile {
         display: block;
+    }
+    #logo{
+        background: transparent;
+        height: 75px;
+        transition: 0.3s ease-in-out;
     }
     .ms-nav-bar .ms-logo {
         height: 70px;
@@ -230,11 +290,6 @@
     .nav-bar-top, .nav-bar-bottom{
         padding: 0;
     }
-    #logo{
-        background: transparent;
-        height: 75px;
-        transition: 0.3s ease-in-out;
-    }
     .ms-song-lyrics {
         height: 680px;
     }
@@ -284,6 +339,7 @@
     .container-lyrics .title-suggesstion {
         display: none;
     }
+    /*--CONTROL--*/
     .ms-play-control-container-bg {
         background-image: var(--bg-control) !important;
     }

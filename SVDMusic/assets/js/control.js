@@ -7,7 +7,7 @@ const overlay = document.getElementById('overlay');
 const closePopLogin = document.getElementById('close_login_popup');
 const container_login = document.getElementById('container_login');
 const joinButton = document.getElementById('join-now');
-const logoButton = document.querySelector('.logo-tablet');
+const logoButton = document.querySelector('.logo-mobile');
 var switchNavBar = true;
 /*--Carousel--*/
 $('.carousel-suggesstion-song').owlCarousel({
