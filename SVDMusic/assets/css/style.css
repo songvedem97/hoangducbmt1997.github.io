@@ -162,7 +162,12 @@ body {
     cursor: pointer;
     padding: 5px;
 }
-
+.btn-prev, .btn-next{
+    padding: 0 20px 0 20px;
+}
+.play-button i{
+    padding: 15px;
+}
 @keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);

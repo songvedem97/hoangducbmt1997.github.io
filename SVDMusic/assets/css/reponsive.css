@@ -117,6 +117,13 @@
     .title-suggesstion {
         font-size: 1.1rem;
     }
+    .btn-prev, .btn-next, .btn-random ,.play-button ,.btn-loop ,.btn-volume{
+        cursor: none !important;
+    }
+    .btn-prev, .btn-next{
+        padding: 0 40px 0 40px;
+    }
+
     .container-app {
         width: calc(100vw - 70px);
         height: 100%;
@@ -277,7 +284,7 @@
         background-image: var(--bg-control) !important;
     }
     .ms-play-control-container {
-        height: 150px;
+        height: 160px;
     }
     .ms-play-control-wrapper {
         flex-direction: column;
@@ -296,7 +303,7 @@
         margin-bottom: 10px;
     }
     .ms-player-progress-bar .progress-bar {
-        margin:  20px auto;
+        margin: 20px auto;
         width: 70%;
     }
     .ms-play-control-right {
