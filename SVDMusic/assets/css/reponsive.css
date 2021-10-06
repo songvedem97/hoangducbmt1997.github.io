@@ -267,6 +267,8 @@
     }
     .ms-content-song-new {
         padding-top: 0px;
+        width: 80%;
+        margin: 0 auto;
     }
     .container-lyrics .title-suggesstion {
         display: none;
@@ -291,6 +293,7 @@
     .ms-control-player-button-control {
         width: 100%;
         margin-top: 10px;
+        margin-bottom: 10px;
     }
     .ms-player-progress-bar .progress-bar {
         margin:  20px auto;
