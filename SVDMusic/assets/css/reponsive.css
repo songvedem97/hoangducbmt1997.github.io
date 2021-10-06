@@ -209,10 +209,7 @@
     }
     /*--Song--*/
     .ms-song-lyrics {
-        height: auto;
-    }
-    .wrapper-ms-song-lyrics {
-        padding-top: 80px;
+        height: 750px;
     }
     .wrapper-song-action .title-suggesstion {
         text-align: center;
@@ -230,6 +227,7 @@
         height: 100%;
         overflow: hidden;
         position: relative;
+        margin: 0;
     }
     .lyricwrap{
         margin-top: 85px;
