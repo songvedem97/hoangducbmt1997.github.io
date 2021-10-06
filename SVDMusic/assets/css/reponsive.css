@@ -209,7 +209,7 @@
     }
     /*--Song--*/
     .ms-song-lyrics {
-        height: 750px;
+        height: 680px;
     }
     .wrapper-song-action .title-suggesstion {
         text-align: center;
@@ -246,6 +246,7 @@
         flex-direction: column;
         align-items: center;
         margin-right: 70px;
+        padding-top: 70px;
     }
     .ms-content-song-new {
         padding-top: 0px;
