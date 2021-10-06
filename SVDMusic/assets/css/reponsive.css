@@ -393,7 +393,7 @@
     .ms-user-profile-bg {
         height: 200px;
     }
-    .container-user-song{
+    .container-user-song,.container-user-profile {
         width: 90%;
         margin: 0 auto;
     }
