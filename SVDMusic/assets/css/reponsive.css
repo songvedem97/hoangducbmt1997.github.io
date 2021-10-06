@@ -230,7 +230,7 @@
     .lyric {
         font-size: 1.1rem;
         line-height: 3rem;
-        top: 50px;
+        top: 115px;
     }
     .wrapper-ms-song-lyrics {
         display: flex;
@@ -270,8 +270,7 @@
         width: 100%;
     }
     .ms-play-control-right {
-        width: 80%;
-        margin-left: 10%;
+        width: 100%;
     }
     .ms-play-control-volume {
         width: auto !important;
