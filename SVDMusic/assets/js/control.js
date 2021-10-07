@@ -227,7 +227,10 @@ if ('mediaSession' in navigator) {
 	}, 2000)
 });
 navigator.mediaSession.setActionHandler('pause', function() {
-    
+    pauseSong();
+});
+navigator.mediaSession.setActionHandler('play', function() {
+    playSong();
 });
 navigator.mediaSession.setActionHandler('nexttrack', function() {
   // User clicked "Next Track" media notification icon.
