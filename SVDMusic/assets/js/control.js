@@ -218,3 +218,19 @@ if ('mediaSession' in navigator) {
     navigator.mediaSession.setActionHandler('previoustrack', function() {});
     navigator.mediaSession.setActionHandler('nexttrack', function() {});
   }
+  navigator.mediaSession.setActionHandler('previoustrack', function() {
+  // User clicked "Previous Track" media notification icon.
+  index = (index - 1 + playlist.length) % playlist.length;
+  playSong();
+});
+
+navigator.mediaSession.setActionHandler('nexttrack', function() {
+  // User clicked "Next Track" media notification icon.
+  index = (index + 1) % playlist.length;
+  playSong();
+});
+
+
+playButton.addEventListener('pointerup', function(event) {
+  playSong();
+});
