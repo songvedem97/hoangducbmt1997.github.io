@@ -99,20 +99,19 @@ loadSong = async () => {
 
 }
 if ('mediaSession' in navigator) {
-	song = songIndex;
 	let detailSong = document.querySelectorAll(".list-music-item");	
 	navigator.mediaSession.metadata = new MediaMetadata({
-		title: detailSong[song].getAttribute("data-name"),
-		artist: detailSong[song].getAttribute("data-creator"),
+		title: detailSong[songIndex].getAttribute("data-name"),
+		artist: detailSong[songIndex].getAttribute("data-creator"),
 		/*
 		album: 'Whenever You Need Somebody',*/
 		artwork: [
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '96x96', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '128x128', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '192x192', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '256x256', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '384x384', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '512x512', type: 'image/png' },
+			{ src: detailSong[songIndex].getAttribute("data-avatar"), sizes: '96x96', type: 'image/png' },
+			{ src: detailSong[songIndex].getAttribute("data-avatar"), sizes: '128x128', type: 'image/png' },
+			{ src: detailSong[songIndex].getAttribute("data-avatar"), sizes: '192x192', type: 'image/png' },
+			{ src: detailSong[songIndex].getAttribute("data-avatar"), sizes: '256x256', type: 'image/png' },
+			{ src: detailSong[songIndex].getAttribute("data-avatar"), sizes: '384x384', type: 'image/png' },
+			{ src: detailSong[songIndex].getAttribute("data-avatar"), sizes: '512x512', type: 'image/png' },
 		]
 	});
 	navigator.mediaSession.setActionHandler('previoustrack', function () {
