@@ -97,6 +97,7 @@ loadSong = async () => {
 	getLrc(detailSong[song].getAttribute('data-lrc'));
 	document.title = detailSong[song].getAttribute("data-name") +", "+  detailSong[song].getAttribute("data-creator");
 	if ('mediaSession' in navigator) {
+		
 		navigator.mediaSession.metadata = new MediaMetadata({
 			title: detailSong[song].getAttribute("data-name"),
 			artist: detailSong[song].getAttribute("data-creator"),
@@ -112,14 +113,17 @@ loadSong = async () => {
 			]
 		});
 		navigator.mediaSession.setActionHandler('previoustrack', function () {
+			audio.currentTime = 0;
 			// User clicked "Previous Track" media notification icon.
-			audio.addEventListener('loadedmetadata', () => {
-				const time = formatTime(audio.duration);
-				timesong.textContent = time;
-			})
 			prevSong();
 			playSong();
 
+		});
+		navigator.mediaSession.setActionHandler('nexttrack', function () {
+			// User clicked "Next Track" media notification icon.
+			audio.currentTime = 0;
+			nextSong();
+			playSong();
 		});
 		navigator.mediaSession.setActionHandler('pause', function () {
 			// User clicked "Pause Track" media notification icon.
@@ -129,16 +133,7 @@ loadSong = async () => {
 			// User clicked "Play Track" media notification icon.
 			playSong();
 		});
-		navigator.mediaSession.setActionHandler('nexttrack', function () {
-			// User clicked "Next Track" media notification icon.
-			audio.addEventListener('loadedmetadata', () => {
-				const time = formatTime(audio.duration);
-				timesong.textContent = time;
-			})
-			nextSong();
-			playSong();
 
-		});
 	}
 }
 
