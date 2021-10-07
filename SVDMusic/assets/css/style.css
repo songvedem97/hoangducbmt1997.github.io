@@ -275,16 +275,12 @@ body {
 }
 
 .login-form p {
-    font-size: 0.9rem;
     font-weight: 200;
     line-height: 20px;
     letter-spacing: 0.5px;
     margin: 20px 0 30px;
 }
 
-.login-form span {
-    font-size: 0.9rem;
-}
 
 .btn-sign-up {
     margin-top: 10px;
@@ -292,7 +288,6 @@ body {
 
 .login-form a {
     color: #333;
-    font-size: 0.9rem;
     text-decoration: none;
     margin: 10px 0;
 }
@@ -448,21 +443,6 @@ body {
 
 .login-form .container.right-panel-active .overlay-right {
     transform: translateX(20%);
-}
-
-.login-form .social-container {
-    margin: 20px 0;
-}
-
-.login-form .social-container a {
-    border: 1px solid var(--gray-color);
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 30px;
-    width: 30px;
 }
 
 
