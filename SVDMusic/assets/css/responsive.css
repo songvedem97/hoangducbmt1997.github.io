@@ -209,6 +209,9 @@
         height: 70px;
         padding-top: 10px;
     }
+    .login-mobile{
+        display: block;
+    }
     .ms-nav-bar li p {
         display: none;
     }
@@ -221,6 +224,21 @@
     .suggesstion-login {
         display: none;
     }
+    /*--Login--*/
+    .login-form .container{
+        width: 100vw;
+        height: 340px;
+    }
+    .login-form input {
+        padding: 8px 15px;
+    }
+    .login-form .overlay-panel {
+        padding: 0 10px;
+    }
+    .login-form form {
+        padding: 0 15px;
+    }
+   
     /*--Content--*/
     .ms-content {
         margin-left: 70px;

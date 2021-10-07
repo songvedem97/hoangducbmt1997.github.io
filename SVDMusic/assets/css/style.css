@@ -196,6 +196,9 @@ body {
 .logo-tablet, .logo-mobile{
     display: none;
 }
+.login-mobile{
+    display: none;
+}
 /*--Popup Login--*/
 
 #login-form {

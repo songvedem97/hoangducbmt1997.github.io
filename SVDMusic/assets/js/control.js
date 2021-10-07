@@ -10,6 +10,7 @@ const joinButton = document.getElementById('join-now');
 const logoButton = document.querySelector('.logo-mobile');
 const isIndex = document.querySelector('.ms-nav-bar a');
 const overlayNavBarMobile = document.querySelector('.overlay-nav-bar-mobile');
+const btnLoginMobile = document.querySelector('.login-mobile');
 
 var switchNavBar = true;
 /*--Carousel--*/
@@ -133,14 +134,16 @@ signInBtnHeader.addEventListener('click', () => {
     document.getElementById('login-form').style.display="block";
     document.getElementById('overlay').style.visibility="visible";
     container_login.classList.remove("right-panel-active");
-
 });
 signUpBtnHeader.addEventListener('click', () => {
     document.getElementById('login-form').style.display="block";
     document.getElementById('overlay').style.visibility="visible";
     container_login.classList.add("right-panel-active");
 });
-
+btnLoginMobile.addEventListener('click',()=>{
+    document.getElementById('login-form').style.display="block";
+    document.getElementById('overlay').style.visibility="visible";
+})
 joinButton.addEventListener('click', () => {
     document.getElementById('login-form').style.display="block";
     document.getElementById('overlay').style.visibility="visible";
