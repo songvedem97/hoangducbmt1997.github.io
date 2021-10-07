@@ -217,17 +217,24 @@ if ('mediaSession' in navigator) {
     navigator.mediaSession.setActionHandler('pause', function() {});
     navigator.mediaSession.setActionHandler('previoustrack', function() {});
     navigator.mediaSession.setActionHandler('nexttrack', function() {});
-  }
+};
+
   navigator.mediaSession.setActionHandler('previoustrack', function() {
   // User clicked "Previous Track" media notification icon.
-  index = (index - 1 + playlist.length) % playlist.length;
-  playSong();
+  prevSong();
+	setTimeout(() => {
+		playSong();
+	}, 2000)
 });
-
+navigator.mediaSession.setActionHandler('pause', function() {
+    
+});
 navigator.mediaSession.setActionHandler('nexttrack', function() {
   // User clicked "Next Track" media notification icon.
-  index = (index + 1) % playlist.length;
-  playSong();
+  nextSong();
+	setTimeout(() => {
+		playSong();
+	}, 2000)
 });
 
 
