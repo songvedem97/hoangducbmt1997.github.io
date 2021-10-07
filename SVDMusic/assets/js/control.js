@@ -9,6 +9,7 @@ const container_login = document.getElementById('container_login');
 const joinButton = document.getElementById('join-now');
 const logoButton = document.querySelector('.logo-mobile');
 const isIndex = document.querySelector('.ms-nav-bar a');
+const overlayNavBarMobile = document.querySelector('.overlay-nav-bar-mobile');
 
 var switchNavBar = true;
 /*--Carousel--*/
@@ -166,6 +167,7 @@ overlay.addEventListener('click',()=>{
 })
 logoButton.addEventListener("click",()=>{
     changeBgNavBar();
+    overlayNavBarMobile.style.display="block";
 })
 function changeBgNavBar() {
     if(switchNavBar == true){
@@ -178,6 +180,14 @@ function changeBgNavBar() {
         switchNavBar = true;
        }
 }
+
+overlayNavBarMobile.addEventListener("click",()=>{
+    document.getElementById('nav-bar').style.height = "75px";
+    document.getElementById('nav-bar').style.background ="transparent";
+    overlayNavBarMobile.style.display="none";
+    switchNavBar = true;
+})
+
 
 window.onscroll = function() {scrollFunction()};
 

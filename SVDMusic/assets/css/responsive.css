@@ -151,8 +151,6 @@
         top: 20px;
         width: 250%;
     }
-
-
 }
 
 /*--CSS Mobile width < 740px--*/
@@ -199,6 +197,13 @@
         background: transparent;
         height: 75px;
         transition: 0.3s ease-in-out;
+    }
+    .overlay-nav-bar-mobile{
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+        z-index: 6;
     }
     .ms-nav-bar .ms-logo {
         height: 70px;
