@@ -284,13 +284,17 @@ listSong.addEventListener("click", (e) => {
 	playSong();
 })
 
-listRankSong.addEventListener("click", (e) => {
-	songIndex = e.target.closest("li").getAttribute("data-index");
-	resetLyrics.innerHTML = `<div class="lyric"></div>`;
-	loadSong(songIndex);
-	playSong();
-	console.log(songIndex);
-})
+if (listRankSong != null) {
+	listRankSong.addEventListener("click", (e) => {
+		songIndex = e.target.closest("li").getAttribute("data-index");
+		resetLyrics.innerHTML = `<div class="lyric"></div>`;
+		loadSong(songIndex);
+		playSong();
+		console.log(songIndex);
+	})
+}
+
+
 
 audio.addEventListener('loadedmetadata', () => {
 	const time = formatTime(audio.duration);
