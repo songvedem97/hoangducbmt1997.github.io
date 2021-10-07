@@ -94,9 +94,37 @@ loadSong = async () => {
 	avatarControl.src=detailSong[song].getAttribute("data-avatar");
 	imgBlurSong.src=detailSong[song].getAttribute("data-img");
 	getLrc(detailSong[song].getAttribute('data-lrc'));
-	document.title = detailSong[song].getAttribute("data-name")+", "+detailSong[song].getAttribute("data-creator");;
 	
 }
+if ('mediaSession' in navigator) {
+	song = songIndex;
+	let detailSong = document.querySelectorAll(".list-music-item");
+
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: detailSong[song].getAttribute("data-name"),
+      artist: detailSong[song].getAttribute("data-creator"),
+	  /*
+      album: 'Whenever You Need Somebody',*/
+      artwork: [
+        { src: 'https://dummyimage.com/96x96',   sizes: '96x96',   type: 'image/png' },
+        { src: 'https://dummyimage.com/128x128', sizes: '128x128', type: 'image/png' },
+        { src: 'https://dummyimage.com/192x192', sizes: '192x192', type: 'image/png' },
+        { src: 'https://dummyimage.com/256x256', sizes: '256x256', type: 'image/png' },
+        { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
+        { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
+      ]
+    });
+  
+    navigator.mediaSession.setActionHandler('play', function() {});
+    navigator.mediaSession.setActionHandler('pause', function() {});
+    navigator.mediaSession.setActionHandler('previoustrack', function() {});
+    navigator.mediaSession.setActionHandler('nexttrack', function() {});
+};
+
+
+
+
+
 playSong = () => {
 	musicContent.classList.add("playing");
 	avatar.style.animationPlayState = 'running';
@@ -312,6 +340,30 @@ audio.addEventListener('timeupdate', function (e) {
 
 });
 
-
+navigator.mediaSession.setActionHandler('previoustrack', function() {
+	// User clicked "Previous Track" media notification icon.
+	prevSong();
+	  setTimeout(() => {
+		  playSong();
+	  }, 2000)
+  });
+  navigator.mediaSession.setActionHandler('pause', function() {
+	  // User clicked "Pause Track" media notification icon.
+	  pauseSong();
+  });
+  navigator.mediaSession.setActionHandler('play', function() {
+	  // User clicked "Play Track" media notification icon.
+	  playSong();
+  });
+  navigator.mediaSession.setActionHandler('nexttrack', function() {
+	// User clicked "Next Track" media notification icon.
+	nextSong();
+	  setTimeout(() => {
+		  playSong();
+	  }, 2000)
+  });
+  playButton.addEventListener('pointerup', function(event) {
+	playSong();
+  });
 
 
