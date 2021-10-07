@@ -94,6 +94,7 @@ loadSong = async () => {
 	avatarControl.src = detailSong[song].getAttribute("data-avatar");
 	imgBlurSong.src = detailSong[song].getAttribute("data-img");
 	getLrc(detailSong[song].getAttribute('data-lrc'));
+	document.title = detailSong[song].getAttribute("data-name") +", "+  detailSong[song].getAttribute("data-creator");
 	if ('mediaSession' in navigator) {
 		navigator.mediaSession.metadata = new MediaMetadata({
 			title: detailSong[song].getAttribute("data-name"),
