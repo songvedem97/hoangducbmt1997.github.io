@@ -38,6 +38,9 @@
     border-bottom: 1px solid var(--bg-color);
 }
 
+.list-music-ranking li:nth-child(1),.list-music-ranking li:nth-child(2),.list-music-ranking li:nth-child(3){
+    display: none;
+}
 /*--Rank 100--*/
 .blur-100-song{
     background-color: var(--bg-index);

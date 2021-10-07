@@ -26,6 +26,7 @@ var arraySongs = [];
 var isRandom = false;
 const btnVolume = document.querySelector('.btn-volume');
 const listSong = document.querySelector('.list-music');
+const listRankSong = document.querySelector('.top-ranking-song');
 /*--INIT--*/
 var songIndex = 0;
 var valueVolume = 0.5;
@@ -281,6 +282,14 @@ listSong.addEventListener("click", (e) => {
 	resetLyrics.innerHTML = `<div class="lyric"></div>`;
 	loadSong(songIndex);
 	playSong();
+})
+
+listRankSong.addEventListener("click", (e) => {
+	songIndex = e.target.closest("li").getAttribute("data-index");
+	resetLyrics.innerHTML = `<div class="lyric"></div>`;
+	loadSong(songIndex);
+	playSong();
+	console.log(songIndex);
 })
 
 audio.addEventListener('loadedmetadata', () => {

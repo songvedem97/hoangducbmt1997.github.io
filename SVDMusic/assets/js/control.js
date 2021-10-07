@@ -60,7 +60,7 @@ $('.carousel-favorite-artist').owlCarousel({
 $('.carousel-new-song').owlCarousel({
     loop:true,
     autoplay:true,
-    autoplayTimeout:3000,
+    autoplayTimeout:4000,
     margin:20,
     nav:false,
     responsive:{
