@@ -15,11 +15,10 @@
 .ms-ranking-bg {
     position: absolute;
     width: 100%;
-    transform: scale(1.1, 1.1);
 }
 .blur-song-bg{
     position: absolute;
-    opacity: 0.9;
+    opacity: 0.5;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(
@@ -42,4 +41,8 @@
 /*--Rank 100--*/
 .blur-100-song{
     background-color: var(--bg-index);
+}
+.ms-100-song-bg{
+    height: 100%;
+    width: auto;
 }

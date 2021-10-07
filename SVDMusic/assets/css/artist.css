@@ -12,6 +12,7 @@
     width: 100%;
     filter: blur(1px);
     filter: grayscale(1);
+    height: auto;
 }
 .ms-artist-banner .blur-song-bg{
     position: absolute;

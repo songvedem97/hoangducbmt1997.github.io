@@ -82,9 +82,6 @@
         height: 200px;
     }
     /*--Artist--*/
-    .ms-artist-bg {
-        height: 200px;
-    }
     .avatar-artist {
         width: 200px;
         height: 200px;
@@ -424,8 +421,9 @@
         position: relative;
     }
     .ms-artist-bg {
-        height: 200px;
+        height: auto;
         position: absolute;
+        width: 100%;
     }
     .ms-artist-banner .avatar-artist {
         margin: 0;
