@@ -138,13 +138,6 @@ loadSong = async () => {
 	}
 }
 
-
-
-
-
-
-
-
 playSong = () => {
 	musicContent.classList.add("playing");
 	avatar.style.animationPlayState = 'running';
