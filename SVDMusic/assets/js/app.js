@@ -109,41 +109,35 @@ loadSong = async () => {
 				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '512x512', type: 'image/png' },
 			]
 		});
-	};
+		navigator.mediaSession.setActionHandler('previoustrack', function () {
+			// User clicked "Previous Track" media notification icon.
+			prevSong();
+			setTimeout(() => {
+				playSong();
+			}, 2000)
+		});
+		navigator.mediaSession.setActionHandler('pause', function () {
+			// User clicked "Pause Track" media notification icon.
+			pauseSong();
+		});
+		navigator.mediaSession.setActionHandler('play', function () {
+			// User clicked "Play Track" media notification icon.
+			playSong();
+		});
+		navigator.mediaSession.setActionHandler('nexttrack', function () {
+			// User clicked "Next Track" media notification icon.
+			nextSong();
+			setTimeout(() => {
+				playSong();
+			}, 2000)
+		});
+		playButton.addEventListener('pointerup', function (event) {
+			playSong();
+		});
+		
+	}
 }
 
-
-if ('mediaSession' in navigator) {
-	navigator.mediaSession.setActionHandler('play', function () { });
-	navigator.mediaSession.setActionHandler('pause', function () { });
-	navigator.mediaSession.setActionHandler('previoustrack', function () { });
-	navigator.mediaSession.setActionHandler('nexttrack', function () { });
-};
-navigator.mediaSession.setActionHandler('previoustrack', function () {
-	// User clicked "Previous Track" media notification icon.
-	prevSong();
-	setTimeout(() => {
-		playSong();
-	}, 2000)
-});
-navigator.mediaSession.setActionHandler('pause', function () {
-	// User clicked "Pause Track" media notification icon.
-	pauseSong();
-});
-navigator.mediaSession.setActionHandler('play', function () {
-	// User clicked "Play Track" media notification icon.
-	playSong();
-});
-navigator.mediaSession.setActionHandler('nexttrack', function () {
-	// User clicked "Next Track" media notification icon.
-	nextSong();
-	setTimeout(() => {
-		playSong();
-	}, 2000)
-});
-playButton.addEventListener('pointerup', function (event) {
-	playSong();
-});
 
 
 
