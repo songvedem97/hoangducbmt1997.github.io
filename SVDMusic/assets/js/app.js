@@ -113,8 +113,8 @@ loadSong = async () => {
 			// User clicked "Previous Track" media notification icon.
 			prevSong();
 			setTimeout(() => {
-				playSong();
-			}, 2000)
+			playSong();
+			}, 0)
 		});
 		navigator.mediaSession.setActionHandler('pause', function () {
 			// User clicked "Pause Track" media notification icon.
@@ -129,7 +129,7 @@ loadSong = async () => {
 			nextSong();
 			setTimeout(() => {
 				playSong();
-			}, 2000)
+			}, 0)
 		});
 		playButton.addEventListener('pointerup', function (event) {
 			playSong();
