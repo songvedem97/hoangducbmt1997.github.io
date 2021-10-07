@@ -133,9 +133,16 @@ loadSong = async () => {
 				playSong();
 			}, 0)
 		});
-		playButton.addEventListener('pointerup', function (event) {
-			playSong();
-		});
+		navigator.mediaSession.setActionHandler('seekbackward', evt => {
+			// User clicked "Seek Backward" media notification icon.
+			audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
+		   });
+		   
+		   navigator.mediaSession.setActionHandler('seekforward', evt => {
+			// User clicked "Seek Forward" media notification icon.
+			audio.currentTime = Math.min(audio.currentTime + skipTime,
+						  audio.duration);
+		   });
 	}
 }
 
