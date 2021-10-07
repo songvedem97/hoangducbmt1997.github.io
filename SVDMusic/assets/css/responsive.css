@@ -420,8 +420,15 @@
         margin: 0 auto;
     }
     /*--Artist-*/
+    .ms-artist-banner{
+        position: relative;
+    }
     .ms-artist-bg {
         height: 200px;
+        position: absolute;
+    }
+    .ms-artist-banner .avatar-artist {
+        margin: 0;
     }
     .wrapper-ms-artist-banner {
         display: flex;

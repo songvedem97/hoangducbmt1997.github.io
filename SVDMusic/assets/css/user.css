@@ -29,6 +29,9 @@
         180deg,hsla(0,0%,100%,0) 30%,var(--bg-index));
     z-index: 1;
 }
+.ms-artist-info{
+    background-color: red;
+}
 .wrapper-user-profile {
     position: relative;
     width: 100%;
@@ -51,10 +54,8 @@
 .profile-avatar {
     height: 200px;
     width: 200px;
-    top: -100px;
     border: 0px solid var(--bg-index);
     margin-top: -100px;
-    border: 5px solid var(--bg-index);
 }
 .user-profile-info{
     color: var(--gray-color);
