@@ -114,9 +114,8 @@ loadSong = async () => {
 		navigator.mediaSession.setActionHandler('previoustrack', function () {
 			// User clicked "Previous Track" media notification icon.
 			prevSong();
-			setTimeout(() => {
 			playSong();
-			}, 0)
+
 		});
 		navigator.mediaSession.setActionHandler('pause', function () {
 			// User clicked "Pause Track" media notification icon.
@@ -129,20 +128,19 @@ loadSong = async () => {
 		navigator.mediaSession.setActionHandler('nexttrack', function () {
 			// User clicked "Next Track" media notification icon.
 			nextSong();
-			setTimeout(() => {
-				playSong();
-			}, 0)
+			playSong();
 		});
+		let skipTime = 10;
 		navigator.mediaSession.setActionHandler('seekbackward', evt => {
 			// User clicked "Seek Backward" media notification icon.
 			audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
-		   });
+		});
 		   
-		   navigator.mediaSession.setActionHandler('seekforward', evt => {
+		navigator.mediaSession.setActionHandler('seekforward', evt => {
 			// User clicked "Seek Forward" media notification icon.
 			audio.currentTime = Math.min(audio.currentTime + skipTime,
 						  audio.duration);
-		   });
+		});
 	}
 }
 
@@ -299,9 +297,6 @@ if (listRankSong != null) {
 		console.log(songIndex);
 	})
 }
-
-
-
 audio.addEventListener('loadedmetadata', () => {
 	const time = formatTime(audio.duration);
 	timesong.textContent = time;
