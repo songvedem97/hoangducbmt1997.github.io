@@ -23,7 +23,7 @@
         width: 70px;
         background-color: var(--blue-color);
     }
-    .logo-mobile{
+    .logo-mobile {
         display: none;
     }
     .logo-desktop {
@@ -78,21 +78,16 @@
         height: 200px;
     }
     .profile-avatar {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
     /*--Artist--*/
-    .wrapper-ms-artist-banner {
-        display: flex;
-        flex-direction: column;
-        padding-top: 100px;
+    .ms-artist-bg {
+        height: 200px;
     }
-    .ms-artist-info {
-        width: 100%;
-    }
-    .ms-artist-list-song {
-        padding-top: 50px;
-        width: 100%;
+    .avatar-artist {
+        width: 200px;
+        height: 200px;
     }
     /*--Song--*/
     .ms-song-lyrics {
@@ -101,7 +96,7 @@
     .ms-play-control-info {
         width: 30%;
     }
-    .ms-play-control-right{
+    .ms-play-control-right {
         width: 30%;
     }
     .wrapper-ms-song-lyrics {
@@ -110,13 +105,13 @@
         margin: 0 auto;
         display: flex;
     }
-    .wrapper-lyric{
+    .wrapper-lyric {
         width: 60%;
     }
-    .lyric{
+    .lyric {
         font-size: 1.5rem;
     }
-    .song-action{
+    .song-action {
         width: 40%;
         display: flex;
         justify-content: center;
@@ -124,8 +119,7 @@
     .wrapper-img-action {
         transform: scale(0.8);
     }
-
-     /*--Control--*/
+    /*--Control--*/
     .ms-play-control-container {
         height: 150px;
     }
@@ -137,7 +131,7 @@
         position: relative;
         width: 40%;
     }
-    .btn-volume{
+    .btn-volume {
         padding-left: 10px;
     }
     .ms-play-control-volume .volume {
@@ -168,13 +162,12 @@
     .title-suggesstion {
         font-size: 1.1rem;
     }
-    .btn-prev, .btn-next, .btn-random ,.play-button ,.btn-loop ,.btn-volume{
+    .btn-prev, .btn-next, .btn-random, .play-button, .btn-loop, .btn-volume {
         cursor: none !important;
     }
-    .btn-prev, .btn-next{
+    .btn-prev, .btn-next {
         padding: 0 40px 0 40px;
     }
-
     .container-app {
         width: calc(100vw - 70px);
         height: 100%;
@@ -182,7 +175,6 @@
     /*--NAVBAR--*/
     .ms-nav-bar {
         width: 70px;
-        
     }
     .logo-desktop {
         display: none;
@@ -193,12 +185,12 @@
     .logo-mobile {
         display: block;
     }
-    #logo{
+    #logo {
         background: transparent;
         height: 75px;
         transition: 0.3s ease-in-out;
     }
-    .overlay-nav-bar-mobile{
+    .overlay-nav-bar-mobile {
         position: fixed;
         height: 100vh;
         width: 100vw;
@@ -209,7 +201,7 @@
         height: 70px;
         padding-top: 10px;
     }
-    .login-mobile{
+    .login-mobile {
         display: block;
     }
     .ms-nav-bar li p {
@@ -225,7 +217,7 @@
         display: none;
     }
     /*--Login--*/
-    .login-form .container{
+    .login-form .container {
         width: 100vw;
         height: 340px;
     }
@@ -238,7 +230,6 @@
     .login-form form {
         padding: 0 15px;
     }
-   
     /*--Content--*/
     .ms-content {
         margin-left: 70px;
@@ -299,7 +290,7 @@
         padding: 10px;
         text-align: center;
     }
-    .container-app{
+    .container-app {
         background-color: var(--bg-index);
     }
     /*--Song--*/
@@ -312,26 +303,26 @@
         border: transparent;
         z-index: 6;
     }
-    .nav-bar-top, .nav-bar-bottom{
+    .nav-bar-top, .nav-bar-bottom {
         padding: 0;
     }
-    .wrapper-ms-song-lyrics{
+    .wrapper-ms-song-lyrics {
         position: relative;
     }
-    .title-playing{
+    .title-playing {
         position: relative;
     }
     .ms-song-lyrics {
         height: 680px;
     }
-    .ms-wrapper-mobile{
+    .ms-wrapper-mobile {
         margin-left: -75px;
         background-color: var(--bg-index);
     }
     .wrapper-img-action {
         transform: scale(0.8);
     }
-    .song-action{
+    .song-action {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -345,7 +336,7 @@
         position: relative;
         margin: 0;
     }
-    .lyricwrap{
+    .lyricwrap {
         margin-top: 85px;
         height: 250px;
         position: relative;
@@ -414,35 +405,24 @@
         right: 10%;
     }
     /*--User--*/
-    .wrapper-user-profile{
+    .wrapper-user-profile {
         display: flex;
         flex-direction: column;
     }
-    .container-user-profile,.container-user-song{
+    .container-user-profile, .container-user-song {
         width: 100%;
     }
     .ms-user-profile-bg {
         height: 200px;
     }
-    .container-user-song,.container-user-profile {
+    .container-user-song, .container-user-profile {
         width: 90%;
         margin: 0 auto;
     }
-    /*--TOP100--*/
-    .ms-ranking-song {
-        height: 200px;
-    }
-    .title-ranking-song {
-        bottom: 50px;
-    }
-    /*--CATE--*/
-    .title-category-song{
-        bottom: 50px;
-    }
-    .list-category-bg {
-        height: 200px;
-    }
     /*--Artist-*/
+    .ms-artist-bg {
+        height: 200px;
+    }
     .wrapper-ms-artist-banner {
         display: flex;
         flex-direction: column;
@@ -457,5 +437,19 @@
     }
     .btn-artist-play, .btn-artist-register {
         font-size: 0.8rem;
+    }
+    /*--TOP100--*/
+    .ms-ranking-song {
+        height: 200px;
+    }
+    .title-ranking-song {
+        bottom: 50px;
+    }
+    /*--CATE--*/
+    .title-category-song {
+        bottom: 50px;
+    }
+    .list-category-bg {
+        height: 200px;
     }
 }
