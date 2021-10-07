@@ -29,9 +29,7 @@
         180deg,hsla(0,0%,100%,0) 30%,var(--bg-index));
     z-index: 1;
 }
-.ms-artist-info{
-    background-color: red;
-}
+
 .wrapper-user-profile {
     position: relative;
     width: 100%;
