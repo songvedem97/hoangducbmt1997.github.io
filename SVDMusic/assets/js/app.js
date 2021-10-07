@@ -136,7 +136,6 @@ loadSong = async () => {
 		playButton.addEventListener('pointerup', function (event) {
 			playSong();
 		});
-		
 	}
 }
 
