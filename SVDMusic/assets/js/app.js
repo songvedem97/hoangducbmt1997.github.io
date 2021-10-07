@@ -130,19 +130,10 @@ loadSong = async () => {
 			nextSong();
 			playSong();
 		});
-		let skipTime = 10;
-		navigator.mediaSession.setActionHandler('seekbackward', evt => {
-			// User clicked "Seek Backward" media notification icon.
-			audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
-		});
-		   
-		navigator.mediaSession.setActionHandler('seekforward', evt => {
-			// User clicked "Seek Forward" media notification icon.
-			audio.currentTime = Math.min(audio.currentTime + skipTime,
-						  audio.duration);
-		});
+		console.log(audio.duration);
 	}
 }
+console.log(audio.currentTime);
 
 playSong = () => {
 	musicContent.classList.add("playing");
