@@ -35,7 +35,7 @@ audio.volume = valueVolume;
 
 getSong = async () => {
 	let songs = document.querySelectorAll(".list-music-item");
-	
+
 	for (let i = 0; i < songs.length; i++) {
 		arraySongs.push(songs[i].getAttribute("data-music"));
 	}
@@ -91,33 +91,61 @@ loadSong = async () => {
 	nameSong.textContent = detailSong[song].getAttribute("data-name");
 	creator.textContent = detailSong[song].getAttribute("data-creator");
 	avatar.src = detailSong[song].getAttribute("data-avatar");
-	avatarControl.src=detailSong[song].getAttribute("data-avatar");
-	imgBlurSong.src=detailSong[song].getAttribute("data-img");
+	avatarControl.src = detailSong[song].getAttribute("data-avatar");
+	imgBlurSong.src = detailSong[song].getAttribute("data-img");
 	getLrc(detailSong[song].getAttribute('data-lrc'));
 	if ('mediaSession' in navigator) {
 		navigator.mediaSession.metadata = new MediaMetadata({
-		  title: detailSong[song].getAttribute("data-name"),
-		  artist: detailSong[song].getAttribute("data-creator"),
-		  /*
-		  album: 'Whenever You Need Somebody',*/
-		  artwork: [
-			{ src: detailSong[song].getAttribute("data-avatar"),   sizes: '96x96',   type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '128x128', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '192x192', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '256x256', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '384x384', type: 'image/png' },
-			{ src: detailSong[song].getAttribute("data-avatar"), sizes: '512x512', type: 'image/png' },
-		  ]
+			title: detailSong[song].getAttribute("data-name"),
+			artist: detailSong[song].getAttribute("data-creator"),
+			/*
+			album: 'Whenever You Need Somebody',*/
+			artwork: [
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '96x96', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '128x128', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '192x192', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '256x256', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '384x384', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '512x512', type: 'image/png' },
+			]
 		});
-	  
-		navigator.mediaSession.setActionHandler('play', function() {});
-		navigator.mediaSession.setActionHandler('pause', function() {});
-		navigator.mediaSession.setActionHandler('previoustrack', function() {});
-		navigator.mediaSession.setActionHandler('nexttrack', function() {});
 	};
-	
-	
 }
+
+
+if ('mediaSession' in navigator) {
+	navigator.mediaSession.setActionHandler('play', function () { });
+	navigator.mediaSession.setActionHandler('pause', function () { });
+	navigator.mediaSession.setActionHandler('previoustrack', function () { });
+	navigator.mediaSession.setActionHandler('nexttrack', function () { });
+};
+navigator.mediaSession.setActionHandler('previoustrack', function () {
+	// User clicked "Previous Track" media notification icon.
+	prevSong();
+	setTimeout(() => {
+		playSong();
+	}, 2000)
+});
+navigator.mediaSession.setActionHandler('pause', function () {
+	// User clicked "Pause Track" media notification icon.
+	pauseSong();
+});
+navigator.mediaSession.setActionHandler('play', function () {
+	// User clicked "Play Track" media notification icon.
+	playSong();
+});
+navigator.mediaSession.setActionHandler('nexttrack', function () {
+	// User clicked "Next Track" media notification icon.
+	nextSong();
+	setTimeout(() => {
+		playSong();
+	}, 2000)
+});
+playButton.addEventListener('pointerup', function (event) {
+	playSong();
+});
+
+
 
 
 
@@ -140,7 +168,7 @@ pauseSong = () => {
 
 nextSong = () => {
 	songIndex++;
-	resetLyrics.innerHTML=`<div class="lyric"></div>`;
+	resetLyrics.innerHTML = `<div class="lyric"></div>`;
 	if (songIndex > arraySongs.length - 1) {
 		songIndex = 0;
 	}
@@ -148,7 +176,7 @@ nextSong = () => {
 }
 prevSong = () => {
 	songIndex--;
-	resetLyrics.innerHTML=`<div class="lyric"></div>`;
+	resetLyrics.innerHTML = `<div class="lyric"></div>`;
 	if (songIndex < 0) {
 		songIndex = arraySongs.length - 1;
 	}
@@ -169,7 +197,7 @@ removeLoopSong = () => {
 addRandomSong = () => {
 	btnRandom.classList.add('add-color-btn');
 }
-removeRandomSong = ()=>{
+removeRandomSong = () => {
 	btnRandom.classList.remove('add-color-btn');
 }
 
@@ -241,7 +269,7 @@ btnLoop.addEventListener("click", () => {
 	else
 		addLoopSong();
 })
-btnRandom.addEventListener("click",()=>{
+btnRandom.addEventListener("click", () => {
 	if (isRandom == false) {
 		isRandom = true;
 		addRandomSong();
@@ -262,7 +290,7 @@ btnVolume.addEventListener("click", () => {
 
 listSong.addEventListener("click", (e) => {
 	songIndex = e.target.closest("li").getAttribute("data-index");
-	resetLyrics.innerHTML=`<div class="lyric"></div>`;
+	resetLyrics.innerHTML = `<div class="lyric"></div>`;
 	loadSong(songIndex);
 	playSong();
 })
@@ -282,16 +310,16 @@ audio.addEventListener("ended", () => {
 	avatar.style.animationPlayState = 'paused';
 	if (isRandom == true) {
 		let valueRandom;
-		do{
-			valueRandom =Math.floor(Math.random()*arraySongs.length);
-		}while(valueRandom===songIndex);
+		do {
+			valueRandom = Math.floor(Math.random() * arraySongs.length);
+		} while (valueRandom === songIndex);
 		songIndex = valueRandom
 		console.log(songIndex);
 		nextSong();
 		playSong();
 	}
-	else{
-		nextSong();	
+	else {
+		nextSong();
 		playSong();
 	}
 })
@@ -338,30 +366,6 @@ audio.addEventListener('timeupdate', function (e) {
 
 });
 
-navigator.mediaSession.setActionHandler('previoustrack', function() {
-	// User clicked "Previous Track" media notification icon.
-	prevSong();
-	  setTimeout(() => {
-		  playSong();
-	  }, 2000)
-  });
-  navigator.mediaSession.setActionHandler('pause', function() {
-	  // User clicked "Pause Track" media notification icon.
-	  pauseSong();
-  });
-  navigator.mediaSession.setActionHandler('play', function() {
-	  // User clicked "Play Track" media notification icon.
-	  playSong();
-  });
-  navigator.mediaSession.setActionHandler('nexttrack', function() {
-	// User clicked "Next Track" media notification icon.
-	nextSong();
-	  setTimeout(() => {
-		  playSong();
-	  }, 2000)
-  });
-  playButton.addEventListener('pointerup', function(event) {
-	playSong();
-  });
+
 
 
