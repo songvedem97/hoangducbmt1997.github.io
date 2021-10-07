@@ -113,6 +113,10 @@ loadSong = async () => {
 		});
 		navigator.mediaSession.setActionHandler('previoustrack', function () {
 			// User clicked "Previous Track" media notification icon.
+			audio.addEventListener('loadedmetadata', () => {
+				const time = formatTime(audio.duration);
+				timesong.textContent = time;
+			})
 			prevSong();
 			playSong();
 
@@ -127,13 +131,17 @@ loadSong = async () => {
 		});
 		navigator.mediaSession.setActionHandler('nexttrack', function () {
 			// User clicked "Next Track" media notification icon.
+			audio.addEventListener('loadedmetadata', () => {
+				const time = formatTime(audio.duration);
+				timesong.textContent = time;
+			})
 			nextSong();
 			playSong();
+
 		});
-		console.log(audio.duration);
 	}
 }
-console.log(audio.currentTime);
+
 
 playSong = () => {
 	musicContent.classList.add("playing");
