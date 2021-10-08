@@ -73,7 +73,8 @@
             </div>
         </div>
     </div>
-    <div class="ms-play-control-container hidden">
+    <!--CONTROL PLAYER-->
+    <div class="ms-play-control-container">
         <div class="ms-play-control-container-bg"></div>
         <div class="ms-play-control-wrapper">
             <div class="ms-play-control-info">
@@ -85,18 +86,20 @@
                         <span class="eq3"></span>
                     </button>
 
-                    <img src="assets/image/co-hen-voi-thanh-xuan-banner.jpg" />
+                    <img class="play-control-img-song" />
                 </div>
                 <div class="ms-control-info-song">
-                    <div class="name-song">Có hẹn với thanh xuân</div>
-                    <div class="creator">MONSTAR</div>
+                    <div class="name-song"></div>
+                    <div class="creator"></div>
                 </div>
             </div>
             <div class="ms-play-control-player">
                 <div class="ms-control-player-button-control">
-                    <i class="fas fa-step-backward"></i>
-                    <i class="fas fa-play btn-play"></i>
-                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-step-backward btn-prev"></i>
+                    <a class="play-button">
+                        <i class="fas fa-play btn-play"></i>
+                    </a>
+                    <i class="fas fa-step-forward btn-next"></i>
 
                 </div>
                 <div class="ms-player-progress-bar">
@@ -109,7 +112,7 @@
             </div>
             <div class="ms-play-control-right">
                 <div class="ms-play-control-random">
-                    <span class="material-icons-outlined">
+                    <span class="material-icons-outlined btn-random">
                         shuffle
                     </span>
                 </div>
@@ -118,7 +121,7 @@
                     </span></div>
                 <div class="ms-play-control-add-play-list">
                     <span class="material-icons-outlined">
-                        highlight_off
+                        playlist_add
                     </span>
                 </div>
                 <div class="ms-play-control-volume">
@@ -216,7 +219,35 @@
             </div>
             <div class="ms-wrapper-mobile">
 
-               
+                <div class="ms-song-lyrics hidden">
+                    <div class="blur-song-bg"></div>
+
+                    <img class="img-blur" />
+                    <div class="wrapper-ms-song-lyrics">
+                        <div class="song-action">
+                            <div class="wrapper-song-action">
+                                <p class="title-suggesstion title-playing">Đang phát :</p>
+                                <div class="wrapper-img-action">
+                                    <div class="overlay"></div>
+                                    <img src="">
+                                </div>
+                                <audio id="audio" class="lrc" data-lrc=""></audio>
+                            </div>
+                        </div>
+                        <div class="wrapper-lyric">
+                            <div class="container-lyrics">
+                                <div class="wrapper-title-lyrics">
+                                    <p class="title-suggesstion">Lời bài hát :</p>
+                                </div>
+                                <div class="lyricwrap">
+                                    <div class="lyric"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="ms-user-profile">
                     <div class="ms-user-profile-bg">
                         <div class="blur-song-bg"></div>
@@ -248,8 +279,12 @@
                             <p class="title-suggesstion ">Bài Hát Yêu Thích</p>
                             <div class="ms-list-song">
                                 <div class="wrap-list-song">
-                                    <ul class="list-song-user">
-                                        <li class="list-music-item">
+                                    <ul class="list-song-user list-music">
+                                        <li class="list-music-item" data-music="assets/mp3/nevada.mp3"
+                                        data-lrc="assets/lyrics/do-toc-2-remix.lrc" data-name="Nevada"
+                                        data-creator="Vicetone"
+                                        data-img="assets/image/nevada-banner.jpg"
+                                        data-avatar="assets/image/Avata-song-1.jpg" data-index="0">
                                             <div class="equalizer-and-number">
                                                 <p class="number-item">01</p>
                                             </div>

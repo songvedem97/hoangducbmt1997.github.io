@@ -31,7 +31,9 @@ const listRankSong = document.querySelector('.top-ranking-song');
 var songIndex = 0;
 var valueVolume = 0.5;
 
-avatar.style.animationPlayState = 'paused';
+if(avatar != null){
+	avatar.style.animationPlayState = 'paused';
+}
 audio.volume = valueVolume;
 
 getSong = async () => {
