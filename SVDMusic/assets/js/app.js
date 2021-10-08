@@ -6,6 +6,7 @@ window.onload = async () => {
 const resetLyrics = document.querySelector('.lyricwrap');
 const btnPlay = document.querySelector('.btn-play');
 const btnUserPlay = document.querySelector('.btn-user-play');
+const btnArtistPlay = document.querySelector('.btn-artist-play');
 const btnPrev = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
 
@@ -228,9 +229,17 @@ function parseLyric(text) {
 	});
 	return result;
 }
-btnUserPlay.addEventListener("click",()=>{
-	playSong();
-})
+if(btnUserPlay != null){
+	btnUserPlay.addEventListener("click",()=>{
+		playSong();
+	})
+}
+if(btnArtistPlay != null){
+	btnArtistPlay.addEventListener("click",()=>{
+		playSong();
+	})
+}
+
 btnPlay.addEventListener("click", () => {
 
 	if (musicContent.classList.contains("playing")) {
