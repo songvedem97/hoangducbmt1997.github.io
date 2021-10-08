@@ -5,6 +5,7 @@ window.onload = async () => {
 
 const resetLyrics = document.querySelector('.lyricwrap');
 const btnPlay = document.querySelector('.btn-play');
+const btnUserPlay = document.querySelector('.btn-user-play');
 const btnPrev = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
 
@@ -227,7 +228,9 @@ function parseLyric(text) {
 	});
 	return result;
 }
-
+btnUserPlay.addEventListener("click",()=>{
+	playSong();
+})
 btnPlay.addEventListener("click", () => {
 
 	if (musicContent.classList.contains("playing")) {
