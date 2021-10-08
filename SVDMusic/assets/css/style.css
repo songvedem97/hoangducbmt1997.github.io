@@ -19,6 +19,7 @@
     --bg-btn-play: #2BDBEC;
     --alpha-color: hsla(0, 0%, 100%, 0.1);
     --betal-color:rgba(244, 246, 248, 0.02);
+    --text-title: #008b70;
 }
 
 /*--General Define --*/
@@ -181,10 +182,10 @@ body {
 }
 
 .text-title {
-    text-shadow: 0 0px 0 var(--purple-color),
-     0 1px 0 var(--purple-color),
-      0 2px 0 var(--purple-color),
-       0 3px 0 var(--purple-color),
+    text-shadow: 0 0px 0 var(--text-title),
+     0 1px 0 var(--text-title),
+      0 2px 0 var(--text-title),
+       0 3px 0 var(--text-title),
         0 0 5px rgba(0, 0, 0, .05),
          0 1px 3px rgba(0, 0, 0, .2),
           0 3px 5px rgba(0, 0, 0, .2),
