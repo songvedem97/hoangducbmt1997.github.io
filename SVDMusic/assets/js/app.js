@@ -252,13 +252,13 @@ btnNext.addEventListener("click", () => {
 	nextSong();
 	setTimeout(() => {
 		playSong();
-	}, 2000)
+	}, 1000)
 })
 btnPrev.addEventListener("click", () => {
 	prevSong();
 	setTimeout(() => {
 		playSong();
-	}, 2000)
+	}, 1000)
 })
 btnLoop.addEventListener("click", () => {
 	if (musicContent.classList.contains("looping")) {
