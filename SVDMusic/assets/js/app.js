@@ -323,11 +323,15 @@ audio.addEventListener("ended", () => {
 		songIndex = valueRandom
 		console.log(songIndex);
 		nextSong();
-		playSong();
+		setTimeout(() => {
+			playSong();
+		}, 2000)
 	}
 	else {
 		nextSong();
-		playSong();
+		setTimeout(() => {
+			playSong();
+		}, 2000)
 	}
 })
 audio.ontimeupdate = function () {
