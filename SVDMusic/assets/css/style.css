@@ -18,6 +18,7 @@
     --bg-index: #0B1220;
     --bg-btn-play: #2BDBEC;
     --alpha-color: hsla(0, 0%, 100%, 0.1);
+    --betal-color:rgba(244, 246, 248, 0.02);
 }
 
 /*--General Define --*/
@@ -1281,7 +1282,7 @@ input[type=radio] {
 .wrap-list-song ul li {
     width: 49%;
     cursor: pointer;
-    background: rgba(244, 246, 248, 0.02);
+    background: var(--betal-color);
     margin: 4px 2px;
 }
 
