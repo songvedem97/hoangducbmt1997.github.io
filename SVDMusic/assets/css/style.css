@@ -1280,10 +1280,10 @@ input[type=radio] {
 }
 
 .wrap-list-song ul li {
-    width: 49%;
+    width: 49.5%;
     cursor: pointer;
     background: var(--betal-color);
-    margin: 4px 2px;
+    margin: 4px 0px;
 }
 
 .ms-list-song .list-music-item {
