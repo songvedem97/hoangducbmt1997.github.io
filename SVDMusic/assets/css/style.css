@@ -1172,7 +1172,7 @@ input[type=radio] {
     animation-delay: 0.34s;
 }
 
-/*--List Song--*/
+/*-- TOP List Song--*/
 
 .carousel-new-song {
     padding-bottom: 10px;
@@ -1273,12 +1273,16 @@ input[type=radio] {
 .wrap-list-song ul {
     width: 100%;
     height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .wrap-list-song ul li {
-    width: 50%;
-    float: left;
+    width: 49%;
     cursor: pointer;
+    background: rgba(244, 246, 248, 0.02);
+    margin: 4px 2px;
 }
 
 .ms-list-song .list-music-item {

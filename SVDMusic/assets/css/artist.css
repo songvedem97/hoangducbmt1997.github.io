@@ -50,7 +50,6 @@
 }
 .list-music-artist li{
     width: 100% !important;
-    border-bottom: 1px solid var(--bg-color);
 }
 .ms-artist-list-song .ms-artist-story{
     color: var(--light-gray-color);

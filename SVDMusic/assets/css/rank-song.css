@@ -35,7 +35,6 @@
 }
 .list-music-ranking li{
     width: 100% !important;
-    border-bottom: 1px solid var(--bg-color);
 }
 
 .list-music-ranking li:nth-child(1),.list-music-ranking li:nth-child(2),.list-music-ranking li:nth-child(3){
