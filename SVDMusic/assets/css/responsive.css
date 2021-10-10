@@ -460,4 +460,11 @@
     .list-category-bg {
         height: 200px;
     }
+     /*--RESULT --*/
+     .ms-result-bg {
+        height: 200px;
+     }
+     .title-result-song {
+        bottom: 50px;
+    }
 }
