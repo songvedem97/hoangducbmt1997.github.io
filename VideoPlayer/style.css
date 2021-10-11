@@ -15,6 +15,11 @@ body{
   font-family: Roboto;
   font-size: 1rem;
 }
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 input[type=range] {
 	height: 10px !important;
@@ -41,17 +46,7 @@ input[type=range]::-webkit-slider-thumb {
 .plyr__progress__buffer{
   display: none;
 }
-h1{
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -250px;
-  z-index: 1;
-  color: var(--main-color);
-}
+
 .nav-bar{
   width: 150px;
   position: fixed;
@@ -59,13 +54,6 @@ h1{
   left: 0;
   height: 100%;
   background-color: #131313;
-}
-.container-content{
-  position: relative;
-  margin-left: 150px;
-  height: 100%;
-  width: calc(100%-150px);
-  background: var(--bg-color);
 }
 .nav-bar ul{
   width: 80%;
@@ -81,6 +69,14 @@ h1{
   background-color: var(--main-color);
   cursor: pointer;
   color: #fff;
+}
+
+.container-content{
+  position: relative;
+  margin-left: 150px;
+  height: 100%;
+  width: calc(100%-150px);
+  background: var(--bg-color);
 }
 .bg-content{
   position: absolute;
@@ -98,18 +94,11 @@ h1{
   right: 0;
   position: absolute;
 }
-.container-video{
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-}
-.container-video video{
-  width: 50vw;
-  height: 50vh;
 
-}
 .plyr__control{
   border-radius: none !important;
+}
+.container-video{
+  width: 50vw;
+  height: 50wh;
 }
