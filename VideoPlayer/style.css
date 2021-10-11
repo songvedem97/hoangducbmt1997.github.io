@@ -1,15 +1,16 @@
 :root {
-  --main-color: #ff4800;
+  --main-color: #00ffb3;
   --yellow-color: rgb(255, 238, 0);
   --bg-color: #222B31;
-  --nav-color: #686868;
+  --nav-color: #afafaf;
+  --white-color:#fff;
+  --nav-bg:#111727;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 body {
@@ -44,7 +45,7 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
   height: 12px !important;
   width: 12px !important;
-  background: var(--yellow-color) !important;
+  background: var(--white-color) !important;
   cursor: pointer;
   margin-top: -5px !important;
   box-shadow: var(--main-color);
@@ -55,12 +56,12 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .nav-bar {
-  width: 150px;
+  width: 200px;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #131313;
+  background-color: var(--nav-bg);
 }
 
 .nav-bar ul {
@@ -83,9 +84,9 @@ input[type=range]::-webkit-slider-thumb {
 
 .container-content {
   position: relative;
-  margin-left: 150px;
+  margin-left: 200px;
   height: 100%;
-  width: calc(100%-150px);
+  width: calc(100%-200px);
   background: var(--bg-color);
 }
 
