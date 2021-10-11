@@ -5,12 +5,30 @@
 }
 body{
   font-family: Roboto;
+  font-size: 1rem;
 }
 
 h1{
   text-align: center;
+  padding-top: 50px;
 }
-
+.nav-bar{
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #131313;
+}
+.nav-bar ul{
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+}
+.nav-bar ul li{
+  padding:10px;
+  font-size: 1rem;
+}
 .container-video{
   display: flex;
   justify-content: center;
