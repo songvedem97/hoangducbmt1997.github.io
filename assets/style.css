@@ -249,7 +249,7 @@ body {
 
 .music-play .avatar img {
 	border-radius: 50%;
-	animation: rotate 8s linear infinite;
+	animation: rotate 20s linear infinite;
 	animation-play-state: paused;
 	width: 250px;
 	height: 250px;
