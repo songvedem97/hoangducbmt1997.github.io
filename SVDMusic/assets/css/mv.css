@@ -95,14 +95,22 @@ input[type=range]::-webkit-slider-thumb {
     width: 80%;
     padding-top: 20px;
     margin: 0 auto;
+    overflow: hidden;
 }
 .wrap-mv-continues img{
     width: 100%;
-    height: 100%;
 }
 .mv-action-continues .creator{
     color: var(--light-gray-color) !important;
 }
 .mv-action-continues .creator:hover{
     color: var(--yellow-color) !important;
+}
+.wrapper-mv-song-continues{
+    height: 130px;
+    overflow: hidden;
+}
+.plyr__time {
+    font-size: .8rem;
+    font-weight: 200;
 }

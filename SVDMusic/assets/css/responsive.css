@@ -467,4 +467,31 @@
      .title-result-song {
         bottom: 50px;
     }
+    /*--MV --*/
+    .wrapper-mv-action {
+        padding-top: 70px;
+    }
+    .wrapper-mv-action{
+        flex-direction: column;
+    }
+    .wrapper-video {
+        width: 100% !important;
+    }
+    .mv-action-continues{
+        width: 100%;
+    }
+    .mv-action-continues .container-content{
+        width: 100%;
+    }
+    .wrapper-mv-song-continues{
+        height: auto;
+        overflow: hidden;
+    }
+    .wrap-mv-continues{
+        height: 350px;
+    }
+    .title-mv{
+        position: relative;
+        top: 0;
+    }
 }
