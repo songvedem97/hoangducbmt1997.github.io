@@ -209,5 +209,24 @@ function scrollFunction() {
   }
 }
 
+/*--MV--*/
+const player = new Plyr('#player', {
+  controls: [
+    'play-large',
+    'play',
+    'progress',
+    'current-time',
+    'settings',
+    'volume',
+    'mute',
+    'pip',
+    'airplay',
+    'fullscreen'],
+  loadSprite: true,
+  iconPrefix: 'icon',
+  iconUrl: './assets/sprite/icon.svg',
+}
+
+);
 
 
