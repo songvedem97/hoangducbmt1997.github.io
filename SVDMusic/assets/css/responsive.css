@@ -487,8 +487,12 @@
         height: auto;
         overflow: hidden;
     }
+    .wrap-mv-continues .item{
+        width: 100%;
+    }
     .wrap-mv-continues{
         height: 350px;
+        background-color: transparent;
     }
     .title-mv{
         position: relative;
