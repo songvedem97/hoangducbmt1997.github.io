@@ -35,7 +35,9 @@ html {
     font-size: 100%;
     overflow-x: hidden;
 }
-
+a{
+    text-decoration: none;
+}
 body {
     font-size: 0.9rem;
     font-weight: 300;
