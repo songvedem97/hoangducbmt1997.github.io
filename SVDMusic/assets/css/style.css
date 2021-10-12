@@ -1509,7 +1509,7 @@ input[type=radio] {
     width: 100%;
     cursor: pointer;
 }
-.carousel-mv-song .item .overlay {
+.ms-mv-song .item .overlay {
     position: absolute;
     background-color: #000;
     height: 100%;
@@ -1519,13 +1519,13 @@ input[type=radio] {
     visibility: hidden;
 }
 
-.carousel-mv-song .wrapper-mv-song {
+.ms-mv-song  .wrapper-mv-song {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.carousel-mv-song .item span {
+.ms-mv-song .item span {
     position: absolute;
     display: flex;
     align-items: center;
@@ -1545,38 +1545,37 @@ input[type=radio] {
     visibility: hidden;
 }
 
-.carousel-mv-song .info-mv-song .name {
+.ms-mv-song .info-mv-song .name {
     font-size: 1rem;
     font-weight: bold;
     color: var(--white-color);
     padding-top: 10px;
 }
 
-.carousel-mv-song .info-mv-song .creator {
+.ms-mv-song .info-mv-song .creator {
     font-size: 0.8rem;
     padding: 5px 10px 10px 0;
     color: var(--gray-color);
 }
 
-.carousel-mv-song .info-mv-song .creator:hover {
+.ms-mv-song .info-mv-song .creator:hover {
     color: var(--light-blue-color);
 }
 
-.carousel-mv-song .item img {
+.ms-mv-song .item img {
     transition: 0.4s ease-in-out;
     height: 100%;
     width: 100%;
 }
-
-.carousel-mv-song .item:hover img {
+.ms-mv-song .item:hover img {
     transform: scale(1.1, 1.1);
 }
 
-.carousel-mv-song .item:hover span {
+.ms-mv-song .item:hover span {
     visibility: visible;
 }
 
-.carousel-mv-song .item:hover .overlay {
+.ms-mv-song .item:hover .overlay {
     visibility: visible;
 }
 

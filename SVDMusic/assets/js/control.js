@@ -127,6 +127,23 @@ $('.carousel-play-list-user').owlCarousel({
     }
 })
 
+$('.carousel-mv-continues').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:true,
+    navText: ['<span class="material-icons-outlined">arrow_back_ios</span>','<span class="material-icons-outlined">arrow_forward_ios</span>'],
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1024:{
+            items:4, rows: 1
+        }
+    }
+})
 
 /*--Show Popup Login--*/
 
