@@ -101,5 +101,5 @@ input[type=range]::-webkit-slider-thumb {
     height: 100%;
 }
 .mv-action-continues .creator{
-    color: var(--yellow-color) !important;
+    color: var(--green-color) !important;
 }
