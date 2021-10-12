@@ -1,6 +1,6 @@
 .ms-mv-action{
     width: 100%;
-    height: 700px;
+    height: 760px;
     overflow: hidden;
     position: relative;
 }
@@ -11,8 +11,14 @@
     filter: blur(40px);
     -webkit-filter: blur(40px);
 }
+.icon-mv{
+    position: relative;
+    top: 9px;
+    padding-right: 10px;
+    font-size: 2rem;
+}
 .wrapper-mv-action{
-    padding-top: 160px;
+    padding-top: 100px;
     width: 90%;
     margin: 0 auto;
     height: 100%;
@@ -23,7 +29,9 @@
 }
 .wrapper-video {
     width: 700px !important;
-    margin: 0 auto;
+    margin: 50px auto;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 5px 10px 0px, rgba(0, 0, 0, 0.05) 0px 2px 2px 0px;
+    
 }
 
 input[type=range] {
