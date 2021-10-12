@@ -128,6 +128,9 @@ input[type=range]::-webkit-slider-thumb {
   justify-content: center;
   align-items: center;
 }
+.plyr__control {
+  color: var(--nav-color)
+}
 .plyr__control--overlaid,.plyr__control--overlaid:hover{
   background: transparent !important;
   border: 2px solid var(--white-color);
@@ -136,5 +139,5 @@ input[type=range]::-webkit-slider-thumb {
 .plyr__control--overlaid svg{
   width: 2rem !important;
   height: 2rem !important;
- color: var(--main-color);
+  color: var(--main-color);
 }
