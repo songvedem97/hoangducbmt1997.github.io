@@ -18,6 +18,14 @@ body {
   font-size: 1rem;
 }
 
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -120,7 +128,13 @@ input[type=range]::-webkit-slider-thumb {
   justify-content: center;
   align-items: center;
 }
-
-.container-video video {
-  margin: -20px 0 -20px 0;
+.plyr__control--overlaid,.plyr__control--overlaid:hover{
+  background: transparent !important;
+  border: 2px solid var(--white-color);
+  padding: 5px !important;
+}
+.plyr__control--overlaid svg{
+  width: 2rem !important;
+  height: 2rem !important;
+ color: var(--main-color);
 }
