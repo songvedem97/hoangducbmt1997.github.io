@@ -3,7 +3,7 @@
 /*-Orther screen-*/
 @media only screen and (min-width: 992px) {
     .music-wrap{
-        width: 400px;
+        width: 360px;
     }
     .music-play .music-controll{
         cursor: pointer;
@@ -17,28 +17,26 @@
 /*-LG-*/
 @media only screen  and (max-width: 991px) and (min-width: 850px) {
     .container{
-    width: 50%;
+    width: 50vw;
     }
     .wrap-time{
         margin-bottom: 20px;
     }
-    .wrap-now-playing {
-        height: 190px;
-    } 
     .music-wrap{
-        width: 380px;
+        width: 360px;
     }
     .music-play .info .name {
         font-size: 1.4rem;
     }
-    .music-play .music-controll{
-        margin-bottom: 10px;
-    } 
+    .music-play .music-controll .btn-play i{
+        font-size: 1.2rem;
+        top:0px
+    }
 }
 /*-MD-*/
 @media only screen and (max-width: 849px) and (min-width: 768px) {
     .container{
-    width: 50%;
+    width: 50vw;
     }
     .music-wrap{
         width: 360px;
@@ -55,9 +53,6 @@
         padding-top: 40px;
     }
     .music-play .info {
-        height: 150px;
-    }
-    .music-play .music-controll {
         height: 150px;
     }
     .music-play .music-controll :nth-child(1){
@@ -79,12 +74,13 @@
     }
     .music-play .music-controll .btn-play i{
         font-size: 1.2rem;
+        top: 0;
     }
 }
 /*-SM-*/
 @media only screen and (max-width: 767px) and (min-width: 576px) {
     .container{
-    width: 50%;
+    width: 50vw;
     }
     .music-wrap{
         width: 360px;
@@ -138,7 +134,7 @@
         width: 50px;
     }
     .music-play .music-controll .btn-play i{
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-top: 4px;
     }
     .copyright-vip-coder{
@@ -149,7 +145,7 @@
 /*-XSM-*/
 @media only screen and (max-width:575px) and (min-width: 401px){
         .container{
-        width: 70%;
+        width: 70vw;
         }
         .music-wrap{
             width: 340px;
@@ -231,7 +227,7 @@
 /*-XXSM-*/
 @media only screen and (max-width: 400px){
     .container{
-    width: 100%;
+    width: 100vw;
     }
     .music-wrap{
         width: 310px;
