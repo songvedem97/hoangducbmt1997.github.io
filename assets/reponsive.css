@@ -307,4 +307,9 @@
         font-size: 0.8rem;
         margin-bottom: 20px;
     }
+    input[type=range]::-webkit-slider-thumb {
+        width: 18px !important;
+        height: 18px !important;
+        margin-top: -7px !important;
+    }
 }
