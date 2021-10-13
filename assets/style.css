@@ -451,7 +451,7 @@ body.loading .wrap-pre-loader {
 
 
 .wrap-progress-bar{
-	width: 80%;
+	width: 82%;
 	margin: 0 auto;
 }
 .test-progress-bar {
@@ -488,13 +488,13 @@ input[type=range]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	box-shadow: 0px 0px 10px #000000;
 	border: 6px solid #24282C;
-	height: 20px;
-	width: 20px;
+	height: 20px !important;
+	width: 20px !important;
 	border-radius: 50px;
 	background: rgba(184, 160, 34, 1);
 	cursor: pointer;
 	-webkit-appearance: none;
-	margin-top: -8px;
+	margin-top: -8px !important;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2), -2px -2px 2px 0px rgba(150, 150, 165, 0.1), 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -511,9 +511,9 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-moz-range-thumb {
 	box-shadow: 0px 0px 10px #000000;
-	border: 9px solid #24282C;
-	height: 25px;
-	width: 25px;
+	border: 6px solid #24282C;
+	height: 20px;
+	width: 20px;
 	border-radius: 50px;
 	background: rgba(184, 160, 34, 1);
 	cursor: pointer;

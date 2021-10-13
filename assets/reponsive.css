@@ -301,7 +301,7 @@
     }
     .music-play .music-controll .btn-play i{
         font-size: 0.9rem;
-        margin-top: 5px;
+        top: 0;
     }
     .copyright-vip-coder{
         font-size: 0.8rem;
