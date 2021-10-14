@@ -248,13 +248,16 @@ body {
 	justify-content: center;
 }
 
-.wrap-img-shadow-3 {
-	width: 220px;
-	height: 220px;
+.img-shadow{
+
 	background: #000;
 	border-radius: 50%;
 	position: absolute;
 	box-shadow: rgb(0 0 0 / 20%) 0px 0px 20px 0px, rgb(150 150 165 / 20%) -5px -5px 30px 0px, rgb(0 0 0 / 50%) 20px 20px 30px 0px;
+}
+.img-action-index{
+	width: 220px;
+	height: 220px;
 }
 
 .avatar img {
@@ -603,7 +606,7 @@ input[type=range]::-moz-range-thumb {
 	display: flex;
 	font-weight: 300;
 	font-size: 0.8rem;
-	color: var(--gray);
+	color: var(--bg-light);
 }
 .song-item-info{
 	padding-left: 15px;
@@ -643,4 +646,8 @@ input[type=range]::-moz-range-thumb {
 	width: 120px;
 	border-radius: 50%;
 	border-width: 4px;
+}
+.img-action-item{
+	height: 120px;
+	width: 120px;
 }
