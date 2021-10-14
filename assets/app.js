@@ -26,7 +26,7 @@ const currentTimeDisplay = document.querySelector(".current-time");
 const list = document.querySelector(".list-music");
 const btnCloseList = document.querySelector(".btn-close");
 const btnOpenList = document.querySelector(".btn-list");
-const btnHeart = document.querySelector(".btn-heart");
+const btnHeart = document.querySelector(".btn-heart i");
 const songlist = list.getElementsByTagName("li");
 let songIndex = Math.floor(Math.random() * 101);
 let isRandom = false;
@@ -118,8 +118,14 @@ loadSong = async (song) => {
 	
 	for (let i = 0; i < songlist.length; i++) {
 		songlist[i].classList.remove("active");
+		songlist[i].classList.remove("active-light-mode");
 	}
-	songlist[song].classList.add("active");
+	if(isLightMode == false){
+		songlist[song].classList.add("active");
+	}
+	else{
+		songlist[song].classList.add("active-light-mode");
+	}
 
 }
 function loader() {
@@ -198,6 +204,7 @@ addLightMode = (e) => {
 	document.querySelector('.btn-close').classList.add('light-btn-wrap');
 	document.querySelector('.name').classList.add('light-text-color');
 	document.querySelector('.music-list').classList.add('light-music-wrap');
+	
 	let nameSongitem = document.querySelectorAll('.name-song-item');
 	for (let i = 0; i < nameSongitem.length; i++) {
 		nameSongitem[i].classList.add("light-text-color");
@@ -259,11 +266,15 @@ audio.addEventListener("ended", () => {
 		playSong();
 	}
 })
+
+avatarItemAction.addEventListener("click",()=>{
+	document.getElementById('list-song').style.visibility='hidden';
+})
 btnCloseList.addEventListener("click",()=>{
-	document.getElementById('list-song').style.display='none';
+	document.getElementById('list-song').style.visibility='hidden';
 })
 btnOpenList.addEventListener("click",()=>{
-	document.getElementById('list-song').style.display='block';
+	document.getElementById('list-song').style.visibility='visible';
 })
 btnHeart.addEventListener("click",()=>{
 	if(isHeart == false){
@@ -278,13 +289,18 @@ btnHeart.addEventListener("click",()=>{
 
 btnMode.addEventListener("click",()=>{
 	if(isLightMode == false)
-	{	playSong();
+	{
+		document.querySelector('.active').classList.add('active-light-mode');
+		document.querySelector('.active-light-mode').classList.remove('active');
+		playSong();
 		btnMode.classList.remove('fa-moon');
 		btnMode.classList.add('fa-sun');	
 		isLightMode = true;
 		addLightMode();
 	}
 	else {
+		document.querySelector('.active-light-mode').classList.add('active');
+		document.querySelector('.active').classList.remove('active-light-mode');
 		btnMode.classList.add('fa-moon');
 		btnMode.classList.remove('fa-sun');
 		isLightMode = false;
