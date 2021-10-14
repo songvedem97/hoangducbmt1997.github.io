@@ -603,15 +603,22 @@ input[type=range]::-moz-range-thumb {
 	display: flex;
 	font-weight: 300;
 	font-size: 0.8rem;
+	color: var(--gray);
 }
 .song-item-info{
-	padding-left: 10px;
+	padding-left: 15px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-
+.list-music-item-info img{
+	margin-left: 10px;
+	border-radius: 5px;
+}
+.song-item-info .creator{
+	color: var(--creator);
+}
 .song-acttion{
 	height: 200px;
 	width: 80%;
