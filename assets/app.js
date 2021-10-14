@@ -175,7 +175,6 @@ prevSong = () => {
 	loadSong(songIndex);
 }
 addLightMode = (e) => {
-	avatar.style.animationPlayState = 'running';
 	document.body.classList.add('light-theme');
 	document.querySelector('.music-player-wrap').classList.add('light-music-wrap::before');
 	document.querySelector('.music-player-wrap').classList.add('light-music-wrap');
@@ -233,9 +232,8 @@ audio.addEventListener("ended", () => {
 	}
 })
 btnMode.addEventListener("click",()=>{
-	audio.play();
 	if(isLightMode == false)
-	{	
+	{	playSong();
 		btnMode.classList.remove('fa-moon');
 		btnMode.classList.add('fa-sun');	
 		isLightMode = true;
