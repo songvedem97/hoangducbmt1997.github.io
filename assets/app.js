@@ -9,7 +9,9 @@ window.onload = async () => {
 // variable
 const musicContent = document.querySelector(".row");
 const avatar = document.querySelector(".avatar img");
+const avatarItemAction = document.querySelector(".avatar-action img");
 const name = document.querySelector(".music-play .name");
+const nameItemAction = document.querySelector(".name-song-acttion");
 const creator = document.querySelector(".music-play .creator");
 const btnMode = document.querySelector(".fa-moon");
 const btnPlay = document.querySelector(".fa-play");
@@ -22,6 +24,10 @@ const progressBarTest = document.querySelector(".test-progress-bar");
 const timesong = document.querySelector(".duration-time");
 const currentTimeDisplay = document.querySelector(".current-time");
 const list = document.querySelector(".list-music");
+const btnCloseList = document.querySelector(".btn-close");
+const btnOpenList = document.querySelector(".btn-list");
+
+
 const songlist = list.getElementsByTagName("li");
 let songIndex = Math.floor(Math.random() * 101);
 let isRandom = false;
@@ -29,9 +35,6 @@ let isLightMode = false;
 let isLoop = false;
 let arraySongs = [];
 let base_api = "https://api.apify.com/v2/key-value-stores/EJ3Ppyr2t73Ifit64/records/LATEST/";
-
-
-
 
 
 fectRequest = async (url) => {
@@ -48,28 +51,29 @@ const getData = async () => {
 
 };
 getSong = async () => {
-
 	const result = getData();
 	list.innerHTML = "";
 	result.then(data => {
 		let all = data.songs.top100_VN;
 		let nt = all[0].songs;
+		
 		for (let i = 0; i < nt.length; i++) {
 			const name = nt[i].title;
 			const creator = nt[i].creator;
 			const music = nt[i].music;
 			const avatar = nt[i].avatar;
-			const bgImage = nt[i].bgImage;
 			list.innerHTML +=
-				`<li class="list-music-item" data-name='${name}' data-creator='${creator}' data-music='${music}'
+			`<li class="list-music-item" data-name='${name}' data-creator='${creator}' data-music='${music}'
 			data-avatar='${avatar}' data-index='${i}'>
 			<div class="list-music-item-info">
-			<span class="name">${name}</span>
-			<span class="creator">${creator}</span>
+			<img class="avatar-item" height='50' src="${avatar}"/>
+			<div class="song-item-info" >
+			<p class="name">${name}</p>
+			<p class="creator">${creator}</p>
+			
 			</div>
-			<a href="${music}">
-			<i class='bx bxs-download'></i>
-			</a>
+			</div>
+
 			</li>`
 		}
 		let songs = document.querySelectorAll(".list-music-item")
@@ -81,6 +85,9 @@ getSong = async () => {
 	})
 
 }
+
+
+
 formatTime = (second) => {
 	let hours = Math.floor(second / 3600);
 	let minutes = Math.floor((second - hours * 3600) / 60);
@@ -103,14 +110,17 @@ loadSong = async (song) => {
 	})
 	let detailSong = document.querySelectorAll(".list-music-item");
 	name.textContent = detailSong[song].getAttribute("data-name");
+	nameItemAction.textContent = detailSong[song].getAttribute("data-name");
 	document.title = detailSong[song].getAttribute("data-name") +', '+ detailSong[song].getAttribute("data-creator");
 	creator.textContent = detailSong[song].getAttribute("data-creator");
 	avatar.src = detailSong[song].getAttribute("data-avatar");
+	avatarItemAction.src = detailSong[song].getAttribute("data-avatar");
+	
 	for (let i = 0; i < songlist.length; i++) {
 		songlist[i].classList.remove("active");
 	}
 	songlist[song].classList.add("active");
-	songlist[song].scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+
 }
 function loader() {
 	var loader = document.getElementById("wrap-pre-loader");
@@ -135,6 +145,7 @@ removeLoopSong = () => {
 playSong = () => {
 	musicContent.classList.add("playing");
 	avatar.style.animationPlayState = 'running';
+	avatarItemAction.style.animationPlayState = 'running';
 	btnPlay.classList.remove('fa-play');
 	btnPlay.classList.add('fa-pause');
 	audio.play();
@@ -142,6 +153,7 @@ playSong = () => {
 pauseSong = () => {
 	musicContent.classList.remove("playing");
 	avatar.style.animationPlayState = 'paused';
+	avatarItemAction.style.animationPlayState = 'paused';
 	btnPlay.classList.add('fa-play');
 	btnPlay.classList.remove('fa-pause');
 	audio.pause();
@@ -232,6 +244,13 @@ audio.addEventListener("ended", () => {
 		playSong();
 	}
 })
+btnCloseList.addEventListener("click",()=>{
+	document.getElementById('list-song').style.display='none';
+})
+btnOpenList.addEventListener("click",()=>{
+	document.getElementById('list-song').style.display='block';
+})
+
 btnMode.addEventListener("click",()=>{
 	if(isLightMode == false)
 	{	playSong();

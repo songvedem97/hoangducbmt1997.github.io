@@ -29,15 +29,13 @@
 				<div class="music-play">
 					<div class="wrap-now-playing">
 						<div class="wrapp-title row col-xxm-12">
-							<div class="btn-mode now-playing-title-icon "><i
-									class="fas fa-moon "></i>
+							<div class="btn-mode now-playing-title-icon btn "><i class="fas fa-moon "></i>
 							</div>
 							<div class="title-playing col-6 col-lg-6 col-md-6 col-sm-6 col-xsm-8 ">
 								<p>Now Playing</p>
 							</div>
-							<div class="btn-list now-playing-title-icon "><i
-									class="fas fa-bars "></i>
-								</div>
+							<div class="btn-list now-playing-title-icon btn "><i class="fas fa-bars "></i>
+							</div>
 						</div>
 						<div class="wrap-time col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
 							<span class="current-time ">00:00</span>
@@ -57,7 +55,7 @@
 						<div class="wrap-progress-bar">
 							<input class="test-progress-bar" type="range" value="0" step="1" min="0" max="100" />
 						</div>
-						
+
 						<div class="music-controll col-12  col-12 col-lg-12 col-md-12 col-sm-12 col-xsm-12 col-xxm-12">
 							<ion-icon name="shuffle-outline" class="btn-random"></ion-icon>
 							<i class="fas fa-step-backward btn-prev"></i>
@@ -67,9 +65,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="music-box">
-					<h2>TOP MUSIC VIP</h2>
-					<ul class="list-music"></ul>
+
+				<div class="music-list" id="list-song">
+					<div class="song-acttion">
+						<p class="name-song-acttion"></p>
+						<div class="wrapper-song-acttion flex-center">
+							<div class="btn-mode now-playing-title-icon btn "><i class="fas fa-moon "></i>
+							</div>
+							<div class="avatar-action avatar">
+								<img />
+							</div>
+							<div class="btn-list now-playing-title-icon btn ">
+								<i class="fas fa-undo btn-close"></i>
+							</div>
+						</div>
+					</div>
+					<ul class="list-music">
+					</ul>
 				</div>
 			</div>
 		</div>
