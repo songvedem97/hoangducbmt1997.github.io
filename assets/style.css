@@ -602,7 +602,7 @@ input[type=range]::-moz-range-thumb {
 	overflow-x: hidden;
 }
 .music-list ul li{
-	padding: 5px;
+	padding: 10px 5px 10px 5px;
 	list-style: none;
 	border-radius: 5px;
 	width: 80%;
