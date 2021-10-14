@@ -184,7 +184,7 @@ body {
 	margin-top: 15px;
 	color: var(--gray);
 }
-.btn-mode, .btn-list{
+.btn-mode, .btn-list,.btn-heart, .btn-close{
 	border-radius: 100%;
 	color: #84878A;
 	background: rgb(29,31,35);
@@ -543,21 +543,21 @@ input[type=range]::-moz-range-thumb {
 	background-color: #fff!important;
 }
 .light-btn-wrap{
-	background: var(--light-color);
-	box-shadow: 7px 7px 15px 0px rgba(var(--shadow-color), .3), -7px -7px 15px 0px rgba(var(--light-color), 1), inset 0px 0px 0px 0px rgba(var(--shadow-color), 0), inset 0px 0px 0px 0px rgba(var(--light-color), 0);
+	background: var(--light-color) !important;
+	box-shadow: 7px 7px 15px 0px rgba(var(--shadow-color), .3), -7px -7px 15px 0px rgba(var(--light-color), 1), inset 0px 0px 0px 0px rgba(var(--shadow-color), 0), inset 0px 0px 0px 0px rgba(var(--light-color), 0) !important;
 }
 .light-btn-play-wrap{
 	box-shadow: 7px 7px 15px 0px rgba(var(--light-color), .3), -7px -7px 15px 0px rgba(var(--light-color), .5), -1px -1px 2px 0px rgba(var(--shadow-color), .2),  1px 1px 2px 0px rgba(var(--shadow-color), .5) !important;
 }
 .light-btn-wrap::before{
-	background: transparent;
+	background: transparent !important;
 }
 .light-music-wrap{
 	background-color: transparent !important;
 }
 .light-music-wrap{
 	background-color: transparent !important;
-	background: #d2f4ff;
+	background: #fff !important;
 }
 .light-music-wrap::before{
 	background:var(--bg-light) !important;
@@ -584,7 +584,7 @@ input[type=range]::-moz-range-thumb {
 	border-radius: 25px;
 	box-shadow: 0px 10px 50px -30px rgb(0 0 0 / 75%);
 	display: none;
-	transition: 0.5s linear;
+
 }
 
 .list-music{

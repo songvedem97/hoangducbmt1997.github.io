@@ -194,7 +194,10 @@ addLightMode = (e) => {
 	document.querySelector('.btn-list').classList.add('light-btn-wrap');
 	document.querySelector('.btn-mode').classList.add('light-btn-wrap');
 	document.querySelector('.btn-play').classList.add('light-btn-play-wrap');
+	document.querySelector('.btn-heart').classList.add('light-btn-wrap');
+	document.querySelector('.btn-close').classList.add('light-btn-wrap');
 	document.querySelector('.name').classList.add('light-text-color');
+	document.querySelector('.music-list').classList.add('light-music-wrap');
 }
 removeLightMode = () => {
 	document.body.classList.remove('light-theme');
@@ -203,7 +206,10 @@ removeLightMode = () => {
 	document.querySelector('.btn-list').classList.remove('light-btn-wrap');
 	document.querySelector('.btn-mode').classList.remove('light-btn-wrap');
 	document.querySelector('.btn-play').classList.remove('light-btn-play-wrap');
+	document.querySelector('.btn-heart').classList.remove('light-btn-wrap');
+	document.querySelector('.btn-close').classList.remove('light-btn-wrap');
 	document.querySelector('.name').classList.remove('light-text-color');
+	document.querySelector('.music-list').classList.remove('light-music-wrap');
 }
 updateProgressTime = (e) => {
 	const { currentTime, duration } = e.srcElement;
