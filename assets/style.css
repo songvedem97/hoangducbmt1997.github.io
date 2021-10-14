@@ -539,7 +539,7 @@ input[type=range]::-moz-range-thumb {
 	box-shadow: 7px 7px 15px 0px rgba(var(--shadow-color), .3), -7px -7px 15px 0px rgba(var(--light-color), 1), inset 0px 0px 0px 0px rgba(var(--shadow-color), 0), inset 0px 0px 0px 0px rgba(var(--light-color), 0);
 }
 .light-btn-play-wrap{
-	box-shadow: 7px 7px 15px 0px rgba(var(--shadow-color), .3), -7px -7px 15px 0px rgba(var(--light-color), .5), -1px -1px 2px 0px rgba(var(--shadow-color), .3),  1px 1px 2px 0px rgba(var(--shadow-color), 1) !important;
+	box-shadow: 7px 7px 15px 0px rgba(var(--light-color), .3), -7px -7px 15px 0px rgba(var(--light-color), .5), -1px -1px 2px 0px rgba(var(--shadow-color), .2),  1px 1px 2px 0px rgba(var(--shadow-color), .5) !important;
 }
 .light-btn-wrap::before{
 	background: transparent;
