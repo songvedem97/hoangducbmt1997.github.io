@@ -233,6 +233,12 @@
             font-size: 0.8rem;
             margin-bottom: 20px;
         }
+        .music-list ul{
+            height: 330px;
+        }
+        .name-song-acttion{
+            font-size: 0.9rem;
+        }
 }
 /*-XXSM-*/
 @media only screen and (max-width: 400px){
@@ -327,5 +333,7 @@
     .music-list ul{
         height: 320px;
     }
-    
+    .name-song-acttion{
+        font-size: 0.8rem;
+    }
 }
