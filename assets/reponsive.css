@@ -4,7 +4,9 @@
 @media only screen and (min-width: 992px) {
     .music-player-wrap{
         width: 360px;
-        box-shadow: 0px 10px 25px -15px rgb(0 0 0 / 75%);
+    }
+    .music-player-wrap::before{
+        box-shadow:none;
     }
     .music-play .music-controll{
         cursor: pointer;
