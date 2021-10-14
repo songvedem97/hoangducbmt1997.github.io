@@ -103,6 +103,7 @@ loadSong = async (song) => {
 	})
 	let detailSong = document.querySelectorAll(".list-music-item");
 	name.textContent = detailSong[song].getAttribute("data-name");
+	document.title = detailSong[song].getAttribute("data-name") +', '+ detailSong[song].getAttribute("data-creator");
 	creator.textContent = detailSong[song].getAttribute("data-creator");
 	avatar.src = detailSong[song].getAttribute("data-avatar");
 	for (let i = 0; i < songlist.length; i++) {
