@@ -36,6 +36,9 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+.heart{
+	color: rgb(252, 31, 123);
+}
 /*--Preloader--*/
 
 .wrap-pre-loader {

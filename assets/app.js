@@ -26,13 +26,13 @@ const currentTimeDisplay = document.querySelector(".current-time");
 const list = document.querySelector(".list-music");
 const btnCloseList = document.querySelector(".btn-close");
 const btnOpenList = document.querySelector(".btn-list");
-
-
+const btnHeart = document.querySelector(".btn-heart");
 const songlist = list.getElementsByTagName("li");
 let songIndex = Math.floor(Math.random() * 101);
 let isRandom = false;
 let isLightMode = false;
 let isLoop = false;
+let isHeart = false;
 let arraySongs = [];
 let base_api = "https://api.apify.com/v2/key-value-stores/EJ3Ppyr2t73Ifit64/records/LATEST/";
 
@@ -250,6 +250,16 @@ btnCloseList.addEventListener("click",()=>{
 btnOpenList.addEventListener("click",()=>{
 	document.getElementById('list-song').style.display='block';
 })
+btnHeart.addEventListener("click",()=>{
+	if(isHeart == false){
+		btnHeart.classList.add('heart');
+		isHeart = true;
+	}
+	else{
+		btnHeart.classList.remove('heart');
+		isHeart = false;
+	}
+})
 
 btnMode.addEventListener("click",()=>{
 	if(isLightMode == false)
@@ -307,6 +317,8 @@ btnLoop.addEventListener("click", () => {
 })
 list.addEventListener("click", (e) => {
 	songIndex = e.target.closest("li").getAttribute("data-index");
+	btnHeart.classList.remove('heart');
+	isHeart = false;
 	loadSong(songIndex);
 	playSong();
 })
