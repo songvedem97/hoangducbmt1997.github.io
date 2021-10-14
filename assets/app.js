@@ -182,7 +182,7 @@ addLightMode = (e) => {
 	document.querySelector('.btn-list').classList.add('light-btn-wrap');
 	document.querySelector('.btn-mode').classList.add('light-btn-wrap');
 	document.querySelector('.btn-play').classList.add('light-btn-play-wrap');
-	create_style("input[type=range]::-webkit-slider-runnable-track {  }");
+	document.querySelector('.name').classList.add('light-text-color');
 }
 removeLightMode = () => {
 	document.body.classList.remove('light-theme');
@@ -191,6 +191,7 @@ removeLightMode = () => {
 	document.querySelector('.btn-list').classList.remove('light-btn-wrap');
 	document.querySelector('.btn-mode').classList.remove('light-btn-wrap');
 	document.querySelector('.btn-play').classList.remove('light-btn-play-wrap');
+	document.querySelector('.name').classList.remove('light-text-color');
 }
 updateProgressTime = (e) => {
 	const { currentTime, duration } = e.srcElement;
@@ -207,7 +208,7 @@ audio.ontimeupdate = function () {
 		if(isLightMode == false)
 		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
 		else
-		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%, var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px -2px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .5)!important;  border: 1px solid var(--light-color) !important;}");
+		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%, var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px -2px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .5)!important; border-color:#f1f1f1 !important;}");
 		
 	}
 };
@@ -219,7 +220,7 @@ progressBarTest.onchange = function (e) {
 	if(isLightMode == false)
 	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
 	else
-	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%,  var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px -2px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .5) !important; border: 1px solid var(--light-color) !important;}");
+	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%,  var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px -2px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .5) !important; border-color:#f1f1f1  !important;}");
 
 };
 audio.addEventListener("ended", () => {
