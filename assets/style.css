@@ -8,6 +8,7 @@
 	--cyan: #7ed1e2;
 	--gray: #A7A9AA;
 	--dark--gray: #4d5063;
+	--gray-color:#4d5063;
 	--creator:#84878A;
 	--bg--btn: #e2e600;
 	--shadow-color: 0, 0, 0;
@@ -30,9 +31,7 @@ body {
 
 
 
-.light-music-wrap::before{
-	background:var(--bg-light) !important;
-}
+
 /*--Preloader--*/
 
 .wrap-pre-loader {
@@ -175,7 +174,9 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
-
+.title-playing{
+	text-align: center;
+}
 .btn-mode, .btn-list{
 	border-radius: 100%;
 	color: #84878A;
@@ -532,7 +533,7 @@ input[type=range]::-moz-range-thumb {
 
 /*--Light theme--*/
 .light-theme{
-	background-color: var(--bg-light) !important;
+	background-color: #fff!important;
 }
 .light-btn-wrap{
 	background: var(--light-color);
@@ -550,4 +551,7 @@ input[type=range]::-moz-range-thumb {
 .light-music-wrap{
 	background-color: transparent !important;
 	background: #d2f4ff;
+}
+.light-music-wrap::before{
+	background:var(--bg-light) !important;
 }

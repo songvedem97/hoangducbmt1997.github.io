@@ -175,7 +175,7 @@ prevSong = () => {
 	loadSong(songIndex);
 }
 addLightMode = (e) => {
-	
+	avatar.style.animationPlayState = 'running';
 	document.body.classList.add('light-theme');
 	document.querySelector('.music-player-wrap').classList.add('light-music-wrap::before');
 	document.querySelector('.music-player-wrap').classList.add('light-music-wrap');
