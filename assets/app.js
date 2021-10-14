@@ -1,4 +1,4 @@
-// load dữ liệu
+// load data
 window.onload = async () => {
 	$body = $("body");
 	$body.addClass("loading");
@@ -6,11 +6,12 @@ window.onload = async () => {
 	await getData();
 	$body.removeClass("loading");
 }
-// biến tương tác
+// variable
 const musicContent = document.querySelector(".row");
 const avatar = document.querySelector(".avatar img");
 const name = document.querySelector(".music-play .name");
 const creator = document.querySelector(".music-play .creator");
+const btnMode = document.querySelector(".fa-moon");
 const btnPlay = document.querySelector(".fa-play");
 const btnLoop = document.querySelector(".btn-loop");
 const btnNext = document.querySelector(".btn-next");
@@ -24,9 +25,15 @@ const list = document.querySelector(".list-music");
 const songlist = list.getElementsByTagName("li");
 let songIndex = Math.floor(Math.random() * 101);
 let isRandom = false;
+let isLightMode = false;
 let isLoop = false;
 let arraySongs = [];
 let base_api = "https://api.apify.com/v2/key-value-stores/EJ3Ppyr2t73Ifit64/records/LATEST/";
+
+
+
+
+
 fectRequest = async (url) => {
 	const response = await fetch(url);
 	return response.json();
@@ -167,6 +174,24 @@ prevSong = () => {
 	}
 	loadSong(songIndex);
 }
+addLightMode = (e) => {
+	
+	document.body.classList.add('light-theme');
+	document.querySelector('.music-player-wrap').classList.add('light-music-wrap::before');
+	document.querySelector('.music-player-wrap').classList.add('light-music-wrap');
+	document.querySelector('.btn-list').classList.add('light-btn-wrap');
+	document.querySelector('.btn-mode').classList.add('light-btn-wrap');
+	document.querySelector('.btn-play').classList.add('light-btn-play-wrap');
+	create_style("input[type=range]::-webkit-slider-runnable-track {  }");
+}
+removeLightMode = () => {
+	document.body.classList.remove('light-theme');
+	document.querySelector('.music-player-wrap').classList.remove('light-music-wrap::before');
+	document.querySelector('.music-player-wrap').classList.remove('light-music-wrap');
+	document.querySelector('.btn-list').classList.remove('light-btn-wrap');
+	document.querySelector('.btn-mode').classList.remove('light-btn-wrap');
+	document.querySelector('.btn-play').classList.remove('light-btn-play-wrap');
+}
 updateProgressTime = (e) => {
 	const { currentTime, duration } = e.srcElement;
 	currentTimeDisplay.textContent = formatTime(currentTime);
@@ -178,8 +203,12 @@ audio.ontimeupdate = function () {
 		const progressPercent = (audio.currentTime / audio.duration) * 100;
 		progressBarTest.value = progressPercent;
 		var val = progressPercent;
-		if ((val >= 90) && (val <= 99)) val = (val - 1);
+		if ((val >= 90) && (val <= 99) ) val = (val - 1);
+		if(isLightMode == false)
 		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
+		else
+		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%, var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px -2px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .5)!important;  border: 1px solid var(--light-color) !important;}");
+		
 	}
 };
 progressBarTest.onchange = function (e) {
@@ -187,7 +216,11 @@ progressBarTest.onchange = function (e) {
 	audio.currentTime = seekTime;
 	var val = e.target.value;
 	if ((val >= 90) && (val <= 99)) val = (val - 1);
+	if(isLightMode == false)
 	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
+	else
+	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%,  var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px -2px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .5) !important; border: 1px solid var(--light-color) !important;}");
+
 };
 audio.addEventListener("ended", () => {
 	if (isLoop == true) {
@@ -196,6 +229,22 @@ audio.addEventListener("ended", () => {
 	else if (isLoop == false) {
 		nextSong();
 		playSong();
+	}
+})
+btnMode.addEventListener("click",()=>{
+	audio.play();
+	if(isLightMode == false)
+	{	
+		btnMode.classList.remove('fa-moon');
+		btnMode.classList.add('fa-sun');	
+		isLightMode = true;
+		addLightMode();
+	}
+	else {
+		btnMode.classList.add('fa-moon');
+		btnMode.classList.remove('fa-sun');
+		isLightMode = false;
+		removeLightMode();
 	}
 })
 btnPlay.addEventListener("click", () => {
