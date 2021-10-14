@@ -10,7 +10,7 @@
 	--dark--gray: #4d5063;
 	--gray-color:#4d5063;
 	--creator:#84878A;
-	--bg--btn: #fbff00;
+	--bg--btn: #ff9100;
 	--shadow-color: 0, 0, 0;
 	--light-color: 255, 255, 255;
 }
@@ -292,7 +292,7 @@ body {
 	text-align: center;
 }
 
-/*-Progress-*/
+/*-Proggress-*/
 
 .music-play .progress {
 	width: 70%;
@@ -309,7 +309,6 @@ body {
 	left: 0;
 	width: 0;
 	height: 100%;
-	background-color: #8968ff;
 	display: flex;
 	justify-content: flex-end;
 	position: relative;
@@ -361,14 +360,14 @@ body {
 
 .music-play .music-controll :nth-child(2) {
 	font-size: 1.5rem;
-	color: var(--gray);
+	color: var(--gray-color);
 }
 
 /*Next*/
 
 .music-play .music-controll :nth-child(4) {
 	font-size: 1.5rem;
-	color: var(--gray);
+	color: var(--gray-color);
 }
 
 /*Play*/
