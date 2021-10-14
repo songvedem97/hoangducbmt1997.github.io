@@ -38,6 +38,10 @@
     .music-play .music-controll .btn-play i{
         font-size: 1.2rem;
     }
+    .img-action-item{
+        height: 120px;
+        width: 120px;
+    }
 }
 /*-MD-*/
 @media only screen and (max-width: 849px) and (min-width: 768px) {
@@ -323,4 +327,5 @@
     .music-list ul{
         height: 320px;
     }
+    
 }

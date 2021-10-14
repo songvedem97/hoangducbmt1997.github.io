@@ -557,8 +557,8 @@ input[type=range]::-moz-range-thumb {
 	background-color: transparent !important;
 }
 .light-music-wrap{
-	background-color: transparent !important;
-	background: #fff !important;
+	background: var(--bg-light) !important;
+	box-shadow: none !important;
 }
 .light-music-wrap::before{
 	background:var(--bg-light) !important;
@@ -623,6 +623,9 @@ input[type=range]::-moz-range-thumb {
 	margin-left: 10px;
 	border-radius: 5px;
 }
+.song-item-info .name-song-item{
+	font-weight: bold;
+}
 .song-item-info .creator{
 	color: var(--creator);
 }
@@ -652,6 +655,6 @@ input[type=range]::-moz-range-thumb {
 	border-width: 4px;
 }
 .img-action-item{
-	height: 120px;
-	width: 120px;
+	height: 120px !important;
+	width: 120px !important;
 }

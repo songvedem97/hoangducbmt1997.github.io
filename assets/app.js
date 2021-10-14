@@ -68,7 +68,7 @@ getSong = async () => {
 			<div class="list-music-item-info">
 			<img class="avatar-item" height='50' src="${avatar}"/>
 			<div class="song-item-info" >
-			<p class="name">${name}</p>
+			<p class="name-song-item">${name}</p>
 			<p class="creator">${creator}</p>
 			
 			</div>
@@ -198,6 +198,10 @@ addLightMode = (e) => {
 	document.querySelector('.btn-close').classList.add('light-btn-wrap');
 	document.querySelector('.name').classList.add('light-text-color');
 	document.querySelector('.music-list').classList.add('light-music-wrap');
+	let nameSongitem = document.querySelectorAll('.name-song-item');
+	for (let i = 0; i < nameSongitem.length; i++) {
+		nameSongitem[i].classList.add("light-text-color");
+	}
 }
 removeLightMode = () => {
 	document.body.classList.remove('light-theme');
@@ -209,7 +213,12 @@ removeLightMode = () => {
 	document.querySelector('.btn-heart').classList.remove('light-btn-wrap');
 	document.querySelector('.btn-close').classList.remove('light-btn-wrap');
 	document.querySelector('.name').classList.remove('light-text-color');
+
 	document.querySelector('.music-list').classList.remove('light-music-wrap');
+	let nameSongitem = document.querySelectorAll('.name-song-item');
+	for (let i = 0; i < nameSongitem.length; i++) {
+		nameSongitem[i].classList.remove("light-text-color");
+	}
 }
 updateProgressTime = (e) => {
 	const { currentTime, duration } = e.srcElement;
