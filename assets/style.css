@@ -633,9 +633,10 @@ input[type=range]::-moz-range-thumb {
 .name-song-acttion{
 	position: absolute;
 	top: 40px;
-	left: 50%;
-	transform: translateX(-50%);
+	left: 0;
+	text-align: center;
 	color: var(--gray);
+	width: 100%;
 }
 .avatar-action img{
 	height: 120px;
