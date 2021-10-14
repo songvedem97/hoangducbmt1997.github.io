@@ -208,7 +208,7 @@ audio.ontimeupdate = function () {
 		if(isLightMode == false)
 		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
 		else
-		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%, var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px -2px rgba(var(--shadow-color), .6), inset -2px -2px 3px 0px rgba(var(--light-color), .7)!important; border-color:#f1f1f1 !important;}");
+		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%, var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px 2px rgba(var(--shadow-color), .1), inset -2px -2px 3px 0px rgba(var(--light-color), .1)!important; border-color:#f1f1f1 !important;}");
 		
 	}
 };
@@ -220,7 +220,7 @@ progressBarTest.onchange = function (e) {
 	if(isLightMode == false)
 	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
 	else
-	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%,  var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px -2px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .5) !important; border-color:#f1f1f1  !important;}");
+	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%,  var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px 2px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .1) !important; border-color:#f1f1f1  !important;}");
 
 };
 audio.addEventListener("ended", () => {
