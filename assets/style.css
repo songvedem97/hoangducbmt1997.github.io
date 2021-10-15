@@ -10,7 +10,7 @@
 	--dark--gray: #4d5063;
 	--gray-color: #5a5a5a;
 	--creator: #84878A;
-	--bg--btn: #f1ee1e;
+	--bg--btn: #fffb00;
 	--shadow-color: 0, 0, 0;
 	--light-color: 255, 255, 255;
 	--orange: #ff6600;
@@ -179,7 +179,7 @@ body {
 /*-CSS Event Click-*/
 
 .bx-add-random {
-	color: var(--bg--btn);
+	color: var(--orange);
 }
 
 .bx-remove-random {
@@ -187,7 +187,7 @@ body {
 }
 
 .bx-add-loop {
-	color: var(--bg--btn);
+	color: var(--orange);
 }
 
 .bx-remove-loop {
