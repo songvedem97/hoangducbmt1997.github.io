@@ -286,6 +286,7 @@ progressBarTest.onchange = function (e) {
 
 };
 audio.addEventListener("ended", () => {
+	btnHeart.classList.remove('heart');
 	if (isLoop == true) {
 		playSong();
 	}
