@@ -691,15 +691,21 @@ input[type=range]::-moz-range-thumb {
 	position: absolute;
 	left: 0;
 	color: var(--gray);
-	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
 	font-size: 0.9rem;
 	height: 110px;
 	top: 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
+.name-song-acttion{
+	width: 200px;
+	background-size: red;
 
+}
 .avatar-action img {
 	height: 120px;
 	width: 120px;
