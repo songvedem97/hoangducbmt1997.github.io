@@ -103,9 +103,7 @@
     .title-playing p{
         font-size: 0.8rem;
     }
-    .title-playing {
-        margin-top: 10px;
-    }
+
     .wrap-now-playing {
         padding-top: 40px;
     }
@@ -167,9 +165,6 @@
         }
         .title-playing p{
             font-size: 0.8rem;
-        }
-        .title-playing {
-            margin-top: 10px;
         }
         .wrap-now-playing {
             padding-top: 40px;
@@ -237,7 +232,7 @@
             height: 330px;
         }
         .name-song-acttion{
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 }
 /*-XXSM-*/
@@ -256,9 +251,6 @@
     .title-playing p{
         font-size: 0.8rem;
         
-    }
-    .title-playing {
-        margin-top: 10px;
     }
     .wrap-now-playing {
         padding-top: 40px;

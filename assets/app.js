@@ -20,7 +20,7 @@ const btnNext = document.querySelector(".btn-next");
 const btnPrev = document.querySelector(".btn-prev");
 const btnRandom = document.querySelector(".btn-random");
 const audio = document.querySelector("#audio");
-const progressBarTest = document.querySelector(".test-progress-bar");
+const progressBarTest = document.querySelector(".music-progress-bar");
 const timesong = document.querySelector(".duration-time");
 const currentTimeDisplay = document.querySelector(".current-time");
 const list = document.querySelector(".list-music");
@@ -85,8 +85,6 @@ getSong = async () => {
 	})
 
 }
-
-
 
 formatTime = (second) => {
 	let hours = Math.floor(second / 3600);
@@ -204,7 +202,8 @@ addLightMode = (e) => {
 	document.querySelector('.btn-close').classList.add('light-btn-wrap');
 	document.querySelector('.name').classList.add('light-text-color');
 	document.querySelector('.music-list').classList.add('light-music-wrap');
-	
+	document.querySelector('.vip-2').classList.add('text-light');
+
 	let nameSongitem = document.querySelectorAll('.name-song-item');
 	for (let i = 0; i < nameSongitem.length; i++) {
 		nameSongitem[i].classList.add("light-text-color");
