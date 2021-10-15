@@ -36,7 +36,9 @@
 .list-music-ranking li{
     width: 100% !important;
 }
-
+.top-ranking-song li{
+    list-style: none;
+}
 .list-music-ranking li:nth-child(1),.list-music-ranking li:nth-child(2),.list-music-ranking li:nth-child(3){
     display: none;
 }

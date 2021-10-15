@@ -11,7 +11,7 @@
     --green-color: #00ffb3;
     --green-btn-color: #00d8ad;
     --bg-footer: #0B1220;
-    --bg-search: hsla(0, 0%, 100%, 0.3);
+    --bg-search: hsla(0, 0%, 100%, 0.2);
     --bg-control: #111727;
     --dark-color: #16181B;
     --boder-control: #0C1524;
@@ -628,7 +628,7 @@ body {
     display: inline-block;
     font-size: 0.9rem;
     width: 95%;
-    color: var(--blue-color);
+    color: var(--dark-color);
     background-clip: padding-box;
     border: 0;
     position: relative;
@@ -642,7 +642,7 @@ body {
 
 ::placeholder {
     color: var(--light-gray-color);
-    font-weight: 300;
+    font-weight: 200;
     opacity: 1;
 }
 
