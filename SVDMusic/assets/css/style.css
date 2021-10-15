@@ -6,7 +6,7 @@
     --white-color: #fff;
     --medium-blue-color: #11263a;
     --light-blue-color: #00E5CE;
-    --yellow-color: #fbff00;
+    --yellow-color: #d9dd00;
     --purple-color: #423ea3;
     --green-color: #00ffb3;
     --green-btn-color: #00d8ad;
@@ -1349,7 +1349,7 @@ input[type=radio] {
 
 .ms-list-song .list-music-item-info .avatar .btn-play {
     position: absolute;
-    color: var(--green-color);
+    color: var(--yellow-color);
     display: flex;
     padding: 4px;
     justify-content: center;
