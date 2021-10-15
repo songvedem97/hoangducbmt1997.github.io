@@ -56,14 +56,14 @@ getSong = async () => {
 	result.then(data => {
 		let all = data.songs.top100_VN;
 		let nt = all[0].songs;
-		
+
 		for (let i = 0; i < nt.length; i++) {
 			const name = nt[i].title;
 			const creator = nt[i].creator;
 			const music = nt[i].music;
 			const avatar = nt[i].avatar;
 			list.innerHTML +=
-			`<li class="list-music-item" data-name='${name}' data-creator='${creator}' data-music='${music}'
+				`<li class="list-music-item" data-name='${name}' data-creator='${creator}' data-music='${music}'
 			data-avatar='${avatar}' data-index='${i}'>
 			<div class="list-music-item-info">
 			<img class="avatar-item" height='50' src="${avatar}"/>
@@ -109,19 +109,48 @@ loadSong = async (song) => {
 	let detailSong = document.querySelectorAll(".list-music-item");
 	name.textContent = detailSong[song].getAttribute("data-name");
 	nameItemAction.textContent = detailSong[song].getAttribute("data-name");
-	document.title = detailSong[song].getAttribute("data-name") +', '+ detailSong[song].getAttribute("data-creator");
+	document.title = detailSong[song].getAttribute("data-name") + ', ' + detailSong[song].getAttribute("data-creator");
 	creator.textContent = detailSong[song].getAttribute("data-creator");
 	avatar.src = detailSong[song].getAttribute("data-avatar");
 	avatarItemAction.src = detailSong[song].getAttribute("data-avatar");
+	if ('mediaSession' in navigator) {
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title: detailSong[song].getAttribute("data-name"),
+			artist: detailSong[song].getAttribute("data-creator"),
+			artwork: [
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '96x96', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '128x128', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '192x192', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '256x256', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '384x384', type: 'image/png' },
+				{ src: detailSong[song].getAttribute("data-avatar"), sizes: '512x512', type: 'image/png' },
+			]
+		});
+		navigator.mediaSession.setActionHandler('previoustrack', function () {
+			prevSong();
+			playSong();
 	
+		});
+		navigator.mediaSession.setActionHandler('nexttrack', function () {
+			nextSong();
+			playSong();
+		});
+		navigator.mediaSession.setActionHandler('pause', function () {
+			pauseSong();
+		});
+		navigator.mediaSession.setActionHandler('play', function () {
+			playSong();
+		});
+	}
+
 	for (let i = 0; i < songlist.length; i++) {
 		songlist[i].classList.remove("active");
 		songlist[i].classList.remove("active-light-mode");
 	}
-	if(isLightMode == false){
+	if (isLightMode == false) {
 		songlist[song].classList.add("active");
 	}
-	else{
+	else {
 		songlist[song].classList.add("active-light-mode");
 	}
 
@@ -237,12 +266,12 @@ audio.ontimeupdate = function () {
 		const progressPercent = (audio.currentTime / audio.duration) * 100;
 		progressBarTest.value = progressPercent;
 		var val = progressPercent;
-		if ((val >= 90) && (val <= 99) ) val = (val - 1);
-		if(isLightMode == false)
-		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
+		if ((val >= 90) && (val <= 99)) val = (val - 1);
+		if (isLightMode == false)
+			create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
 		else
-		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%, var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px 1px rgba(var(--shadow-color), .1), inset -2px -2px 3px 0px rgba(var(--light-color), .1)!important; border-color:#f1f1f1 !important;}");
-		
+			create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%, var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px 1px rgba(var(--shadow-color), .1), inset -2px -2px 3px 0px rgba(var(--light-color), .1)!important; border-color:#f1f1f1 !important;}");
+
 	}
 };
 progressBarTest.onchange = function (e) {
@@ -250,10 +279,10 @@ progressBarTest.onchange = function (e) {
 	audio.currentTime = seekTime;
 	var val = e.target.value;
 	if ((val >= 90) && (val <= 99)) val = (val - 1);
-	if(isLightMode == false)
-	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
+	if (isLightMode == false)
+		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, #1D2021 " + val + "%, #1D2021 100%) !important;}");
 	else
-	create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%,  var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px 1px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .1) !important; border-color:#f1f1f1  !important;}");
+		create_style("input[type=range]::-webkit-slider-runnable-track { background: linear-gradient(90deg, rgba(218,80,25,1) 0%, rgba(184,160,34,1) " + val + "%, var(--bg-light) " + val + "%,  var(--bg-light) 100%) !important;box-shadow: inset 2px 2px 3px 1px rgba(var(--shadow-color), .3), inset -2px -2px 3px 0px rgba(var(--light-color), .1) !important; border-color:#f1f1f1  !important;}");
 
 };
 audio.addEventListener("ended", () => {
@@ -266,34 +295,33 @@ audio.addEventListener("ended", () => {
 	}
 })
 
-avatarItemAction.addEventListener("click",()=>{
-	document.getElementById('list-song').style.visibility='hidden';
+avatarItemAction.addEventListener("click", () => {
+	document.getElementById('list-song').style.visibility = 'hidden';
 })
-btnCloseList.addEventListener("click",()=>{
-	document.getElementById('list-song').style.visibility='hidden';
+btnCloseList.addEventListener("click", () => {
+	document.getElementById('list-song').style.visibility = 'hidden';
 })
-btnOpenList.addEventListener("click",()=>{
-	document.getElementById('list-song').style.visibility='visible';
+btnOpenList.addEventListener("click", () => {
+	document.getElementById('list-song').style.visibility = 'visible';
 })
-btnHeart.addEventListener("click",()=>{
-	if(isHeart == false){
+btnHeart.addEventListener("click", () => {
+	if (isHeart == false) {
 		btnHeart.classList.add('heart');
 		isHeart = true;
 	}
-	else{
+	else {
 		btnHeart.classList.remove('heart');
 		isHeart = false;
 	}
 })
 
-btnMode.addEventListener("click",()=>{
-	if(isLightMode == false)
-	{
+btnMode.addEventListener("click", () => {
+	if (isLightMode == false) {
 		document.querySelector('.active').classList.add('active-light-mode');
 		document.querySelector('.active-light-mode').classList.remove('active');
 		playSong();
 		btnMode.classList.remove('fa-moon');
-		btnMode.classList.add('fa-sun');	
+		btnMode.classList.add('fa-sun');
 		isLightMode = true;
 		addLightMode();
 	}
@@ -351,7 +379,7 @@ list.addEventListener("click", (e) => {
 	isHeart = false;
 	loadSong(songIndex);
 	playSong();
-})
+});
 function create_style(css) {
 	head = document.head,
 		oldstyles = head.querySelector("#rangestyle"),
