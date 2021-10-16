@@ -1,8 +1,6 @@
 window.onload = async () => {
   getSong();
 }
-
-const musicContent = document.querySelector(".container-app");
 const listSong = document.querySelector('.list-music');
 const timesong = document.querySelector(".duration-time");
 const currentTimeDisplay = document.querySelector(".current-time");
@@ -10,8 +8,7 @@ var songIndex = 0;
 const audioContext = new AudioContext(), analyser = new AnalyserNode(audioContext, { fftSize: 2048 })
 const music = new Audio();
 const audio = document.querySelector("#audio");
-const progressBar = document.querySelector(".music-progress-bar");
-const avatar = document.getElementById("section1");
+const scrubRuler = document.getElementById('scrub-ruler');
 const togglePlayPause = document.getElementById('toggle-play-pause');
 const btnNext = document.querySelector(".btn-next");
 const btnPrev = document.querySelector(".btn-prev");
@@ -20,9 +17,10 @@ var request = new XMLHttpRequest();
 var arraySongs = [];
 audio.volume = 0;
 
-/* get song and push in array */
+
 getSong = async () => {
   let songs = document.querySelectorAll(".list-music-item");
+
   for (let i = 0; i < songs.length; i++) {
     arraySongs.push(songs[i].getAttribute("data-music"));
   }
@@ -36,7 +34,7 @@ loadSong = async () => {
     const time = formatTime(audio.duration);
     timesong.textContent = time;
   })
-  /*get url and analyser*/
+
   request.open('GET', audio.src, true);
   request.responseType = 'blob';
   request.onload = function () {
@@ -44,8 +42,10 @@ loadSong = async () => {
     connectAudioToAnalyser(music, analyser, audioContext);
   }
   request.send();
-  draw();
 }
+
+
+
 
 
 formatTime = (second) => {
@@ -64,55 +64,13 @@ formatTime = (second) => {
 
 updateProgressTime = (e) => {
   const { currentTime, duration } = e.srcElement;
-  currentTimeDisplay.textContent = formatTime(currentTime);
+  currentTimeDisplay.textContent = formatTime(music.currentTime);
 }
 audio.addEventListener("timeupdate", updateProgressTime);
 
-
-
-
-music.addEventListener('ended', () => {
-  togglePlayPause.checked = false;
-})
-
 music.addEventListener('timeupdate', () => {
-  progressBar.value = music.currentTime;
+  scrubRuler.value = music.currentTime;
 })
-
-progressBar.addEventListener('change', event => {
-  music.currentTime = event.target.value;
-  music.play();
-  togglePlayPause.checked = true;
-})
-
-togglePlayPause.addEventListener('change', event => {
-  if (event.target.checked) {
-    music.play();
-    audio.play();
-  }
-
-  else {
-    music.pause();
-    audio.pause();
-  }
-
-})
-btnNext.addEventListener("click", () => {
-
-	nextSong();
-	setTimeout(() => {
-		playSong();
-    music.play();
-	}, 400)
-})
-btnPrev.addEventListener("click", () => {
-	prevSong();
-	setTimeout(() => {
-		playSong();
-    music.play();
-	}, 400)
-})
-
 
 nextSong = () => {
 	songIndex++;
@@ -128,6 +86,35 @@ prevSong = () => {
 	}
 	loadSong(songIndex);
 }
+
+music.addEventListener('ended', () => {
+  togglePlayPause.checked = true;
+  music.play();
+})
+
+
+
+scrubRuler.addEventListener('change', event => {
+  music.currentTime = event.target.value;
+  music.play();
+  togglePlayPause.checked = true;
+})
+
+togglePlayPause.addEventListener('change', event => {
+  songIndex++;
+  if (event.target.checked) {
+    music.play();
+    audio.play();
+  }
+
+  else {
+    music.pause();
+    audio.pause();
+  }
+
+})
+
+
 
 document.addEventListener('keypress', event => {
   if (event.key === ' ') {
@@ -145,8 +132,8 @@ const connectAudioToAnalyser = (audioElement, analyserNode, context) => {
     audioElement.pause()
     togglePlayPause.checked = false
 
-    progressBar.setAttribute('max', audioElement.duration)
-    progressBar.setAttribute('value', 0)
+    scrubRuler.setAttribute('max', audioElement.duration)
+    scrubRuler.setAttribute('value', 0)
 
     source.connect(analyserNode)
     analyser.connect(context.destination)
@@ -180,3 +167,4 @@ function draw() {
   updateValue(section1, 20, 0.2)
 
 }
+draw();
