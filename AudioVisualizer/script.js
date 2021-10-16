@@ -1,17 +1,17 @@
 window.onload = async () => {
   getSong();
 }
+const musicContent = document.querySelector(".container-app");
 const listSong = document.querySelector('.list-music');
 const timesong = document.querySelector(".duration-time");
 const currentTimeDisplay = document.querySelector(".current-time");
-var songIndex = 0;
+var songIndex = 2;
 const audioContext = new AudioContext(), analyser = new AnalyserNode(audioContext, { fftSize: 2048 })
 const music = new Audio();
 const audio = document.querySelector("#audio");
-const scrubRuler = document.getElementById('scrub-ruler');
+const progressBar = document.querySelector('.progress-bar');
 const togglePlayPause = document.getElementById('toggle-play-pause');
-const btnNext = document.querySelector(".btn-next");
-const btnPrev = document.querySelector(".btn-prev");
+const btnPlay = document.querySelector('.btn-play');
 const source = audioContext.createMediaElementSource(music);
 var request = new XMLHttpRequest();
 var arraySongs = [];
@@ -44,10 +44,6 @@ loadSong = async () => {
   request.send();
 }
 
-
-
-
-
 formatTime = (second) => {
   let hours = Math.floor(second / 3600);
   let minutes = Math.floor((second - hours * 3600) / 60);
@@ -65,46 +61,50 @@ formatTime = (second) => {
 updateProgressTime = (e) => {
   const { currentTime, duration } = e.srcElement;
   currentTimeDisplay.textContent = formatTime(music.currentTime);
-  scrubRuler.value = music.currentTime;
+  progressBar.value = music.currentTime;
 }
 audio.addEventListener("timeupdate", updateProgressTime);
 
-
-
-
-
-
-music.addEventListener('ended', () => {
-  togglePlayPause.checked = true;
-  music.play();
-})
-
-scrubRuler.addEventListener('change', event => {
+progressBar.addEventListener('change', event => {
   music.currentTime = event.target.value;
-  music.play();
-  togglePlayPause.checked = true;
 })
+
+
+
+music.addEventListener("ended", () => {
+  loadSong(songIndex--);
+  music.play();
+
+  
+})
+
 
 togglePlayPause.addEventListener('change', event => {
+
   if (event.target.checked == true) {
+    musicContent.classList.add("playing");
     music.play();
     audio.play();
   }
   else {
+    musicContent.classList.remove("playing");
     music.pause();
     audio.pause();
   }
 
 })
 
+
+
+
 const connectAudioToAnalyser = (audioElement, analyserNode, context) => {
   const canplayHandler = () => {
-    scrubRuler.setAttribute('max', audioElement.duration);
-    scrubRuler.setAttribute('value', 0);
+    progressBar.setAttribute('max', audioElement.duration);
+    progressBar.setAttribute('value', 0);
     source.connect(analyserNode);
     analyser.connect(context.destination);
-
-    audioElement.removeEventListener('canplay', canplayHandler);
+    /*
+    audioElement.removeEventListener('canplay', canplayHandler);*/
   }
   audioElement.addEventListener('canplay', canplayHandler);
 }
