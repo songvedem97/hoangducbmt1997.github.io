@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Audio Visualizer</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Audio Visualiser</title>
+</head>
+
+ 
+</audio>
+<h1 class="title" id="file-name"></h1>
+
+<svg class="audioVisualiser" xmlns="http://www.w3.org/2000/svg" >
+  <div class="hidden"></div>
+  <ellipse id="section1"></ellipse>
+
+
+</svg>
+<section class="controls">
+  <div class="icon-toggle-button" id="toggle-play-pause-wrapper">
+    <input id="toggle-play-pause" type="checkbox"/>
+    <label for="toggle-play-pause">
+      <button class="icon-button"><i class="fas fa-play"></i></button>
+      <button class="icon-button"><i class="fas fa-pause"></i></button>
+    </label>
+  </div>
+  <input class="range-slider" type="range" value="0" max="0" step="1" id="scrub-ruler"/>
+
+</section>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

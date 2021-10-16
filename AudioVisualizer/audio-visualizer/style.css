@@ -1,0 +1,167 @@
+html {
+  font-size: 20px;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #678 0%, #6a7a8a 50%, #9ab 100%);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.title {
+  position: absolute;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #eee;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: -4rem;
+}
+#section1{
+  top: 0;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+#section1::before{
+  content: '';
+  position: absolute;
+  background-image: url(242726023_266384042012292_4931075800274261668_n.jpg);
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.icon-button {
+  cursor: pointer;
+}
+.icon-toggle-button input[type='checkbox'] {
+  display: none;
+}
+.icon-toggle-button input[type='checkbox']:not(:checked) + label > button:last-child {
+  display: none;
+}
+.icon-toggle-button input[type='checkbox']:checked + label > button:first-child {
+  display: none;
+}
+.icon-toggle-button label * {
+  pointer-events: none;
+}
+.file-loader input[type='file'] {
+  display: none;
+}
+.file-loader label {
+  text-align: center;
+  cursor: pointer;
+}
+.file-loader.music-loader label {
+  white-space: nowrap;
+  color: #eee;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 0.35rem 0.6rem;
+  border: solid #eee 0px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.file-loader.music-loader label:hover {
+  background-color: #eee;
+  color: #6a7a8a;
+}
+#toggle-play-pause-wrapper {
+  display: inline-block;
+}
+#toggle-play-pause-wrapper label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem 0.5rem 0.5rem;
+  border: solid #eee 0px;
+  transition: background-color 0.2s, opacity 0.2s, transform 0.2s;
+  transform-origin: center;
+}
+#toggle-play-pause-wrapper label .icon-button {
+  background: transparent;
+  color: #eee;
+  border: none;
+  font-size: 1.25rem;
+  transition: color 0.2s;
+}
+#toggle-play-pause-wrapper label:hover {
+  background-color: #eee;
+}
+#toggle-play-pause-wrapper label:hover > .icon-button {
+  color: #678;
+}
+#toggle-play-pause-wrapper label:active {
+  opacity: 0.5;
+  transform: scale(0.85);
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+}
+.range-slider {
+  -webkit-appearance: none;
+  width: 20rem;
+  background: transparent;
+  transition: opacity 0.2s ease-in-out;
+}
+.range-slider.vertical {
+  width: 10rem;
+  transform: rotate(-90deg);
+}
+.range-slider:disabled {
+  opacity: 0.5;
+}
+.range-slider:focus {
+  outline: none;
+}
+.range-slider::-webkit-slider-runnable-track {
+  transition: background 0.2s;
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0), 0px 0px 0px rgba(13,13,13,0);
+  background: rgba(187,204,221,0.498);
+  border: solid transparent 1px;
+  border-radius: 2rem;
+}
+.range-slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0,0,0,0), 0px 0px 0px rgba(13,13,13,0);
+  border: 0px;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 1.5rem;
+  background: rgba(238,238,238,0.933);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -0.25rem;
+}
+.range-slider:active::-webkit-slider-thumb {
+  background: #eee;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: -0.35rem;
+  margin-left: -0.035rem/2;
+}
+.range-slider:active::-webkit-slider-runnable-track {
+  background: #bcd;
+}
