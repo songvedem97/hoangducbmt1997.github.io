@@ -2,8 +2,6 @@ window.onload = async () => {
   getSong();
 }
 
-
-
 const musicContent = document.querySelector(".container-app");
 const listSong = document.querySelector('.list-music');
 const timesong = document.querySelector(".duration-time");
@@ -12,7 +10,8 @@ var songIndex = 0;
 const audioContext = new AudioContext(), analyser = new AnalyserNode(audioContext, { fftSize: 2048 })
 const music = new Audio();
 const audio = document.querySelector("#audio");
-const scrubRuler = document.getElementById('scrub-ruler');
+const progressBar = document.querySelector(".music-progress-bar");
+const avatar = document.getElementById("section1");
 const togglePlayPause = document.getElementById('toggle-play-pause');
 const btnNext = document.querySelector(".btn-next");
 const btnPrev = document.querySelector(".btn-prev");
@@ -21,7 +20,7 @@ var request = new XMLHttpRequest();
 var arraySongs = [];
 audio.volume = 0;
 
-
+/* get song and push in array */
 getSong = async () => {
   let songs = document.querySelectorAll(".list-music-item");
   for (let i = 0; i < songs.length; i++) {
@@ -37,7 +36,7 @@ loadSong = async () => {
     const time = formatTime(audio.duration);
     timesong.textContent = time;
   })
-
+  /*get url and analyser*/
   request.open('GET', audio.src, true);
   request.responseType = 'blob';
   request.onload = function () {
@@ -70,31 +69,17 @@ updateProgressTime = (e) => {
 audio.addEventListener("timeupdate", updateProgressTime);
 
 
-nextSong = () => {
 
-	songIndex++;
-	if (songIndex > arraySongs.length - 1) {
-		songIndex = 0;
-	}
-	loadSong(songIndex);
-}
-prevSong = () => {
-	songIndex--;
-	if (songIndex < 0) {
-		songIndex = arraySongs.length - 1;
-	}
-	loadSong(songIndex);
-}
 
 music.addEventListener('ended', () => {
   togglePlayPause.checked = false;
 })
 
 music.addEventListener('timeupdate', () => {
-  scrubRuler.value = music.currentTime;
+  progressBar.value = music.currentTime;
 })
 
-scrubRuler.addEventListener('change', event => {
+progressBar.addEventListener('change', event => {
   music.currentTime = event.target.value;
   music.play();
   togglePlayPause.checked = true;
@@ -113,7 +98,7 @@ togglePlayPause.addEventListener('change', event => {
 
 })
 btnNext.addEventListener("click", () => {
-  console.log(a);
+
 	nextSong();
 	setTimeout(() => {
 		playSong();
@@ -121,7 +106,6 @@ btnNext.addEventListener("click", () => {
 	}, 400)
 })
 btnPrev.addEventListener("click", () => {
-  console.log(a);
 	prevSong();
 	setTimeout(() => {
 		playSong();
@@ -129,6 +113,21 @@ btnPrev.addEventListener("click", () => {
 	}, 400)
 })
 
+
+nextSong = () => {
+	songIndex++;
+	if (songIndex > arraySongs.length - 1) {
+		songIndex = 0;
+	}
+	loadSong(songIndex);
+}
+prevSong = () => {
+	songIndex--;
+	if (songIndex < 0) {
+		songIndex = arraySongs.length - 1;
+	}
+	loadSong(songIndex);
+}
 
 document.addEventListener('keypress', event => {
   if (event.key === ' ') {
@@ -146,8 +145,8 @@ const connectAudioToAnalyser = (audioElement, analyserNode, context) => {
     audioElement.pause()
     togglePlayPause.checked = false
 
-    scrubRuler.setAttribute('max', audioElement.duration)
-    scrubRuler.setAttribute('value', 0)
+    progressBar.setAttribute('max', audioElement.duration)
+    progressBar.setAttribute('value', 0)
 
     source.connect(analyserNode)
     analyser.connect(context.destination)
