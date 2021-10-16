@@ -30,14 +30,14 @@ body {
   align-items: center;
 }
 
-#section1 {
+#section {
   top: 0;
   position: relative;
   width: 300px;
   height: 300px;
 }
 
-#section1::before {
+#section::before {
   content: '';
   position: absolute;
   background-image: url(girl-2.jpg);

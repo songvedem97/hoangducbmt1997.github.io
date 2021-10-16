@@ -71,27 +71,13 @@ audio.addEventListener("timeupdate", updateProgressTime);
 
 
 
-nextSong = () => {
-	songIndex++;
-	if (songIndex > arraySongs.length - 1) {
-		songIndex = 0;
-	}
-	loadSong(songIndex);
-}
-prevSong = () => {
-	songIndex--;
-	if (songIndex < 0) {
-		songIndex = arraySongs.length - 1;
-	}
-	loadSong(songIndex);
-}
+
+
 
 music.addEventListener('ended', () => {
   togglePlayPause.checked = true;
   music.play();
 })
-
-
 
 scrubRuler.addEventListener('change', event => {
   music.currentTime = event.target.value;
@@ -100,12 +86,10 @@ scrubRuler.addEventListener('change', event => {
 })
 
 togglePlayPause.addEventListener('change', event => {
-  songIndex++;
-  if (event.target.checked) {
+  if (event.target.checked == true) {
     music.play();
     audio.play();
   }
-
   else {
     music.pause();
     audio.pause();
@@ -113,41 +97,22 @@ togglePlayPause.addEventListener('change', event => {
 
 })
 
-
-
-document.addEventListener('keypress', event => {
-  if (event.key === ' ') {
-    if (!togglePlayPause.checked) {
-      music.play()
-    } else {
-      music.pause()
-    }
-    togglePlayPause.checked = !togglePlayPause.checked
-  }
-})
-
 const connectAudioToAnalyser = (audioElement, analyserNode, context) => {
   const canplayHandler = () => {
-    audioElement.pause()
-    togglePlayPause.checked = false
+    scrubRuler.setAttribute('max', audioElement.duration);
+    scrubRuler.setAttribute('value', 0);
+    source.connect(analyserNode);
+    analyser.connect(context.destination);
 
-    scrubRuler.setAttribute('max', audioElement.duration)
-    scrubRuler.setAttribute('value', 0)
-
-    source.connect(analyserNode)
-    analyser.connect(context.destination)
-
-    audioElement.removeEventListener('canplay', canplayHandler)
+    audioElement.removeEventListener('canplay', canplayHandler);
   }
-  audioElement.addEventListener('canplay', canplayHandler)
+  audioElement.addEventListener('canplay', canplayHandler);
 }
 
 function draw() {
   setTimeout(() => requestAnimationFrame(draw), 50)
-
-  const dataArray = new Uint8Array(analyser.frequencyBinCount)
-  analyser.getByteTimeDomainData(dataArray)
-
+  const dataArray = new Uint8Array(analyser.frequencyBinCount);
+  analyser.getByteTimeDomainData(dataArray);
   const oneThirdLength = Math.floor(dataArray.length / 3),
     dataSections = [
       dataArray.slice(0, oneThirdLength),
@@ -163,7 +128,7 @@ function draw() {
       sectionElement.style.transform =
       `scale(${(((dataAverages[0] / 128) - 1) * maxChange) + 1})`
 
-  updateValue(section1, 20, 0.2)
+  updateValue(section, 20, 0.2)
 
 }
 draw();
