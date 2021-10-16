@@ -42,6 +42,7 @@ loadSong = async () => {
     connectAudioToAnalyser(music, analyser, audioContext);
   }
   request.send();
+  draw();
 }
 
 formatTime = (second) => {
@@ -131,4 +132,3 @@ function draw() {
   updateValue(section, 20, 0.2)
 
 }
-draw();
