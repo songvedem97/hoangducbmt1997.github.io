@@ -7,26 +7,21 @@ html {
   }
 }
 body {
+  font-family: Roboto;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(45deg, #678 0%, #6a7a8a 50%, #9ab 100%);
   height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
-.title {
-  position: absolute;
-  font-size: 1.25rem;
-  font-weight: lighter;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  color: #eee;
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: -4rem;
+.container-app{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #section1{
   top: 0;
@@ -37,10 +32,10 @@ body {
 #section1::before{
   content: '';
   position: absolute;
-  background-image: url(242726023_266384042012292_4931075800274261668_n.jpg);
+  background-image: url(girl-2.jpg);
   background-size: 100%;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   border: 5px solid #fff;
 }
@@ -82,7 +77,11 @@ body {
   color: #6a7a8a;
 }
 #toggle-play-pause-wrapper {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  color: #fff;
 }
 #toggle-play-pause-wrapper label {
   display: flex;
@@ -164,4 +163,7 @@ body {
 }
 .range-slider:active::-webkit-slider-runnable-track {
   background: #bcd;
+}
+.list-music li{
+  list-style: none;
 }
