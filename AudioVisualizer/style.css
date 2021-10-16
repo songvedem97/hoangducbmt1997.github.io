@@ -48,7 +48,8 @@ body {
   border: 5px solid #fff;
 }
 
-.icon-button {
+.icon-button, .btn-prev , .btn-next {
+  padding: 10px;
   cursor: pointer;
 }
 

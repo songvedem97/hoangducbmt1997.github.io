@@ -5,15 +5,26 @@ const musicContent = document.querySelector(".container-app");
 const listSong = document.querySelector('.list-music');
 const timesong = document.querySelector(".duration-time");
 const currentTimeDisplay = document.querySelector(".current-time");
-var songIndex = 2;
-const audioContext = new AudioContext(), analyser = new AnalyserNode(audioContext, { fftSize: 2048 })
-const music = new Audio();
+var songIndex = 0;
+
 const audio = document.querySelector("#audio");
 const progressBar = document.querySelector('.progress-bar');
 const togglePlayPause = document.getElementById('toggle-play-pause');
+
+
+
 const btnPlay = document.querySelector('.btn-play');
+const btnNext = document.querySelector(".btn-next");
+
+const btnPrev = document.querySelector(".btn-prev");
+
+
+
+const music = new Audio();
+const audioContext = new AudioContext(), analyser = new AnalyserNode(audioContext, { fftSize: 2048 });
 const source = audioContext.createMediaElementSource(music);
 var request = new XMLHttpRequest();
+
 var arraySongs = [];
 audio.volume = 0;
 
@@ -28,6 +39,7 @@ getSong = async () => {
 }
 
 loadSong = async () => {
+
   song = songIndex;
   audio.src = arraySongs[song];
   audio.addEventListener('loadedmetadata', () => {
@@ -73,24 +85,31 @@ progressBar.addEventListener('change', event => {
 
 
 music.addEventListener("ended", () => {
-  loadSong(songIndex--);
-  music.play();
+  loadSong(songIndex++);
+  if (songIndex < 0) {
+		songIndex = arraySongs.length - 1;
+	}
+
+ 
 
   
+  togglePlayPause.checked = false;
 })
 
+
+btnNext.addEventListener("click", () => {
+
+})
 
 togglePlayPause.addEventListener('change', event => {
 
   if (event.target.checked == true) {
     musicContent.classList.add("playing");
-    music.play();
-    audio.play();
+    playSong();
   }
   else {
     musicContent.classList.remove("playing");
-    music.pause();
-    audio.pause();
+    pauseSong();
   }
 
 })
@@ -104,7 +123,7 @@ const connectAudioToAnalyser = (audioElement, analyserNode, context) => {
     progressBar.setAttribute('value', 0);
     source.connect(analyserNode);
     analyser.connect(context.destination);
-    /*
+/*
     audioElement.removeEventListener('canplay', canplayHandler);*/
   }
   audioElement.addEventListener('canplay', canplayHandler);
@@ -131,4 +150,20 @@ function draw() {
 
   updateValue(section, 20, 0.2)
 
+}
+nextSong = () => {
+	songIndex++;
+	if (songIndex > arraySongs.length - 1) {
+		songIndex = 0;
+	}
+	loadSong(songIndex);
+}
+playSong = () => {
+  music.play();
+  audio.play();
+}
+
+pauseSong = () => {
+  music.pause();
+  audio.pause();
 }
