@@ -65,12 +65,11 @@ formatTime = (second) => {
 updateProgressTime = (e) => {
   const { currentTime, duration } = e.srcElement;
   currentTimeDisplay.textContent = formatTime(music.currentTime);
+  scrubRuler.value = music.currentTime;
 }
 audio.addEventListener("timeupdate", updateProgressTime);
 
-music.addEventListener('timeupdate', () => {
-  scrubRuler.value = music.currentTime;
-})
+
 
 nextSong = () => {
 	songIndex++;
