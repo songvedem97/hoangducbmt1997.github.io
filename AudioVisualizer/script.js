@@ -13,7 +13,7 @@ const togglePlayPause = document.getElementById('toggle-play-pause');
 
 
 
-const btnPlay = document.querySelector('.btn-play');
+const btnPlay = document.querySelector(".btn-play");
 const btnNext = document.querySelector(".btn-next");
 
 const btnPrev = document.querySelector(".btn-prev");
@@ -39,14 +39,12 @@ getSong = async () => {
 }
 
 loadSong = async () => {
-
   song = songIndex;
   audio.src = arraySongs[song];
   audio.addEventListener('loadedmetadata', () => {
     const time = formatTime(audio.duration);
     timesong.textContent = time;
   })
-
   request.open('GET', audio.src, true);
   request.responseType = 'blob';
   request.onload = function () {
@@ -70,6 +68,28 @@ formatTime = (second) => {
   }
   return (hours !== 0 ? hours + ':' : '') + minutes + ':' + seconds;
 }
+nextSong = () => {
+  songIndex++;
+  if (songIndex > arraySongs.length - 1) {
+    songIndex = 0;
+  }
+  loadSong(songIndex);
+}
+playSong = () => {
+  musicContent.classList.add("playing");
+  btnPlay.classList.add('fa-pause');
+  btnPlay.classList.remove('fa-play');
+  music.play();
+  audio.play();
+}
+
+pauseSong = () => {
+  musicContent.classList.remove("playing");
+  btnPlay.classList.add('fa-play');
+  btnPlay.classList.remove('fa-pause');
+  music.pause();
+  audio.pause();
+}
 
 updateProgressTime = (e) => {
   const { currentTime, duration } = e.srcElement;
@@ -85,15 +105,10 @@ progressBar.addEventListener('change', event => {
 
 
 music.addEventListener("ended", () => {
-  loadSong(songIndex++);
-  if (songIndex < 0) {
-		songIndex = arraySongs.length - 1;
-	}
-
- 
-
-  
-  togglePlayPause.checked = false;
+  songIndex++;
+  loadSong(songIndex);
+  music.play();
+  audio.play();
 })
 
 
@@ -101,16 +116,16 @@ btnNext.addEventListener("click", () => {
 
 })
 
-togglePlayPause.addEventListener('change', event => {
 
-  if (event.target.checked == true) {
-    musicContent.classList.add("playing");
+togglePlayPause.addEventListener('click', () => {
+
+  if (musicContent.classList.contains("playing")) {
+    pauseSong();
+  } else {
     playSong();
   }
-  else {
-    musicContent.classList.remove("playing");
-    pauseSong();
-  }
+  
+  
 
 })
 
@@ -123,8 +138,8 @@ const connectAudioToAnalyser = (audioElement, analyserNode, context) => {
     progressBar.setAttribute('value', 0);
     source.connect(analyserNode);
     analyser.connect(context.destination);
-/*
-    audioElement.removeEventListener('canplay', canplayHandler);*/
+    /*
+        audioElement.removeEventListener('canplay', canplayHandler);*/
   }
   audioElement.addEventListener('canplay', canplayHandler);
 }
@@ -150,20 +165,4 @@ function draw() {
 
   updateValue(section, 20, 0.2)
 
-}
-nextSong = () => {
-	songIndex++;
-	if (songIndex > arraySongs.length - 1) {
-		songIndex = 0;
-	}
-	loadSong(songIndex);
-}
-playSong = () => {
-  music.play();
-  audio.play();
-}
-
-pauseSong = () => {
-  music.pause();
-  audio.pause();
 }

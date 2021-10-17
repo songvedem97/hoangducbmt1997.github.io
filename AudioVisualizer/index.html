@@ -4,9 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Audio Visualizer</title>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
-    integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
     rel="stylesheet">
@@ -25,11 +23,12 @@
   <section class="controls">
     <div class="icon-toggle-button" id="toggle-play-pause-wrapper">
       <i class="fas fa-backward btn-prev"></i>
-      <input id="toggle-play-pause" type="checkbox" />
-      <label for="toggle-play-pause">
-        <button class="icon-button"><i class="fas fa-play"></i></button>
-        <button class="icon-button"><i class="fas fa-pause"></i></button>
-      </label>
+
+      <div id="toggle-play-pause">
+        <i class="fas fa-play btn-play"></i>
+      </div>
+
+
       <i class="fas fa-forward btn-next"></i>
 
     </div>
