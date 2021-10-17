@@ -115,7 +115,6 @@ input[type=range]::-webkit-slider-thumb {
 .wrapper-mv-song-continues{
     width: 100px !important;
     height: 65px !important;
-    background-color: red;
 }
 .wrap-mv-continues img{
     background-size: cover;
