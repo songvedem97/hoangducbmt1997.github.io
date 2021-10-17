@@ -1234,8 +1234,8 @@ input[type=radio] {
 }
 
 .carousel-new-song .info-new-song .name {
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .carousel-new-song .info-new-song .creator {
