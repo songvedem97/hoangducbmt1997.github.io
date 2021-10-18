@@ -12,13 +12,23 @@ const avatar = document.querySelector("#bar10");
 var isPlay = false;
 var offsetHeight = document.getElementById('bar10').offsetHeight;
 avatar.style.animationPlayState = 'paused';
-var listSongs = new Array('./naruto-1.mp3', './naruto-2.mp3', './naruto-3.mp3');
+var listSongs = [];
 var i = 0;
 
 startApp();
 
 function startApp() {
+	
+	getSong = () => {
+		let songs = document.querySelectorAll(".list-music-item");
+	
+		for (let i = 0; i < songs.length; i++) {
+			listSongs.push(songs[i].getAttribute("data-music"));
+		}
+	}
+	getSong();
 	function render() {
+		
 		analyser.getByteFrequencyData(audioDataArray);
 		for (let x = 1; x <= 16; x++) {
 			const ndx = ((x * numPoints) / 16) | 0;
