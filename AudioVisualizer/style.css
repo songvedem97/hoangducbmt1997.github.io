@@ -19,13 +19,14 @@ body {
 }
 #equalizer h1{
 	position: absolute;
-	top: 0;
+	top: 5%;
 	z-index: 10;
 	color: white;
 }
 video{
 	position: absolute;
-	height: 100vh;
+	height: auto;
+	width: 100vw;
 
 }
 .hidden {
