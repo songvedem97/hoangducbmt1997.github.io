@@ -5,15 +5,23 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	font-family: Poppins;
 }
 
 #equalizer {
 	width: 100vw;
 	height: 100vh;
-	background-color: #2c3e50;
+	background-color: #030302;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+}
+#equalizer h1{
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	color: white;
 }
 video{
 	position: absolute;

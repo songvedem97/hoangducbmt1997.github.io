@@ -1,24 +1,34 @@
 
+const context = new AudioContext();
+const analyser = context.createAnalyser();
+const numPoints = analyser.frequencyBinCount;
+const audioDataArray = new Uint8Array(numPoints);
+analyser.getByteFrequencyData(audioDataArray);
+const audio = new Audio();
+
 const play = document.querySelector('body');
+var isPlay = false;
 
 play.addEventListener('click', () => {
-	play.classList.add('playing');
-	start();
+	if(!isPlay){
+		start();
+		isPlay = true;
+	}
 })
-
+audio.addEventListener('ended',()=>{
+	isPlay = false;
+})
 
 function start() {
 	window.onclick = () => { };
 
 	// make a Web Audio Context
-	const context = new AudioContext();
-	const analyser = context.createAnalyser();
+
 	// Make a buffer to receive the audio data
-	const numPoints = analyser.frequencyBinCount;
-	const audioDataArray = new Uint8Array(numPoints);
+
 	function render() {
 		// get the current audio data
-		analyser.getByteFrequencyData(audioDataArray);
+
 		// draw a point every size pixels
 		for (let x = 1; x <= 16; x++) {
 			// compute the audio data for this point
@@ -36,7 +46,7 @@ function start() {
 	}
 	requestAnimationFrame(render);
 	// Make a audio node
-	const audio = new Audio();
+
 	audio.autoplay = true;
 	// this line is only needed if the music you are trying to play is on a
 	// different server than the page trying to play it.
@@ -56,4 +66,5 @@ function start() {
 		source.connect(analyser);
 		analyser.connect(context.destination);
 	}
+
 }
