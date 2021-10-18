@@ -1,168 +1,50 @@
-window.onload = async () => {
-  getSong();
-}
-const musicContent = document.querySelector(".container-app");
-const listSong = document.querySelector('.list-music');
-const timesong = document.querySelector(".duration-time");
-const currentTimeDisplay = document.querySelector(".current-time");
-var songIndex = 0;
-
-const audio = document.querySelector("#audio");
-const progressBar = document.querySelector('.progress-bar');
-const togglePlayPause = document.getElementById('toggle-play-pause');
-
-
-
-const btnPlay = document.querySelector(".btn-play");
-const btnNext = document.querySelector(".btn-next");
-
-const btnPrev = document.querySelector(".btn-prev");
-
-
-
-const music = new Audio();
-const audioContext = new AudioContext(), analyser = new AnalyserNode(audioContext, { fftSize: 2048 });
-const source = audioContext.createMediaElementSource(music);
-var request = new XMLHttpRequest();
-
-var arraySongs = [];
-audio.volume = 0;
-
-
-getSong = async () => {
-  let songs = document.querySelectorAll(".list-music-item");
-
-  for (let i = 0; i < songs.length; i++) {
-    arraySongs.push(songs[i].getAttribute("data-music"));
-  }
-  loadSong();
-}
-
-loadSong = async () => {
-  song = songIndex;
-  audio.src = arraySongs[song];
-  audio.addEventListener('loadedmetadata', () => {
-    const time = formatTime(audio.duration);
-    timesong.textContent = time;
-  })
-  request.open('GET', audio.src, true);
-  request.responseType = 'blob';
-  request.onload = function () {
-    music.src = window.URL.createObjectURL(request.response);
-    connectAudioToAnalyser(music, analyser, audioContext);
-  }
-  request.send();
-  draw();
-}
-
-formatTime = (second) => {
-  let hours = Math.floor(second / 3600);
-  let minutes = Math.floor((second - hours * 3600) / 60);
-  let seconds = Math.floor(second - hours * 3600 - minutes * 60);
-  hours = hours < 10 ? (hours > 0 ? '0' + hours : 0) : hours;
-  if (minutes < 10) {
-    minutes = '0' + minutes;
-  }
-  if (seconds < 10) {
-    seconds = '0' + seconds;
-  }
-  return (hours !== 0 ? hours + ':' : '') + minutes + ':' + seconds;
-}
-nextSong = () => {
-  songIndex++;
-  if (songIndex > arraySongs.length - 1) {
-    songIndex = 0;
-  }
-  loadSong(songIndex);
-}
-playSong = () => {
-  musicContent.classList.add("playing");
-  btnPlay.classList.add('fa-pause');
-  btnPlay.classList.remove('fa-play');
-  music.play();
-  audio.play();
-}
-
-pauseSong = () => {
-  musicContent.classList.remove("playing");
-  btnPlay.classList.add('fa-play');
-  btnPlay.classList.remove('fa-pause');
-  music.pause();
-  audio.pause();
-}
-
-updateProgressTime = (e) => {
-  const { currentTime, duration } = e.srcElement;
-  currentTimeDisplay.textContent = formatTime(music.currentTime);
-  progressBar.value = music.currentTime;
-}
-audio.addEventListener("timeupdate", updateProgressTime);
-
-progressBar.addEventListener('change', event => {
-  music.currentTime = event.target.value;
-})
-
-
-
-music.addEventListener("ended", () => {
-  songIndex++;
-  loadSong(songIndex);
-  music.play();
-  audio.play();
-})
-
-
-btnNext.addEventListener("click", () => {
-
-})
-
-
-togglePlayPause.addEventListener('click', () => {
-
-  if (musicContent.classList.contains("playing")) {
-    pauseSong();
-  } else {
-    playSong();
-  }
-  
-  
-
-})
-
-
-
-
-const connectAudioToAnalyser = (audioElement, analyserNode, context) => {
-  const canplayHandler = () => {
-    progressBar.setAttribute('max', audioElement.duration);
-    progressBar.setAttribute('value', 0);
-    source.connect(analyserNode);
-    analyser.connect(context.destination);
-    /*
-        audioElement.removeEventListener('canplay', canplayHandler);*/
-  }
-  audioElement.addEventListener('canplay', canplayHandler);
-}
-
-function draw() {
-  setTimeout(() => requestAnimationFrame(draw), 50)
-  const dataArray = new Uint8Array(analyser.frequencyBinCount);
-  analyser.getByteTimeDomainData(dataArray);
-  const oneThirdLength = Math.floor(dataArray.length / 3),
-    dataSections = [
-      dataArray.slice(0, oneThirdLength),
-      dataArray.slice(oneThirdLength, oneThirdLength * 2),
-      dataArray.slice(oneThirdLength * 2)
-    ],
-    dataAverages = dataSections.map(
-      section => section.reduce(
-        (total, next) => total + next
-      ) / section.length
-    ),
-    updateValue = (sectionElement, original, maxChange) =>
-      sectionElement.style.transform =
-      `scale(${(((dataAverages[0] / 128) - 1) * maxChange) + 1})`
-
-  updateValue(section, 20, 0.2)
-
-}
+window.onload = () => {
+	window.onclick = start;
+	function start() {
+		window.onclick = () => {};
+		// make a Web Audio Context
+		const context = new AudioContext();
+		const analyser = context.createAnalyser();
+		// Make a buffer to receive the audio data
+		const numPoints = analyser.frequencyBinCount;
+		const audioDataArray = new Uint8Array(numPoints);
+		function render() {
+			// get the current audio data
+			analyser.getByteFrequencyData(audioDataArray);
+			// draw a point every size pixels
+			for (let x = 1; x <= 16; x++) {
+				// compute the audio data for this point
+				const ndx = ((x * numPoints) / 16) | 0;
+				// get the audio data and make it go from 0 to 1
+				const audioValue = audioDataArray[ndx] / 255;
+				// draw a rect size by size big
+				const y = audioValue * 80;
+				document.getElementById("bar" + x).style.height = y + 4 + "vh";
+				document.getElementById("bar" + x).style.top = 50 - y / 2 - 2 + "vh";
+			}
+			requestAnimationFrame(render);
+		}
+		requestAnimationFrame(render);
+		// Make a audio node
+		const audio = new Audio();
+		audio.autoplay = true;
+		// this line is only needed if the music you are trying to play is on a
+		// different server than the page trying to play it.
+		// It asks the server for permission to use the music. If the server says "no"
+		// then you will not be able to play the music
+		// Note if you are using music from the same domain
+		// **YOU MUST REMOVE THIS LINE** or your server must give permission.
+		audio.crossOrigin = "anonymous";
+		// call `handleCanplay` when it music can be played
+		audio.addEventListener("canplay", handleCanplay);
+		audio.src = "./alone.mp3";
+		audio.load();
+		function handleCanplay() {
+			// connect the audio element to the analyser node and the analyser node
+			// to the main Web Audio context
+			const source = context.createMediaElementSource(audio);
+			source.connect(analyser);
+			analyser.connect(context.destination);
+		}
+	}
+};
