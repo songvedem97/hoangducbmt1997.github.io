@@ -1,5 +1,6 @@
 
 const play = document.querySelector('body');
+
 var isPlay = false;
 var offsetHeight = document.getElementById('bar10').offsetHeight;
 play.addEventListener('click', () => {
@@ -30,11 +31,24 @@ function start() {
 			const audioValue = audioDataArray[ndx] / 255;
 			// draw a rect size by size big
 			const y = audioValue * 40;
-			document.getElementById("bar" + x).style.height = y + offsetHeight/6 + "vh";
-			document.getElementById("bar" + x).style.width = y + offsetHeight/6 + "vh";
+			
+			if(x != 1){
+				document.getElementById("bar" + x).style.height = y + offsetHeight/6 + "vh";
+				document.getElementById("bar" + x).style.width = y + offsetHeight/6 + "vh";
+				
+			}
+			else
+			{
+				const opacity = 0.4 + (y /60) ;
+				document.getElementById("bar" + x).style.opacity = opacity;
+				
+			}
+			
 			/*
 			document.getElementById("bar" + x).style.animationDuration = 20 - y / 7 + "s";*/
 		}
+		
+		
 		requestAnimationFrame(render);
 	}
 	requestAnimationFrame(render);
