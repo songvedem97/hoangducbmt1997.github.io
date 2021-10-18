@@ -457,9 +457,13 @@ video {
 		opacity: 1.0;
 	}
 	75% {
-		transform: scale(2.5, 2.5);
+		transform: scale(2, 2);
 		opacity: 0.0;
-	}
+		-webkit-transform: scale(2, 2);
+		-moz-transform: scale(2, 2);
+		-ms-transform: scale(2, 2);
+		-o-transform: scale(2, 2);
+}
 	100% {
 		opacity: 0.0;
 	}
@@ -474,7 +478,7 @@ video {
 		opacity: 1.0;
 	}
 	75% {
-		-webkit-transform: scale(2.5, 2.5);
+		-webkit-transform: scale(2, 2);
 		opacity: 0.0;
 	}
 	100% {
@@ -491,7 +495,7 @@ video {
 		opacity: 1.0;
 	}
 	75% {
-		-moz-transform: scale(2.5, 2.5);
+		-moz-transform: scale(2, 2);
 		opacity: 0.0;
 	}
 	100% {
@@ -511,9 +515,13 @@ video {
 		opacity: 1.0;
 	}
 	100% {
-		transform: scale(2.5, 2.5);
+		transform: scale(2, 2);
 		opacity: 0.0;
-	}
+		-webkit-transform: scale(2, 2);
+		-moz-transform: scale(2, 2);
+		-ms-transform: scale(2, 2);
+		-o-transform: scale(2, 2);
+}
 }
 
 @-webkit-keyframes pulsateExt {
@@ -528,7 +536,7 @@ video {
 		opacity: 1.0;
 	}
 	100% {
-		-webkit-transform: scale(2.5, 2.5);
+		-webkit-transform: scale(2, 2);
 		opacity: 0.0;
 	}
 }
@@ -545,7 +553,7 @@ video {
 		opacity: 1.0;
 	}
 	100% {
-		-moz-transform: scale(2.5, 2.5);
+		-moz-transform: scale(2, 2);
 		opacity: 0.0;
 	}
 }
