@@ -59,4 +59,8 @@ function start() {
 		source.connect(analyser);
 		analyser.connect(context.destination);
 	}
+
+	audio.addEventListener('ended',()=>{
+		isPlay = false;
+	})
 }
