@@ -1,10 +1,4 @@
 
-// make a Web Audio Context
-const context = new AudioContext();
-const analyser = context.createAnalyser();
-// Make a buffer to receive the audio data
-const numPoints = analyser.frequencyBinCount;
-const audioDataArray = new Uint8Array(numPoints);
 const btnPlay = document.querySelector('.btn-play');
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
@@ -13,23 +7,23 @@ var isPlay = false;
 var offsetHeight = document.getElementById('bar10').offsetHeight;
 avatar.style.animationPlayState = 'paused';
 var listSongs = [];
-var i = 0;
 
 startApp();
-
 function startApp() {
-	
 	getSong = () => {
 		let songs = document.querySelectorAll(".list-music-item");
-	
 		for (let i = 0; i < songs.length; i++) {
 			listSongs.push(songs[i].getAttribute("data-music"));
 		}
 	}
 	getSong();
+	const context = new AudioContext();
+	const analyser = context.createAnalyser();
+	const numPoints = analyser.frequencyBinCount;
+	const audioDataArray = new Uint8Array(numPoints);
+	analyser.getByteFrequencyData(audioDataArray);
+	var i = 0;
 	function render() {
-		
-		analyser.getByteFrequencyData(audioDataArray);
 		for (let x = 1; x <= 16; x++) {
 			const ndx = ((x * numPoints) / 16) | 0;
 			const audioValue = audioDataArray[ndx] / 255;
@@ -96,6 +90,8 @@ function startApp() {
 		audio.src = listSongs[i];
 		audio.play();
 	})
-
+	getSong();
 }
 
+
+	
