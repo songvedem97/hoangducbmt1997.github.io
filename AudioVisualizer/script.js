@@ -29,7 +29,7 @@ function start() {
 			// get the audio data and make it go from 0 to 1
 			const audioValue = audioDataArray[ndx] / 255;
 			// draw a rect size by size big
-			const y = audioValue * 50;
+			const y = audioValue * 40;
 			document.getElementById("bar" + x).style.height = y + offsetHeight/6 + "vh";
 			document.getElementById("bar" + x).style.width = y + offsetHeight/6 + "vh";
 			/*
