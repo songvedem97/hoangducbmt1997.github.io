@@ -1,8 +1,4 @@
 
-// make a Web Audio Context
-
-// Make a buffer to receive the audio data
-
 const btnPlay = document.querySelector('.btn-play');
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
@@ -25,7 +21,8 @@ function startApp() {
 		}
 	}
 	getSong();
-	const context = new AudioContext();
+
+	var context = new (window.AudioContext || window.webkitAudioContext)();
 	const analyser = context.createAnalyser();
 	const numPoints = analyser.frequencyBinCount;
 	const audioDataArray = new Uint8Array(numPoints);
@@ -53,6 +50,7 @@ function startApp() {
 	audio.addEventListener("canplay", handleCanplay);
 	audio.src = listSongs[0];
 	function handleCanplay() {
+
 		const source = context.createMediaElementSource(audio);
 		source.connect(analyser);
 		analyser.connect(context.destination);
