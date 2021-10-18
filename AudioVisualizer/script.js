@@ -43,7 +43,7 @@ function start() {
 			}
 			else
 			{
-				const opacity = 0.4 + (y /60) ;
+				const opacity = 0.4 + (y /50) ;
 				document.getElementById("bar" + x).style.opacity = opacity;
 				
 			}
