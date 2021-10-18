@@ -18,12 +18,13 @@
 
 /*-SM-*/
 
-@media only screen and (max-width: 767px) and (min-width: 576px) {
-    
+@media only screen and (min-width: 767px) and (min-width: 576px) {
+
 }
 
 /*-XXSM-*/
-
-@media only screen and (max-width: 400px) {
-   
+@media only screen and (max-width: 575px) {
+    #equalizer .bar {
+        display: none !important;
+    }
 }

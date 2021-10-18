@@ -1,7 +1,7 @@
 
 const play = document.querySelector('body');
 var isPlay = false;
-
+var offsetHeight = document.getElementById('bar10').offsetHeight;
 play.addEventListener('click', () => {
 	if(isPlay == false){
 		start();
@@ -30,8 +30,8 @@ function start() {
 			const audioValue = audioDataArray[ndx] / 255;
 			// draw a rect size by size big
 			const y = audioValue * 50;
-			document.getElementById("bar" + x).style.height = y + 40 + "vh";
-			document.getElementById("bar" + x).style.width = y + 40 + "vh";
+			document.getElementById("bar" + x).style.height = y + offsetHeight/6 + "vh";
+			document.getElementById("bar" + x).style.width = y + offsetHeight/6 + "vh";
 			/*
 			document.getElementById("bar" + x).style.animationDuration = 20 - y / 7 + "s";*/
 		}

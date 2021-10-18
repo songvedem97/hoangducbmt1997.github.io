@@ -36,8 +36,8 @@ video {
 }
 
 #bar10 {
-	height: 40vh;
-	width: 40vh;
+	height: 20vh;
+	width: 20vh;
 	border-radius: 50%;
 	border: 5px solid purple;
 	animation: rotate 20s linear infinite;
