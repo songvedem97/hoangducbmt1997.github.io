@@ -1,0 +1,29 @@
+/*-Orther screen-*/
+
+@media only screen and (min-width: 992px) {
+    
+}
+
+/*-LG-*/
+
+@media only screen and (max-width: 991px) and (min-width: 850px) {
+   
+}
+
+/*-MD-*/
+
+@media only screen and (max-width: 849px) and (min-width: 768px) {
+   
+}
+
+/*-SM-*/
+
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+    
+}
+
+/*-XXSM-*/
+
+@media only screen and (max-width: 400px) {
+   
+}
