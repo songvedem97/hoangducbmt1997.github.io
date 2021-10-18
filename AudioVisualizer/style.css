@@ -41,6 +41,7 @@ video {
 	border-radius: 50%;
 	border: 5px solid purple;
 	animation: rotate 20s linear infinite;
+	-webkit-animation: rotate 20s linear infinite;
 	position: relative;
 	overflow: hidden;
 }
@@ -54,14 +55,32 @@ video {
 @keyframes rotate {
 	0% {
 		transform: rotate(0);
-	}
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		-ms-transform: rotate(0);
+		-o-transform: rotate(0);
+}
 	100% {
 		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+}
+}
+@-webkit-keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
 	}
 }
 
+
 #bar10:hover {
 	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
 }
 
 .glitch-image:nth-child(1) {
@@ -94,26 +113,31 @@ video {
 .glitch-image:nth-child(2) {
 	transform: translate3d(1.1, 0, 0);
 	animation: glitch-horizontal 3s infinite linear alternate;
+	-webkit-animation: glitch-horizontal 3s infinite linear alternate;
 }
 
 .glitch-image:nth-child(3) {
 	transform: translate3d(-1.1, 0, 0);
 	animation: glitch-horizontal-2 2s infinite linear alternate;
+	-webkit-animation: glitch-horizontal-2 2s infinite linear alternate;
 }
 
 .glitch-image:nth-child(4) {
 	transform: translate3d(-1.1, 0, 0);
 	animation: glitch-vertical 1s infinite linear alternate;
+	-webkit-animation: glitch-vertical 1s infinite linear alternate;
 }
 
 .glitch-image:nth-child(5) {
 	transform: translate3d(0, 1.1, 0) scale3d(-1, -1, 1);
 	animation: glitch-flash 0.5s steps(1, end) infinite;
+	-webkit-animation: glitch-flash 0.5s steps(1, end) infinite;
 }
 
 .glitch-image:nth-child(6) {
 	transform: translate3d(0, 1.3, 0) scale3d(-1, -1, 1);
 	animation: glitch-flash-2 0.5s steps(1, end) infinite;
+	-webkit-animation: glitch-flash-2 0.5s steps(1, end) infinite;
 }
 
 @keyframes glitch-horizontal {
@@ -317,20 +341,36 @@ video {
 	0% {
 		opacity: 0.2;
 		transform: translate3d(10px, 5px, 0);
-	}
+		-webkit-transform: translate3d(10px, 5px, 0);
+		-moz-transform: translate3d(10px, 5px, 0);
+		-ms-transform: translate3d(10px, 5px, 0);
+		-o-transform: translate3d(10px, 5px, 0);
+}
 	33%, 100% {
 		opacity: 0;
 		transform: translate3d(0, 0, 0);
-	}
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+}
 }
 
 @keyframes glitch-flash-2 {
 	0% {
 		opacity: 0.2;
 		transform: translate3d(5px, 10px, 0);
-	}
+		-webkit-transform: translate3d(5px, 10px, 0);
+		-moz-transform: translate3d(5px, 10px, 0);
+		-ms-transform: translate3d(5px, 10px, 0);
+		-o-transform: translate3d(5px, 10px, 0);
+}
 	13%, 100% {
 		opacity: 0;
 		transform: translate3d(0, 0, 0);
-	}
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+}
 }
