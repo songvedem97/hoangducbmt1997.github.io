@@ -1,11 +1,15 @@
 
 const play = document.querySelector('body');
-
+const avatar = document.querySelector("#bar10");
 var isPlay = false;
 var offsetHeight = document.getElementById('bar10').offsetHeight;
+
+avatar.style.animationPlayState = 'paused';
+
 play.addEventListener('click', () => {
 	if(isPlay == false){
 		start();
+		avatar.style.animationPlayState = 'running';
 		isPlay = true;
 	}
 })
@@ -76,5 +80,6 @@ function start() {
 
 	audio.addEventListener('ended',()=>{
 		isPlay = false;
+		avatar.style.animationPlayState = 'paused';
 	})
 }
