@@ -3,11 +3,14 @@ const play = document.querySelector('body');
 const avatar = document.querySelector("#bar10");
 var isPlay = false;
 var offsetHeight = document.getElementById('bar10').offsetHeight;
-
 avatar.style.animationPlayState = 'paused';
+var listSongs = new Array('./naruto-1.mp3','./naruto-2.mp3','./naruto-3.mp3');
+var i = 0;
+var audio = new Audio();
+
 
 play.addEventListener('click', () => {
-	if(isPlay == false){
+	if (isPlay == false) {
 		start();
 		avatar.style.animationPlayState = 'running';
 		isPlay = true;
@@ -35,29 +38,28 @@ function start() {
 			const audioValue = audioDataArray[ndx] / 255;
 			// draw a rect size by size big
 			const y = audioValue * 40;
-			
-			if(x != 1){
-				document.getElementById("bar" + x).style.height = y + offsetHeight/6 + "vh";
-				document.getElementById("bar" + x).style.width = y + offsetHeight/6 + "vh";
-				
+
+			if (x != 1) {
+				document.getElementById("bar" + x).style.height = y + offsetHeight / 6 + "vh";
+				document.getElementById("bar" + x).style.width = y + offsetHeight / 6 + "vh";
+
 			}
-			else
-			{
-				const opacity = 0.4 + (y /50) ;
+			else {
+				const opacity = 0.4 + (y / 50);
 				document.getElementById("bar" + x).style.opacity = opacity;
-				
+
 			}
-			
+
 			/*
 			document.getElementById("bar" + x).style.animationDuration = 20 - y / 7 + "s";*/
 		}
-		
-		
+
+
 		requestAnimationFrame(render);
 	}
 	requestAnimationFrame(render);
 	// Make a audio node
-	const audio = new Audio();
+
 	audio.autoplay = true;
 	// this line is only needed if the music you are trying to play is on a
 	// different server than the page trying to play it.
@@ -68,8 +70,13 @@ function start() {
 	audio.crossOrigin = "anonymous";
 	// call `handleCanplay` when it music can be played
 	audio.addEventListener("canplay", handleCanplay);
-	audio.src = "./naruto-sad.mp3";
-	audio.load();
+	audio.addEventListener('ended', () => {
+		i = ++i < listSongs.length ? i : 0;
+		audio.src = listSongs[i];
+		audio.play();
+	})
+	audio.src = listSongs[0];
+
 	function handleCanplay() {
 		// connect the audio element to the analyser node and the analyser node
 		// to the main Web Audio context
@@ -78,8 +85,5 @@ function start() {
 		analyser.connect(context.destination);
 	}
 
-	audio.addEventListener('ended',()=>{
-		isPlay = false;
-		avatar.style.animationPlayState = 'paused';
-	})
+
 }
