@@ -4,6 +4,9 @@
     #equalizer{
         display: none;
     }
+    #video{
+        height: 100%;
+    }
 }
 
 
