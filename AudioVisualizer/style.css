@@ -12,31 +12,61 @@ body {
 	font-family: Ninja;
 	src: url('./font/njnaruto.ttf');
 }
-
-#equalizer {
-	width: 100vw;
-	height: 100vh;
-	background-color: #030302;
+.flex-center{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.hidden {
+	display: none;
+}
+.container-app{
+	width: 100vw;
+	height: 100vh;
+	background-color: #030302;
 	position: relative;
 }
-
-#equalizer .content-title {
+.wrap-title{
 	position: absolute;
 	top: 10%;
 	z-index: 10;
+	width: 100%;
+	text-align: center;
+}
+.content-title {
 	color: #ff8800;
 	text-shadow: -3px 0 purple, 0 3px purple, 3px 0 purple, 0 -3px purple;
 	text-transform: uppercase;
 	font-weight: bolder;
 	font-size: 2rem;
+	position: absolute;
+	width: 200px;
+	top: 0px;
 }
 .title-smal{
-	top: 10% !important;
+	top: 0px;
 	font-size: 1rem !important;
 	color: #fff !important;
+}
+video {
+	position: absolute;
+	height: auto;
+	width: 100vw;
+	top: 0;
+	left: 0;
+}
+
+/*--Equalizer--*/
+#equalizer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#bar8{
+	position: absolute;
+	width: 25vw;
+	height: 25vh;
+	z-index: 4;
 }
 
 #bar9 {
@@ -49,19 +79,6 @@ body {
 	left: 0;
 	z-index: 1;
 }
-
-video {
-	position: absolute;
-	height: auto;
-	width: 100vw;
-	top: 0;
-	left: 0;
-}
-
-.hidden {
-	display: none;
-}
-
 #bar10 {
 	z-index: 5;
 	height: 20vh;
@@ -73,19 +90,11 @@ video {
 	overflow: hidden;
 	position: absolute;
 }
-
 #bar10 img {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
-#bar8{
-	position: absolute;
-	width: 25vw;
-	height: 25vh;
-	z-index: 4;
-}
-
 .actividad-number-circle {
 	background-color: rgba(255, 0, 200, 0.1);
 	height: 100%;
@@ -118,33 +127,6 @@ video {
 	text-shadow: -4px 0 purple, 0 4px purple, 4px 0 purple, 0 -4px purple;
 	cursor: pointer;
 }
-
-@keyframes rotate {
-	0% {
-		transform: rotate(0);
-		-webkit-transform: rotate(0);
-		-moz-transform: rotate(0);
-		-ms-transform: rotate(0);
-		-o-transform: rotate(0);
-	}
-	100% {
-		transform: rotate(360deg);
-		-webkit-transform: rotate(360deg);
-		-moz-transform: rotate(360deg);
-		-ms-transform: rotate(360deg);
-		-o-transform: rotate(360deg);
-	}
-}
-
-@-webkit-keyframes rotate {
-	0% {
-		-webkit-transform: rotate(0);
-	}
-	100% {
-		-webkit-transform: rotate(360deg);
-	}
-}
-
 .glitch-image:nth-child(1) {
 	opacity: 1;
 }
@@ -222,6 +204,8 @@ video {
 	-o-transform: translate3d(0, 1.3, 0) scale3d(-1, -1, 1);
 }
 
+
+/*--Keyframes--*/
 @keyframes glitch-horizontal {
 	0% {
 		-webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
@@ -778,3 +762,28 @@ video {
 }
 }
 
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		-ms-transform: rotate(0);
+		-o-transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
