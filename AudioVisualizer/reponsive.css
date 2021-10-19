@@ -2,7 +2,6 @@
 
 @media only screen and (max-width: 1024px) {
     #equalizer{
-        display: none;
     }
     #video{
         height: 100%;
