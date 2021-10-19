@@ -1,7 +1,8 @@
 /*-Orther screen-*/
 @media only screen and (min-width: 1024px) {
-
-    
+    .warning-tb-mb{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -14,9 +15,10 @@
     .warning-tb-mb{
         position: absolute;
         width: 100%;
-        height: 200px;
+        height: 300px;
         text-align: center;
         background-color: purple;
+        color: #fff;
         bottom: 0;
         font-size: 2rem;
         font-weight: bold;
