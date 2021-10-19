@@ -1,10 +1,25 @@
 /*-Orther screen-*/
+@media only screen and (min-width: 1024px) {
 
-@media only screen and (max-width: 1024px) {
-    #equalizer{
-    }
+    
+}
+
+@media only screen and (max-width: 1023px) {
     #video{
         height: 100%;
+    }
+    .control-music,#equalizer {
+        display: none;
+    }
+    .warning-tb-mb{
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        background-color: purple;
+        bottom: 0;
+        font-size: 2rem;
+        font-weight: bold;
     }
 }
 
