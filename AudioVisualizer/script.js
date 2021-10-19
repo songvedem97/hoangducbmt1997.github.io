@@ -47,6 +47,9 @@ function startApp() {
 		requestAnimationFrame(render);
 	}
 	requestAnimationFrame(render);
+
+	/*--INIT--*/
+	videoBg.src=listVideoBg[0];
 	var audio = new Audio();
 	audio.autoplay = false;
 	audio.src = listSongs[0];
@@ -56,6 +59,10 @@ function startApp() {
 		const source = context.createMediaElementSource(audio);
 		source.connect(analyser);
 		analyser.connect(context.destination);
+	}
+	playVideo =()=>{
+		videoBg.load();
+		videoBg.play();
 	}
 	playSong =()=>{
 		avatar.style.animationPlayState = 'running';
@@ -85,19 +92,23 @@ function startApp() {
 	})
 	btnNext.addEventListener('click', () => {
 		i = ++i < listSongs.length ? i : 0;
-	
 		audio.src = listSongs[i];
+		videoBg.src = listVideoBg[i];
+		playVideo();
 		playSong();
 	})
 	btnPrev.addEventListener('click', () => {
 		i = --i >= 0 ? i : listSongs.length-1;
-	
+		videoBg.src = listVideoBg[i];
 		audio.src = listSongs[i];
+		playVideo();
 		playSong();
 	})
 	audio.addEventListener('ended', () => {
 		i = ++i < listSongs.length ? i : 0;
 		audio.src = listSongs[i];
+		videoBg.src = listVideoBg[i];
+		playVideo();
 		audio.play();
 	})
 
