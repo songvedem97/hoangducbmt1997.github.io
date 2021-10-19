@@ -10,17 +10,9 @@
         height: 100vh;
     }
 
-    .warning-tb-mb{
-        position: absolute;
-        width: 100%;
-        height: 25%;
-        text-align: center;
-        background-color: #a81805;
-        color: #fff;
-        bottom: 0;
-        font-size: 2rem;
-        font-weight: bold;
-        z-index: 1000;
+    #bar10 {
+        height: 150px;
+        width: 150px;
     }
 }
 
