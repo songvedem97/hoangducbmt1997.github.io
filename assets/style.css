@@ -91,6 +91,10 @@ body {
 	transform: translate(-50%, -50%) rotate(135deg);
 	width: 30px;
 	height: 30px;
+	-webkit-transform: translate(-50%, -50%) rotate(135deg);
+	-moz-transform: translate(-50%, -50%) rotate(135deg);
+	-ms-transform: translate(-50%, -50%) rotate(135deg);
+	-o-transform: translate(-50%, -50%) rotate(135deg);
 }
 
 .pre-loader hr {
@@ -125,16 +129,32 @@ body {
 @keyframes spin {
 	0%, 100% {
 		transform: translateX(200%);
-	}
+		-webkit-transform: translateX(200%);
+		-moz-transform: translateX(200%);
+		-ms-transform: translateX(200%);
+		-o-transform: translateX(200%);
+}
 	25% {
 		transform: translateY(200%);
-	}
+		-webkit-transform: translateY(200%);
+		-moz-transform: translateY(200%);
+		-ms-transform: translateY(200%);
+		-o-transform: translateY(200%);
+}
 	50% {
 		transform: translateX(0);
-	}
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+}
 	75% {
 		transform: translateY(0);
-	}
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+}
 }
 
 /*-Grid-1140-*/
@@ -315,11 +335,22 @@ body {
 @keyframes rotate {
 	0% {
 		transform: rotate(0);
-	}
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		-ms-transform: rotate(0);
+		-o-transform: rotate(0);
+}
 	100% {
 		transform: rotate(360deg);
-	}
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
 }
+}
+
+
+
 
 /*-Info Music-*/
 
@@ -439,6 +470,10 @@ body {
 	border-image: initial;
 	transition: 0.2s ease-in-out;
 	box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%), -4px -4px 15px 0px rgb(154 154 154 / 30%), 1px 1px 15px 0px rgb(25 25 25 / 60%);
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
 }
 
 .music-play .music-controll .btn-play:before {
@@ -700,6 +735,10 @@ input[type=range]::-moz-range-thumb {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
 }
 .name-song-acttion{
 	width: 200px;

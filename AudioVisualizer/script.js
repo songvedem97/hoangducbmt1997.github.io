@@ -3,10 +3,12 @@ const btnPlay = document.querySelector('.btn-play');
 const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
 const avatar = document.querySelector("#bar10");
+const videoBg = document.querySelector("#video");
 var isPlay = false;
 var offsetHeight = document.getElementById('bar10').offsetHeight;
 avatar.style.animationPlayState = 'paused';
 var listSongs = new Array();
+var listVideoBg = [];
 var closeAudioContext = true;
 var i = 0;
 
@@ -16,9 +18,9 @@ function startApp() {
 	
 	getSong = () => {
 		let songs = document.querySelectorAll(".list-music-item");
-	
 		for (let i = 0; i < songs.length; i++) {
 			listSongs.push(songs[i].getAttribute("data-music"));
+			listVideoBg.push(songs[i].getAttribute("data-video"));
 		}
 	}
 	getSong();
