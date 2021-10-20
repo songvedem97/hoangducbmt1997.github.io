@@ -15,7 +15,7 @@ var i = 0;
 startApp();
 
 function startApp() {
-	
+
 	getSong = () => {
 		let songs = document.querySelectorAll(".list-music-item");
 		for (let i = 0; i < songs.length; i++) {
@@ -49,7 +49,7 @@ function startApp() {
 	requestAnimationFrame(render);
 
 	/*--INIT--*/
-	videoBg.src=listVideoBg[0];
+	videoBg.src = listVideoBg[0];
 	var audio = new Audio();
 	audio.autoplay = false;
 	audio.src = listSongs[0];
@@ -60,56 +60,62 @@ function startApp() {
 		source.connect(analyser);
 		analyser.connect(context.destination);
 	}
-	playVideo =()=>{
+	playVideo = () => {
 		videoBg.load();
 		videoBg.play();
 	}
-	playSong =()=>{
+	playSong = () => {
 		avatar.style.animationPlayState = 'running';
 		btnPlay.classList.remove('fa-play');
 		btnPlay.classList.add('fa-pause');
 		audio.play();
 		isPlay = true;
-		
+
 	}
-	pauseSong =()=>{
+	pauseSong = () => {
 		avatar.style.animationPlayState = 'paused';
 		btnPlay.classList.add('fa-play');
 		btnPlay.classList.remove('fa-pause');
 		audio.pause();
 		isPlay = false;
-		
+
 	}
 
 	btnPlay.addEventListener('click', () => {
 		if (isPlay == false) {
-			playSong();	
+			playSong();
 		}
-		else{
+		else {
 			pauseSong();
 		}
-	
+
 	})
 	btnNext.addEventListener('click', () => {
 		i = ++i < listSongs.length ? i : 0;
 		audio.src = listSongs[i];
 		videoBg.src = listVideoBg[i];
-		playVideo();
-		playSong();
+		setTimeout(() => {
+			playVideo();
+			playSong();
+		}, 2000);
 	})
 	btnPrev.addEventListener('click', () => {
-		i = --i >= 0 ? i : listSongs.length-1;
+		i = --i >= 0 ? i : listSongs.length - 1;
 		videoBg.src = listVideoBg[i];
 		audio.src = listSongs[i];
-		playVideo();
-		playSong();
+		setTimeout(() => {
+			playVideo();
+			playSong();
+		}, 2000);
 	})
 	audio.addEventListener('ended', () => {
 		i = ++i < listSongs.length ? i : 0;
 		audio.src = listSongs[i];
 		videoBg.src = listVideoBg[i];
-		playVideo();
-		audio.play();
+		setTimeout(() => {
+			playVideo();
+			playSong();
+		}, 2000);
 	})
 
 }
