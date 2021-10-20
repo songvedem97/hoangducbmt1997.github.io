@@ -2,7 +2,6 @@
 	--red-color: rgb(219, 0, 0);
 	--main-color: purple;
 	--border-color: #26a;
-
 	--line-color: #0cf;
 	--line-width: 100px;
 	--content-size: 300px;
@@ -100,14 +99,13 @@ video {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: center;	
+	align-items: center;
 	--border-width: 50%;
 	z-index: 1;
 	width: var(--content-size);
-  	height: var(--content-size);
+	height: var(--content-size);
 	border-width: 10px;
 	overflow: hidden;
-
 	border-radius: var(--border-width);
 	position: absolute;
 	-webkit-border-radius: var(--border-width);
@@ -115,38 +113,19 @@ video {
 	-ms-border-radius: var(--border-width);
 	-o-border-radius: var(--border-width);
 	box-shadow: 0 0 20px var(--border-color);
-	
 }
+
 .gradient {
 	position: absolute;
 	width: calc(var(--content-size) * 2);
 	height: calc(var(--content-size) * 2);
-	
 	top: calc(50% - var(--content-size));
 	left: calc(50% - var(--content-size));
-	
 	background: rgba(0, 0, 0, 0);
-	background: linear-gradient(
-	  to right, 
-	  rgba(0, 0, 0, 0) calc(50% - var(--line-width) / 2),
-	  var(--line-color) 50%,
-	  rgba(0, 0, 0, 0) calc(50% + var(--line-width) / 2));
-	
-	-webkit-animation:
-	  borderAnimation
-	  var(--animation-speed)
-	  infinite
-	  linear;
-	
-			animation:
-	  borderAnimation
-	  var(--animation-speed)
-	  infinite
-	  linear;
-  }
-
-
-
+	background: linear-gradient( to right, rgba(0, 0, 0, 0) calc(50% - var(--line-width) / 2), var(--line-color) 50%, rgba(0, 0, 0, 0) calc(50% + var(--line-width) / 2));
+	-webkit-animation: borderAnimation var(--animation-speed) infinite linear;
+	animation: borderAnimation var(--animation-speed) infinite linear;
+}
 
 #bar10 img {
 	position: absolute;
@@ -612,32 +591,24 @@ video {
 	}
 }
 
-@keyframes moveGradient {
-	50% {
-		background-position: 100% 50%;
-	}
-}
 
 @keyframes borderAnimation {
 	from {
-	  transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
-	
 	to {
-	  transform: rotate(180deg);
+		transform: rotate(180deg);
 	}
-  }
-  
-  @keyframes neonAnimation {
+}
+
+@keyframes neonAnimation {
 	from {
-	  text-shadow: 0 0 5px var(--line-color);
+		text-shadow: 0 0 5px var(--line-color);
 	}
 	50% {
-	  text-shadow: 0 0 10px var(--line-color);
+		text-shadow: 0 0 10px var(--line-color);
 	}
-	
 	to {
-	  text-shadow: 0 0 5px var(--line-color);
+		text-shadow: 0 0 5px var(--line-color);
 	}
-  }
-  
+}
