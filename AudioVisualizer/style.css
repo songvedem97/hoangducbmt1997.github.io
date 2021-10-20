@@ -58,7 +58,7 @@ body {
 video {
 	position: absolute;
 	height: auto;
-	width: 100%;
+	width: 100vw;
 }
 
 /*--Equalizer--*/
