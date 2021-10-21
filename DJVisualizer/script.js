@@ -4,24 +4,36 @@ const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
 const avatar = document.querySelector("#bar10");
 const videoBg = document.querySelector("#video");
+const image = document.querySelectorAll('.glitch-image');
 var isPlay = false;
 var offsetHeight = document.getElementById('bar10').offsetHeight;
 avatar.style.animationPlayState = 'paused';
+var songIndex = 0;
 var listSongs = new Array();
 var listVideoBg = [];
 var closeAudioContext = true;
-var i = 0;
+var audio = new Audio();
+audio.autoplay = false;
 
 startApp();
 
 function startApp() {
-	
+	loadSong = (song) =>{
+		song = songIndex;
+		let detailSong = document.querySelectorAll(".list-music-item");
+		videoBg.src = listVideoBg[songIndex];
+		audio.src = listSongs[songIndex];
+		for(let i = 0; i< image.length; i++ ){
+			image[i].src= detailSong[songIndex].getAttribute("data-img");
+		}
+	}
 	getSong = () => {
 		let songs = document.querySelectorAll(".list-music-item");
 		for (let i = 0; i < songs.length; i++) {
 			listSongs.push(songs[i].getAttribute("data-music"));
 			listVideoBg.push(songs[i].getAttribute("data-video"));
 		}
+		loadSong();
 	}
 	getSong();
 	// create web audio api context
@@ -49,10 +61,7 @@ function startApp() {
 	requestAnimationFrame(render);
 
 	/*--INIT--*/
-	videoBg.src=listVideoBg[0];
-	var audio = new Audio();
-	audio.autoplay = false;
-	audio.src = listSongs[0];
+
 	audio.crossOrigin = "anonymous";
 	audio.addEventListener("canplay", handleCanplay);
 	function handleCanplay() {
@@ -91,25 +100,28 @@ function startApp() {
 	
 	})
 	btnNext.addEventListener('click', () => {
-		i = ++i < listSongs.length ? i : 0;
-		audio.src = listSongs[i];
-		videoBg.src = listVideoBg[i];
+		songIndex = ++songIndex < listSongs.length ? songIndex : 0;
+		audio.src = listSongs[songIndex];
+		videoBg.src = listVideoBg[songIndex];
+		loadSong(songIndex);
 		playVideo();
 		playSong();
 	})
 	btnPrev.addEventListener('click', () => {
-		i = --i >= 0 ? i : listSongs.length-1;
-		videoBg.src = listVideoBg[i];
-		audio.src = listSongs[i];
+		songIndex = --songIndex >= 0 ? songIndex : listSongs.length-1;
+		videoBg.src = listVideoBg[songIndex];
+		audio.src = listSongs[songIndex];
+		loadSong(songIndex);
 		playVideo();
 		playSong();
 	})
 	audio.addEventListener('ended', () => {
-		i = ++i < listSongs.length ? i : 0;
-		audio.src = listSongs[i];
-		videoBg.src = listVideoBg[i];
+		songIndex = ++songIndex < listSongs.length ? songIndex : 0;
+		audio.src = listSongs[songIndex];
+		videoBg.src = listVideoBg[songIndex];
+		loadSong(songIndex);
 		playVideo();
-		audio.play();
+		playSong();
 	})
 
 }

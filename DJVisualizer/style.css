@@ -112,7 +112,7 @@ video {
 	-moz-border-radius: var(--border-width);
 	-ms-border-radius: var(--border-width);
 	-o-border-radius: var(--border-width);
-	box-shadow: 0 0 20px var(--border-color);
+	box-shadow: 0 0 30px var(--border-color);
 }
 
 .gradient {
@@ -131,11 +131,11 @@ video {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	transform: scale(0.95, 0.95);
-	-webkit-transform: scale(0.95, 0.95);
-	-moz-transform: scale(0.95, 0.95);
-	-ms-transform: scale(0.95, 0.95);
-	-o-transform: scale(0.95, 0.95);
+	transform: scale(0.92, 0.92);
+	-webkit-transform: scale(0.92, 0.92);
+	-moz-transform: scale(0.92, 0.92);
+	-ms-transform: scale(0.92, 0.92);
+	-o-transform: scale(0.92, 0.92);
 	z-index: 10;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -160,47 +160,46 @@ video {
 }
 
 /*-CONTROL MUSIC-*/
-
-.control-music {
+.bg-control{
 	position: absolute;
 	bottom: 0;
+	height: 220px;
+	transform: scale(1.2,1.2);
+	width: 100%;
 	z-index: 10;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 99px;
-	width: 300px;
+	bottom: -150px;
+	background: #0f0b2e;
+	border: 2px solid var(--line-color);
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	-webkit-transform: scale(1.2,1.2);
+	-moz-transform: scale(1.2,1.2);
+	-ms-transform: scale(1.2,1.2);
+	-o-transform: scale(1.2,1.2);
+	box-shadow: 0 0 15px var(--border-color);
 	overflow: hidden;
-	background: #252C36;
 }
-
-.bg-control {
+.bg-blur{
+	width: 100%;
+	height: 100%;
 	position: absolute;
-	width: 260px;
-	height: 100px;
-	bottom: 30px;
-	z-index: 9;
-	border-top: 3px solid rgb(97, 97, 97);
-	background: #252C36;
-	display: flex;
-	justify-content: center;
+	background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 1%,var(--line-color));
+	opacity: 0.3;
+}
+.control-music {
+	position: absolute;
+	top: -60px;
+	height: 200px;
+	width: 100%;
 	border-radius: 50%;
+	overflow: hidden;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
-}
-
-.bg-control-2 {
-	position: absolute;
-	height: 100px;
-	width: 100vw;
-	z-index: 8;
-	bottom: 0;
-	border-top: 3px solid rgb(97, 97, 97);
-	border-top-left-radius: 50%;
-	border-top-right-radius: 50%;
-	background: #252C36;
 }
 
 .control-music i {
@@ -211,39 +210,20 @@ video {
 }
 
 .control-music .btn-prev {
-	background-color: #111111;
 	border-bottom-left-radius: 20px;
 	border-top-left-radius: 20px;
 }
 
 .control-music .btn-next {
-	background-color: #111111;
+
 	border-bottom-right-radius: 20px;
 	border-top-right-radius: 20px;
 }
-
-.control-music .btn-play {
-	background-color: #ff3c3f;
-	width: 60px;
-	height: 30px;
-	text-align: center;
-	border-radius: 35px;
-	-webkit-border-radius: 35px;
-	-moz-border-radius: 35px;
-	-ms-border-radius: 35px;
-	-o-border-radius: 35px;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .control-music .btn-play::after {
 	content: '';
 	position: absolute;
 	height: 80px;
 	width: 140px;
-	background-color: #111111;
 	top: -15px;
 	z-index: -1;
 	border-radius: 50%;
@@ -252,6 +232,25 @@ video {
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
 }
+
+.control-music .btn-play {
+
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 5px #444444, 0 0 30px #ebe7e6 inset, 0 0 0 15px #f5f3f2, 0 0 3px 15px #444444;
+}
+
+
 
 .glitch-image:nth-child(1) {
 	opacity: 1;
