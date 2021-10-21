@@ -622,8 +622,8 @@ video {
 }
 .wrap-equalizer{
 	position: absolute;
-	width: 60%;
-	bottom: 80px;
+	width: 40%;
+	bottom: 75px;
 	justify-content: space-between;
 	z-index: 100;
 	z-index: 2;
