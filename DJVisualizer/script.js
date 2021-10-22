@@ -4,6 +4,7 @@ const btnNext = document.querySelector('.btn-next');
 const btnPrev = document.querySelector('.btn-prev');
 const avatar = document.querySelector("#bar10");
 const videoBg = document.querySelector("#video");
+const nameSong = document.querySelector(".wrap-title-song");
 const image = document.querySelectorAll('.glitch-image');
 var isPlay = false;
 var offsetHeight = document.getElementById('bar10').offsetHeight;
@@ -23,6 +24,8 @@ function startApp() {
 		let detailSong = document.querySelectorAll(".list-music-item");
 		videoBg.src = listVideoBg[songIndex];
 		audio.src = listSongs[songIndex];
+		let name = detailSong[songIndex].getAttribute("data-name");
+		nameSong.innerHTML= `<marquee loop ='1' >Bài hát: ${name}. Chúc các bạn nghe nhạc vui vẻ!</marquee>`;
 		for(let i = 0; i< image.length; i++ ){
 			image[i].src= detailSong[songIndex].getAttribute("data-img");
 		}
@@ -102,6 +105,7 @@ function startApp() {
 
 	btnPlay.addEventListener('click', () => {
 		if (isPlay == false) {
+
 			playSong();	
 		}
 		else{

@@ -46,14 +46,24 @@ body {
 	position: relative;
 }
 
-.wrap-title {
+.wrap-title-song {
+
+	width: 50%;
+	color: #fff;
 	position: absolute;
 	top: 10%;
 	z-index: 10;
-	width: 100%;
 	text-align: center;
+	font-size: 2rem;
 }
+.marquee {
+	width: 100%;
+	overflow: hidden;
 
+  }
+.name-song{
+	color: yellow;
+}
 .content-title {
 	color: #fff;
 	text-shadow: -3px 0 var(--main-color), 0 3px var(--main-color), 3px 0 var(--main-color), 0 -3px var(--main-color);
@@ -170,7 +180,7 @@ video {
 .bg-control {
 	position: absolute;
 	bottom: 0;
-	height: 240px;
+	height: 220px;
 	transform: scale(1.2, 1.2);
 	width: 100%;
 	z-index: 10;
@@ -200,8 +210,8 @@ video {
 
 .control-music {
 	position: absolute;
-	bottom: -5px;
-	height: 150px;
+	bottom: 0px;
+	height: 120px;
 	width: 320px;
 	z-index: 69;
 	justify-content: space-around;
@@ -217,10 +227,7 @@ video {
 	z-index: 10;
 	color: cyan;
     text-shadow: 0 0 4px cyan;
-	padding: 10px;
-	width: 60px;
-	height: 60px;
-	line-height: 60px;
+
 	text-align: center;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -239,10 +246,10 @@ video {
 }
 .big{
 	position: relative;
-    z-index: 9;
+    z-index: 10;
     cursor: pointer;
-    height: 8rem;
-    width: 8rem;
+    height: 7rem;
+    width: 7rem;
     margin: 0 auto;
     border-radius: 100%;
 	border: solid 2px #000;
@@ -277,6 +284,69 @@ video {
 }
 .glitch-logo{
 	background-blend-mode: var(--blend-1);
+}
+.wrap-equalizer{
+	position: absolute;
+	width: 60%;
+	bottom: 25px;
+	justify-content: space-between;
+	z-index: 100;
+	z-index: 2;
+}
+.wrap-equalizer-left, .wrap-equalizer-right{
+	display: flex;
+}
+.wrap-equalizer .equalizer:nth-child(1){
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	-ms-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	margin-right: 20px;
+}
+.wrap-equalizer .equalizer:nth-child(2){
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+	-moz-transform: scaleX(1);
+	-ms-transform: scaleX(1);
+	-o-transform: scaleX(1);
+}
+.equalizer, .equalizer:after, .equalizer:before {
+	width: 60px;
+	height: 20px;
+
+	position: relative;
+	transform: translate(-90px, 50px);
+	animation-name: bar1;
+	animation-duration: 0.3s;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	-webkit-transform: translate(-90px, 50px);
+	-moz-transform: translate(-90px, 50px);
+	-ms-transform: translate(-90px, 50px);
+	-o-transform: translate(-90px, 50px);
+}
+.equalizer:before {
+	content: "";
+	position: absolute;
+	transform: translate(80px, 0);
+	animation-name: bar2;
+	-webkit-transform: translate(80px, 0);
+	-moz-transform: translate(80px, 0);
+	-ms-transform: translate(80px, 0);
+	-o-transform: translate(80px, 0);
+}
+.equalizer:after {
+	content: "";
+	position: absolute;
+	transform: translate(160px, 0);
+	box-shadow: 0 -30px 0 #29D9C2, 0 -60px 0 #29D9C2, 0 -90px 0 #29D9C2;
+	animation-name: bar3;
+	-webkit-transform: translate(160px, 0);
+	-moz-transform: translate(160px, 0);
+	-ms-transform: translate(160px, 0);
+	-o-transform: translate(160px, 0);
 }
 .glitch-image:nth-child(1) {
 	position: relative;
@@ -637,62 +707,7 @@ video {
 		text-shadow: 0 0 5px var(--line-color);
 	}
 }
-.wrap-equalizer{
-	position: absolute;
-	width: 40%;
-	bottom: 65px;
-	justify-content: space-between;
-	z-index: 100;
-	z-index: 2;
-}
-.wrap-equalizer .equalizer:nth-child(1){
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
-}
-.wrap-equalizer .equalizer:nth-child(2){
-	-webkit-transform: scaleX(1);
-	transform: scaleX(1);
-	-moz-transform: scaleX(1);
-	-ms-transform: scaleX(1);
-	-o-transform: scaleX(1);
-}
-.equalizer, .equalizer:after, .equalizer:before {
-	width: 60px;
-	height: 20px;
 
-	position: relative;
-	transform: translate(-90px, 50px);
-	animation-name: bar1;
-	animation-duration: 0.3s;
-	animation-direction: alternate;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	-webkit-transform: translate(-90px, 50px);
-	-moz-transform: translate(-90px, 50px);
-	-ms-transform: translate(-90px, 50px);
-	-o-transform: translate(-90px, 50px);
-}
-  .equalizer:before {
-	content: "";
-	position: absolute;
-	transform: translate(80px, 0);
-	animation-name: bar2;
-	-webkit-transform: translate(80px, 0);
-	-moz-transform: translate(80px, 0);
-	-ms-transform: translate(80px, 0);
-	-o-transform: translate(80px, 0);
-}
-  .equalizer:after {
-	content: "";
-	position: absolute;
-	transform: translate(160px, 0);
-	box-shadow: 0 -30px 0 #29D9C2, 0 -60px 0 #29D9C2, 0 -90px 0 #29D9C2;
-	animation-name: bar3;
-	-webkit-transform: translate(160px, 0);
-	-moz-transform: translate(160px, 0);
-	-ms-transform: translate(160px, 0);
-	-o-transform: translate(160px, 0);
-}
   
   @keyframes bar1 {
 	0%, 19.9% {
