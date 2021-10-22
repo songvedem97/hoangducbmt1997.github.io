@@ -104,24 +104,32 @@ function startApp() {
 		audio.src = listSongs[songIndex];
 		videoBg.src = listVideoBg[songIndex];
 		loadSong(songIndex);
-		playVideo();
-		playSong();
+		setTimeout(() => {
+			playVideo();
+			playSong();
+		}, 2000);
 	})
 	btnPrev.addEventListener('click', () => {
 		songIndex = --songIndex >= 0 ? songIndex : listSongs.length-1;
 		videoBg.src = listVideoBg[songIndex];
 		audio.src = listSongs[songIndex];
 		loadSong(songIndex);
-		playVideo();
-		playSong();
+		setTimeout(() => {
+			playVideo();
+			playSong();
+		}, 2000);
+		
+		
 	})
 	audio.addEventListener('ended', () => {
 		songIndex = ++songIndex < listSongs.length ? songIndex : 0;
 		audio.src = listSongs[songIndex];
 		videoBg.src = listVideoBg[songIndex];
 		loadSong(songIndex);
-		playVideo();
-		playSong();
+		setTimeout(() => {
+			playVideo();
+			playSong();
+		}, 2000);
 	})
 
 }

@@ -623,7 +623,7 @@ video {
 .wrap-equalizer{
 	position: absolute;
 	width: 40%;
-	bottom: 75px;
+	bottom: 65px;
 	justify-content: space-between;
 	z-index: 100;
 	z-index: 2;
@@ -642,7 +642,7 @@ video {
 .equalizer, .equalizer:after, .equalizer:before {
 	width: 60px;
 	height: 20px;
-	
+
 	position: relative;
 	transform: translate(-90px, 50px);
 	animation-name: bar1;
