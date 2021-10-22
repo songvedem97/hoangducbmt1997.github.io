@@ -21,6 +21,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	font-family: Alata;
+	overflow: hidden;
 }
 
 @font-face {
