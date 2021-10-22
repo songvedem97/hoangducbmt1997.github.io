@@ -642,10 +642,8 @@ video {
 .equalizer, .equalizer:after, .equalizer:before {
 	width: 60px;
 	height: 20px;
-	background: #29D9C2;
 	position: relative;
 	transform: translate(-90px, 50px);
-	box-shadow: 0 -15px 0 #29D9C2, 0 -30px 0 #29D9C2, 0 -45px 0 #29D9C2, 0 -60px 0 #29D9C2;
 	animation-name: bar1;
 	animation-duration: 0.3s;
 	animation-direction: alternate;
@@ -660,7 +658,6 @@ video {
 	content: "";
 	position: absolute;
 	transform: translate(80px, 0);
-	box-shadow: 0 -30px 0 #29D9C2;
 	animation-name: bar2;
 	-webkit-transform: translate(80px, 0);
 	-moz-transform: translate(80px, 0);
