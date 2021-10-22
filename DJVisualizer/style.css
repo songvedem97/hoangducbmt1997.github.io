@@ -642,6 +642,7 @@ video {
 .equalizer, .equalizer:after, .equalizer:before {
 	width: 60px;
 	height: 20px;
+	
 	position: relative;
 	transform: translate(-90px, 50px);
 	animation-name: bar1;
