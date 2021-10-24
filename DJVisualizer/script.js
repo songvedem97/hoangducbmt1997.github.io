@@ -25,7 +25,7 @@ function startApp() {
 		videoBg.src = listVideoBg[songIndex];
 		audio.src = listSongs[songIndex];
 		let name = detailSong[songIndex].getAttribute("data-name");
-		nameSong.innerHTML= `<marquee loop ='1' >Bài hát: ${name}. Chúc các bạn nghe nhạc vui vẻ!</marquee>`;
+		nameSong.innerHTML= `<marquee width="100%" direction="left" loop ="2" ><p>Bài hát: ${name}. Chúc các bạn nghe nhạc vui vẻ!</p></marquee>`;
 		for(let i = 0; i< image.length; i++ ){
 			image[i].src= detailSong[songIndex].getAttribute("data-img");
 		}
