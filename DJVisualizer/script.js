@@ -41,19 +41,17 @@ function startApp() {
 	getSong();
 	// create web audio api context
 
-	function unlockAudioContext(audioCtx) {
+	function unlockAudioContext(context) {
 		if (context.state !== 'suspended') return;
 		const b = document.body;
 		const events = ['touchstart','touchend', 'mousedown','keydown'];
 		events.forEach(e => b.addEventListener(e, unlock, false));
-		function unlock() { audioCtx.resume().then(clean); }
+		function unlock() { context.resume().then(clean); }
 		function clean() { events.forEach(e => b.removeEventListener(e, unlock)); }
 	}
-	var context = new (window.AudioContext || window.webkitAudioContext);
-	unlockAudioContext(context);
-	const analyser = context.createAnalyser();
-	const numPoints = analyser.frequencyBinCount;
-	const audioDataArray = new Uint8Array(numPoints);
+
+
+
 	function render() {
 		analyser.getByteFrequencyData(audioDataArray);
 		for (let x = 1; x <= 16; x++) {
@@ -75,6 +73,12 @@ function startApp() {
 
 	/*--INIT--*/
 
+
+	const context = new (window.AudioContext || window.webkitAudioContext);
+	unlockAudioContext(context);
+	const analyser = context.createAnalyser();
+	const numPoints = analyser.frequencyBinCount;
+	const audioDataArray = new Uint8Array(numPoints);
 	audio.crossOrigin = "anonymous";
 	audio.addEventListener("canplay", handleCanplay);
 	function handleCanplay() {
