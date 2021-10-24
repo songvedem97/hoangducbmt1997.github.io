@@ -23,6 +23,7 @@ function startApp() {
 		song = songIndex;
 		let detailSong = document.querySelectorAll(".list-music-item");
 		videoBg.src = listVideoBg[songIndex];
+		videoBg.load();
 		audio.src = listSongs[songIndex];
 		let name = detailSong[songIndex].getAttribute("data-name");
 		nameSong.innerHTML= `<marquee width="100%" direction="left" loop ="2" ><p>Bài hát: ${name}. Chúc các bạn nghe nhạc vui vẻ!</p></marquee>`;
@@ -39,7 +40,7 @@ function startApp() {
 		loadSong();
 	}
 	getSong();
-	// create web audio api context
+	
 
 	function unlockAudioContext(context) {
 		if (context.state !== 'suspended') return;
@@ -70,7 +71,8 @@ function startApp() {
 	requestAnimationFrame(render);
 
 	/*--INIT--*/
-
+	
+	// create web audio api context
 	const context = new (window.AudioContext || window.webkitAudioContext);
 	unlockAudioContext(context);
 	const analyser = context.createAnalyser();
