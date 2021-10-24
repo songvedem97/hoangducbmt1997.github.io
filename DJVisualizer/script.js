@@ -43,14 +43,12 @@ function startApp() {
 
 	function unlockAudioContext(context) {
 		if (context.state !== 'suspended') return;
-		const b = document.body;
+		const body = document.body;
 		const events = ['touchstart','touchend', 'mousedown','keydown'];
 		events.forEach(e => b.addEventListener(e, unlock, false));
 		function unlock() { context.resume().then(clean); }
-		function clean() { events.forEach(e => b.removeEventListener(e, unlock)); }
+		function clean() { events.forEach(e => body.removeEventListener(e, unlock)); }
 	}
-
-
 
 	function render() {
 		analyser.getByteFrequencyData(audioDataArray);
@@ -72,7 +70,6 @@ function startApp() {
 	requestAnimationFrame(render);
 
 	/*--INIT--*/
-
 
 	const context = new (window.AudioContext || window.webkitAudioContext);
 	unlockAudioContext(context);
