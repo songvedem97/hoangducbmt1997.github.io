@@ -11,6 +11,7 @@ const logoButton = document.querySelector('.logo-mobile');
 const isIndex = document.querySelector('.ms-nav-bar a');
 const overlayNavBarMobile = document.querySelector('.overlay-nav-bar-mobile');
 const btnLoginMobile = document.querySelector('.login-mobile');
+var player;
 
 var switchNavBar = true;
 /*--Carousel--*/
@@ -227,23 +228,25 @@ function scrollFunction() {
 }
 
 /*--MV--*/
-const player = new Plyr('#player', {
-  controls: [
-    'play-large',
-    'play',
-    'progress',
-    'current-time',
-    'settings',
-    'volume',
-    'mute',
-    'pip',
-    'airplay',
-    'fullscreen'],
-  loadSprite: true,
-  iconPrefix: 'icon',
-  iconUrl: './assets/sprite/icon.svg',
-}
 
-);
+if(player === null)
+ player = new Plyr('#player', {
+        controls: [
+          'play-large',
+          'play',
+          'progress',
+          'current-time',
+          'settings',
+          'volume',
+          'mute',
+          'pip',
+          'airplay',
+          'fullscreen'],
+        loadSprite: true,
+        iconPrefix: 'icon',
+        iconUrl: './assets/sprite/icon.svg',
+      });
+
+
 
 
