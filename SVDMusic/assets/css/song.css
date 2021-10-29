@@ -55,6 +55,10 @@
     z-index: 2;
     margin: -25px 0 0 -25px;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .wrapper-img-action::after{
     content: '';
@@ -67,6 +71,10 @@
     opacity: 0.1;
     border-radius: 50%;
     z-index: 1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .wrapper-img-action img {
     width: 100%;
@@ -75,6 +83,7 @@
     border: 5px solid var(--white-color);
     animation: rotate 20s linear infinite;
     position: relative;
+    -webkit-animation: rotate 20s linear infinite;
 }
 
 @keyframes rotate {
@@ -124,6 +133,10 @@
     top: 115px;
     line-height: 70px;
     font-weight: bold;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
 }
 .lyricwrap {
     position: relative;
